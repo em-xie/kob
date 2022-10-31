@@ -3,8 +3,10 @@ package com.kob.backend.controller.pk;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @作者：xie
@@ -14,12 +16,10 @@ import java.util.List;
 @RequestMapping("/pk/")
 public class BotInfoController {
     @RequestMapping("getbotinfo/")
-    public List<String> getBotInfo(){
-        LinkedList<String> list = new LinkedList<>();
-        list.add("1");
-        list.add("1");
-        list.add("1");
-        list.add("1");
-        return list;
+    public Map<String,String> getBotInfo(){
+        HashMap<String, String> bot1 = new HashMap<>();
+        bot1.put("name","1");
+        bot1.put("rating","2");
+        return bot1;
     }
 }
