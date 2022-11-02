@@ -1,14 +1,13 @@
 <template>
     <div ref="parent" class="gamemap">
-        <canvas ref="canvas">
-        </canvas>
+<canvas ref="canvas" tabindex="0"></canvas>
     </div>
 </template>
 
 <script>
 import { GameMap } from "@/assets/scripts/GameMap"
 import { ref, onMounted } from 'vue'
-
+// onMounted 注册一个回调函数，在组件挂载完成后执行。
 export default {
     setup() {
         let parent = ref(null);
