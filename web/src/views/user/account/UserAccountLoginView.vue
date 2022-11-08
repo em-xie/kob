@@ -1,5 +1,5 @@
 <template>
-    <ContentField>
+    <ContentField v-if="!$store.state.user.pulling_info">
         <div class="row justify-content-md-center">
             <div class="col-3">
                 <!--submit.prevent阻止掉默认行为  -->
@@ -36,6 +36,24 @@ export default {
         let password = ref('');
         let error_message = ref('');
 
+        const jwt_token = localStorage.getItem("jwt_token");
+        if(jwt_token){
+            // commit 调用user里面的mutations函数  同步
+            //dispatch action 异步
+            store.commit("updateToken",jwt_token);
+            store.dispatch("getinfo",{
+                success() {
+                    router.push({ name: 'home' });
+                    store.commit("updatePullingInfo", false);
+                },
+                error() {
+                    store.commit("updatePullingInfo", false);
+                }
+            })
+        }else {
+            store.commit("updatePullingInfo", false);
+        }
+
         const login = () => {
             error_message.value = "";
             // dispatch 调用user.js
@@ -53,7 +71,7 @@ export default {
                 },
                 error(){
                     error_message.value="用户名或密码错误";
-                    console.log(error_message.value)
+                    
                 }
             })
         }

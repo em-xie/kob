@@ -7,6 +7,7 @@ export default {
         photo: "",
         token: "",
         is_login: false,
+        pulling_info: true, //是否正在拉取信息
     },
     getters: {
     },
@@ -17,9 +18,13 @@ export default {
             state.username = user.username;
             state.photo = user.photo;
             state.is_login = user.is_login;
+            
         },
         updateToken(state, token) {
             state.token = token;
+        },
+        updatePullingInfo(state, pulling_info) {
+            state.pulling_info = pulling_info;
         },
         logout(state) {
             state.id = "";
@@ -31,7 +36,6 @@ export default {
     },
     actions: {
         login(context,data) {
-            
             $.ajax({
                 url: "http://127.0.0.1:8089/user/account/token/",
                 type: "post",
@@ -41,6 +45,7 @@ export default {
                 },
                 success(resp) {
                     if(resp.error_message === "success"){
+                        localStorage.setItem("jwt_token", resp.token);
                         context.commit("updateToken", resp.token);
                         data.success(resp);
                     }else {
@@ -48,7 +53,7 @@ export default {
                     }
                 },
                 error(resp) {
-                  console.log(resp);
+                    data.error(resp);
                 }
               });
         },
@@ -78,6 +83,7 @@ export default {
               });
         },
         logout(context) {
+            localStorage.removeItem("jwt_token");
             context.commit("logout");
         }
 
