@@ -270,7 +270,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserMapper userMapper;
 
+//3.1 UserDetailsService
+UserDetailsService接口。该接口只提供了一个方法：
 
+//UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+
+//该方法很容易理解：通过用户名来加载用户 。这个方法主要用于从系统数据中查询并加载具体的用户到Spring Security中。
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
@@ -348,11 +353,87 @@ public class UserDetailsImpl implements UserDetails {
 
 ```
 
+### 3.2 UserDetails
+
+从上面`UserDetailsService` 可以知道最终交给Spring Security的是`UserDetails` 。该接口是提供用户信息的核心接口。该接口实现仅仅存储用户的信息。后续会将该接口提供的用户信息封装到认证对象`Authentication`中去。`UserDetails` 默认提供了：
+
+- 用户的权限集， 默认需要添加`ROLE_` 前缀
+- 用户的加密后的密码， 不加密会使用`{noop}`前缀
+- 应用内唯一的用户名
+- 账户是否过期
+- 账户是否锁定
+- 凭证是否过期
+- 用户是否可用
+
+如果以上的信息满足不了你使用，你可以自行实现扩展以存储更多的用户信息。比如用户的邮箱、手机号等等。通常我们使用其实现类：
+
+```
+org.springframework.security.core.userdetails.User
+```
+
+该类内置一个建造器`UserBuilder` 会很方便地帮助我们构建`UserDetails` 对象
+
+```
+org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+```
+
+源码如下：
+
+```
+@Configuration
+@ConditionalOnClass(AuthenticationManager.class)
+@ConditionalOnBean(ObjectPostProcessor.class)
+@ConditionalOnMissingBean({ AuthenticationManager.class, AuthenticationProvider.class, UserDetailsService.class })
+public class UserDetailsServiceAutoConfiguration {
+
+    private static final String NOOP_PASSWORD_PREFIX = "{noop}";
+
+    private static final Pattern PASSWORD_ALGORITHM_PATTERN = Pattern.compile("^\\{.+}.*$");
+
+    private static final Log logger = LogFactory.getLog(UserDetailsServiceAutoConfiguration.class);
+
+    @Bean
+    @ConditionalOnMissingBean(
+            type = "org.springframework.security.oauth2.client.registration.ClientRegistrationRepository")
+    @Lazy
+    public InMemoryUserDetailsManager inMemoryUserDetailsManager(SecurityProperties properties,
+            ObjectProvider<PasswordEncoder> passwordEncoder){
+        SecurityProperties.User user = properties.getUser();
+        List<String> roles = user.getRoles();
+        return new InMemoryUserDetailsManager(
+                User.withUsername(user.getName()).password(getOrDeducePassword(user, passwordEncoder.getIfAvailable()))
+                        .roles(StringUtils.toStringArray(roles)).build());
+    }
+
+    private String getOrDeducePassword(SecurityProperties.User user, PasswordEncoder encoder) {
+        String password = user.getPassword();
+        if (user.isPasswordGenerated()) {
+            logger.info(String.format("%n%nUsing generated security password: %s%n", user.getPassword()));
+        }
+        if (encoder != null || PASSWORD_ALGORITHM_PATTERN.matcher(password).matches()) {
+            return password;
+        }
+        return NOOP_PASSWORD_PREFIX + password;
+    }
+
+}
+```
+
+我们来简单解读一下该类，从`@Conditional`系列注解我们知道该类在类路径下存在`AuthenticationManager`、在Spring [容器](https://cloud.tencent.com/product/tke?from=10680)中存在Bean `ObjectPostProcessor`并且不存在Bean `AuthenticationManager`, `AuthenticationProvider`, `UserDetailsService`的情况下生效。千万不要纠结这些类干嘛用的! 该类只初始化了一个`UserDetailsManager` 类型的Bean。`UserDetailsManager` 类型负责对安全用户实体抽象`UserDetails`的增删查改操作。同时还继承了`UserDetailsService`接口。
+
+明白了上面这些让我们把目光再回到`UserDetailsServiceAutoConfiguration` 上来。该类初始化了一个名为`InMemoryUserDetailsManager` 的内存用户管理器。该管理器通过配置注入了一个默认的`UserDetails`存在内存中，就是我们上面用的那个`user` ，每次启动`user`都是动态生成的。那么问题来了如果我们定义自己的`UserDetailsManager` Bean是不是就可以实现我们需要的用户管理逻辑呢？
+
+
+
 
 
 1. 实现密文存储：
 在 config 下新建 SecurityConfig 。
 实现config.SecurityConfig类，用来实现用户密码的加密存储。
+
+### 3.3 UserDetailsServiceAutoConfiguration
+
+`UserDetailsServiceAutoConfiguration` 全限定名为:
 
 ```
 @Configuration
@@ -391,6 +472,142 @@ class BackendApplicationTests {
 }
 
 ```
+
+### 3.4 自定义UserDetailsManager
+
+我们来自定义一个`UserDetailsManager` 来看看能不能达到自定义用户管理的效果。首先我们针对`UserDetailsManager` 的所有方法进行一个代理的实现，我们依然将用户存在内存中，区别就是这是我们自定义的：
+
+```
+package cn.felord.spring.security;
+
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * 代理 {@link org.springframework.security.provisioning.UserDetailsManager} 所有功能
+ *
+ * @author Felordcn
+ */
+public class UserDetailsRepository {
+
+    private Map<String, UserDetails> users = new HashMap<>();
+
+
+    public void createUser(UserDetails user) {
+        users.putIfAbsent(user.getUsername(), user);
+    }
+
+
+    public void updateUser(UserDetails user) {
+        users.put(user.getUsername(), user);
+    }
+
+
+    public void deleteUser(String username) {
+        users.remove(username);
+    }
+
+
+    public void changePassword(String oldPassword, String newPassword) {
+        Authentication currentUser = SecurityContextHolder.getContext()
+                .getAuthentication();
+
+        if (currentUser == null) {
+            // This would indicate bad coding somewhere
+            throw new AccessDeniedException(
+                    "Can't change password as no Authentication object found in context "
+                            + "for current user.");
+        }
+
+        String username = currentUser.getName();
+
+        UserDetails user = users.get(username);
+
+
+        if (user == null) {
+            throw new IllegalStateException("Current user doesn't exist in database.");
+        }
+
+        // todo copy InMemoryUserDetailsManager  自行实现具体的更新密码逻辑
+    }
+
+
+    public boolean userExists(String username) {
+
+        return users.containsKey(username);
+    }
+
+
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return users.get(username);
+    }
+}
+```
+
+该类负责具体对`UserDetails` 的增删改查操作。我们将其注入Spring 容器：
+
+```
+    @Bean
+    public UserDetailsRepository userDetailsRepository() {
+        UserDetailsRepository userDetailsRepository = new UserDetailsRepository();
+
+        // 为了让我们的登录能够运行 这里我们初始化一个用户Felordcn 密码采用明文 当你在密码12345上使用了前缀{noop} 意味着你的密码不使用加密，authorities 一定不能为空 这代表用户的角色权限集合
+        UserDetails felordcn = User.withUsername("Felordcn").password("{noop}12345").authorities(AuthorityUtils.NO_AUTHORITIES).build();
+        userDetailsRepository.createUser(felordcn);
+        return userDetailsRepository;
+    }
+```
+
+为了方便测试 我们也内置一个名称为`Felordcn` 密码为`12345`的`UserDetails`用户，密码采用明文 当你在密码`12345`上使用了前缀`{noop}` 意味着你的密码不使用加密，这里我们并没有指定密码加密方式你可以使用`PasswordEncoder` 来指定一种加密方式。通常推荐使用`Bcrypt`作为加密方式。默认Spring Security使用的也是此方式。authorities 一定不能为`null` 这代表用户的角色权限集合。接下来我们实现一个`UserDetailsManager` 并注入Spring 容器：
+
+```
+    @Bean
+    public UserDetailsManager userDetailsManager(UserDetailsRepository userDetailsRepository) {
+        return new UserDetailsManager() {
+            @Override
+            public void createUser(UserDetails user) {
+                userDetailsRepository.createUser(user);
+            }
+
+            @Override
+            public void updateUser(UserDetails user) {
+                userDetailsRepository.updateUser(user);
+            }
+
+            @Override
+            public void deleteUser(String username) {
+                userDetailsRepository.deleteUser(username);
+            }
+
+            @Override
+            public void changePassword(String oldPassword, String newPassword) {
+                userDetailsRepository.changePassword(oldPassword, newPassword);
+            }
+
+            @Override
+            public boolean userExists(String username) {
+                return userDetailsRepository.userExists(username);
+            }
+
+            @Override
+            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+                return userDetailsRepository.loadUserByUsername(username);
+            }
+        };
+    }
+```
+
+这样实际执行委托给了`UserDetailsRepository` 来做。我们重复 `章节3.` 的动作进入登陆页面分别输入`Felordcn`和`12345` 成功进入。
+
+
+
+
 
 4.4 使用密文添加用户 ：
 修改 controller 下的 user 的 UserController的注册，密码直接存储加密之后的密码。
