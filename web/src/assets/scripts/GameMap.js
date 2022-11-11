@@ -5,11 +5,12 @@ import { Snake } from './Snake';
 
 
 export class GameMap extends AcGameObject {
-    constructor(ctx, parent) {
+    constructor(ctx, parent, store) {
         super();
 
         this.ctx = ctx;
         this.parent = parent;
+        this.store = store;
         this.L = 0;
 
         this.rows = 13;
@@ -32,76 +33,86 @@ export class GameMap extends AcGameObject {
     // 因为其思路类似洪水从一个区域扩散到所有能到达的区域而得名。
     // Flood Fill算法被用来计算需要被清除的区域。
     // 参数 ，图 ，起点的x,y 终点的x, y
-    check_connectivity(g, sx, sy, tx, ty) {
-        if (sx == tx && sy == ty) return true;
-        g[sx][sy] = true;
+    // check_connectivity(g, sx, sy, tx, ty) {
+    //     if (sx == tx && sy == ty) return true;
+    //     g[sx][sy] = true;
 
-        let dx = [-1, 0, 1, 0],
-            dy = [0, 1, 0, -1];
-        for (let i = 0; i < 4; i++) {
-            let x = sx + dx[i],
-                y = sy + dy[i];
-            if (!g[x][y] && this.check_connectivity(g, x, y, tx, ty))
-                return true;
-        }
+    //     let dx = [-1, 0, 1, 0],
+    //         dy = [0, 1, 0, -1];
+    //     for (let i = 0; i < 4; i++) {
+    //         let x = sx + dx[i],
+    //             y = sy + dy[i];
+    //         if (!g[x][y] && this.check_connectivity(g, x, y, tx, ty))
+    //             return true;
+    //     }
 
-        return false;
-    }
+    //     return false;
+    // }
 
-    creat_walls() {
-        // 墙 true 无 false
-        const g = [];
-        for (let r = 0; r < this.cols; r++) {
-            g[r] = [];
-            for (let c = 0; c < this.cols; c++) {
-                g[r][c] = false;
-            }
-        }
+    // creat_walls() {
+    //     // // 墙 true 无 false
+    //     console.log(this.store.state.pk.gamemap)
+    //     const g = this.store.state.pk.gamemap;
+    //     // for (let r = 0; r < this.cols; r++) {
+    //     //     g[r] = [];
+    //     //     for (let c = 0; c < this.cols; c++) {
+    //     //         g[r][c] = false;
+    //     //     }
+    //     // }
 
-        //给四周加上墙
-        for (let r = 0; r < this.rows; r++) {
-            g[r][0] = g[r][this.cols - 1] = true;
-        }
+    //     // //给四周加上墙
+    //     // for (let r = 0; r < this.rows; r++) {
+    //     //     g[r][0] = g[r][this.cols - 1] = true;
+    //     // }
 
-        for (let c = 0; c < this.cols; c++) {
-            g[0][c] = g[this.rows - 1][c] = true;
-        }
+    //     // for (let c = 0; c < this.cols; c++) {
+    //     //     g[0][c] = g[this.rows - 1][c] = true;
+    //     // }
 
-        // 创建随机障碍物
-        for (let i = 0; i < this.inner_walls_count / 2; i++) {
-            for (let j = 0; j < 1000; j++) {
-                // 随机一个数
-                let r = parseInt(Math.random() * this.rows);
-                let c = parseInt(Math.random() * this.cols);
-                if (g[r][c] || g[this.rows-1-r][this.cols-1-c]) continue;
+    //     // // 创建随机障碍物
+    //     // for (let i = 0; i < this.inner_walls_count / 2; i++) {
+    //     //     for (let j = 0; j < 1000; j++) {
+    //     //         // 随机一个数
+    //     //         let r = parseInt(Math.random() * this.rows);
+    //     //         let c = parseInt(Math.random() * this.cols);
+    //     //         if (g[r][c] || g[this.rows-1-r][this.cols-1-c]) continue;
 
-                // 排除左下角和右上角
-                if (r == this.rows - 2 && c == 1 || r == 1 && c == this.cols - 2)
-                    continue;
-                // 对称
-                g[r][c] = g[this.rows-1-r][this.cols-1-c] = true;
-                break;
-            }
-        }
+    //     //         // 排除左下角和右上角
+    //     //         if (r == this.rows - 2 && c == 1 || r == 1 && c == this.cols - 2)
+    //     //             continue;
+    //     //         // 对称
+    //     //         g[r][c] = g[this.rows-1-r][this.cols-1-c] = true;
+    //     //         break;
+    //     //     }
+    //     // }
 
-        // 判断是否连通
-        // 复制当前状态
-        // JSON.parse()方法将JSON格式字符串转换为js对象(属性名没有双引号)
-        // 解析前要保证数据是标准的JSON格式，否则会解析出错
-        // JSON.stringify()先将对象转换为字符串
-        const copy_g = JSON.parse(JSON.stringify(g)); // 复制到JSON再转换回来
-        if (!this.check_connectivity(copy_g, this.rows - 2, 1, 1, this.cols - 2)) return false;
+    //     // // 判断是否连通
+    //     // // 复制当前状态
+    //     // // JSON.parse()方法将JSON格式字符串转换为js对象(属性名没有双引号)
+    //     // // 解析前要保证数据是标准的JSON格式，否则会解析出错
+    //     // // JSON.stringify()先将对象转换为字符串
+    //     // const copy_g = JSON.parse(JSON.stringify(g)); // 复制到JSON再转换回来
+    //     // if (!this.check_connectivity(copy_g, this.rows - 2, 1, 1, this.cols - 2)) return false;
 
-        for (let r = 0; r < this.rows; r++) {
-            for (let c = 0; c < this.cols; c++) {
-                if (g[r][c]) {
-                    this.walls.push(new Wall(r, c, this));
-                }
-            }
-        }
+    //     for (let r = 0; r < this.rows; r++) {
+    //         for (let c = 0; c < this.cols; c++) {
+    //             if (g[r][c]) {
+    //                 this.walls.push(new Wall(r, c, this));
+    //             }
+    //         }
+    //     }
 
-        return true;
-    }
+    //     // return true;
+    // }
+    create_walls() {
+        const g = this.store.state.pk.gamemap;
+    
+        for (let r = 0; r < this.rows; r++)
+          for (let c = 0; c < this.cols; c++)
+            if (g[r][c]) this.walls.push(new Wall(r, c, this));
+      }
+    
+    
 
     add_listening_events() {
         this.ctx.canvas.focus();
@@ -119,9 +130,11 @@ export class GameMap extends AcGameObject {
     }
 
     start() {
-        for (let i = 0; i < 1000; i++)
-            if (this.creat_walls())
-                break;
+        // for (let i = 0; i < 1000; i++)
+        //     if (this.creat_walls())
+        //         break;
+        // this.creat_walls();
+        this.create_walls();
         this.add_listening_events();
     }
 
