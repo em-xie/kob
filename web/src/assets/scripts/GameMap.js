@@ -106,39 +106,66 @@ export class GameMap extends AcGameObject {
     // }
     create_walls() {
         const g = this.store.state.pk.gamemap;
-    
-        for (let r = 0; r < this.rows; r++)
-          for (let c = 0; c < this.cols; c++)
-            if (g[r][c]) this.walls.push(new Wall(r, c, this));
-      }
-    
+        console.log(this.store.state.pk.gamemap);
+        for (let r = 0; r < this.rows; r ++ ) {
+            for (let c = 0; c < this.cols; c ++ ) {
+                
+                if (g[r][c]) {
+                    this.walls.push(new Wall(r, c, this));
+                }
+            }
+        }
+    }
+
     
 
-    add_listening_events() {
-        this.ctx.canvas.focus();
-        //const [snake0, snake1] = this.Snakes;
-        this.ctx.canvas.addEventListener("keydown", e => {
-            // if (e.key === 'w') snake0.set_direction(0);
-            // else if (e.key === 'd') snake0.set_direction(1);
-            // else if (e.key === 's') snake0.set_direction(2);
-            // else if (e.key === 'a') snake0.set_direction(3);
-            // else if (e.key === 'ArrowUp') snake1.set_direction(0);
-            // else if (e.key === 'ArrowRight') snake1.set_direction(1);
-            // else if (e.key === 'ArrowDown') snake1.set_direction(2);
-            // else if (e.key === 'ArrowLeft') snake1.set_direction(3);
-            let d = -1;
-            if(e.key === 'w') d = 0;
-            else if(e.key === 'd') d = 1;
-            else if(e.key === 's') d = 2;
-            else if(e.key === 'a') d = 3;
-            if(d >= 0){
-                this.store.state.pk.socket.send(JSON.stringify({
-                    event: "move",
-                    direction: d,
-                }))
-            }
-        });
+      add_listening_events() {
+        
+        if (this.store.state.record.is_record) {
+            let k = 0;
+
+            const a_steps = this.store.state.record.a_steps;
+            const b_steps = this.store.state.record.b_steps;
+            const loser = this.store.state.record.record_loser;
+            const [snake0, snake1] = this.Snakes;
+            const interval_id = setInterval(() => {
+                if (k >= a_steps.length - 1) {
+                    if (loser === "all" || loser === "A") {
+                        snake0.status = "die";
+                    }
+                    if (loser === "all" || loser === "B") {
+                        snake1.status = "die";
+                    }
+                    clearInterval(interval_id);
+                } else {
+                    snake0.set_direction(parseInt(a_steps[k]));
+                    snake1.set_direction(parseInt(b_steps[k]));
+                }
+                k ++ ;
+            }, 300);
+        } else {
+            this.ctx.canvas.focus();
+            this.ctx.canvas.addEventListener("keydown", e => {
+                let d = -1;
+                if(e.key === 'w') d = 0;
+                else if(e.key === 'd') d = 1;
+                else if(e.key === 's') d = 2;
+                else if(e.key === 'a') d = 3;
+                // else if(e.key === 'ArrowUp') snake1.set_direction(0);
+                // else if(e.key === 'ArrowRight') snake1.set_direction(1);
+                // else if(e.key === 'ArrowDown') snake1.set_direction(2);
+                // else if(e.key === 'ArrowLeft') snake1.set_direction(3);
+
+                if(d >= 0) {
+                    this.store.state.pk.socket.send(JSON.stringify({
+                        event: "move",
+                        direction: d,
+                    }));
+                }
+            });
+        }
     }
+
 
     start() {
         // for (let i = 0; i < 1000; i++)

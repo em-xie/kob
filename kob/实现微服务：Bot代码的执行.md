@@ -719,3 +719,545 @@ matchingsystem
         BotInterface.java
 ```
 
+Bot的实现
+Bot.java
+
+```
+package com.kob.botrunningsystem.service.impl.utils;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Bot {
+    Integer userId;
+    String botCode;
+    String input;
+}
+BotPoll的实现
+```
+
+```
+BotPoll的实现
+虽然队列没用消息队列，但是因为我们写了条件变量与锁的操作，所以等价于消息队列
+
+BotPool.java
+
+package com.kob.botrunningsystem.service.impl.utils;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.ReentrantLock;
+
+public class BotPool extends Thread {
+    // 以下的锁和条件变量加不加static都可以，因为BotPool只有一个
+    private final ReentrantLock lock = new ReentrantLock();
+    private final Condition condition = lock.newCondition();
+    private final Queue<Bot> bots = new LinkedList<>();
+```
+
+
+
+    public void addBot(Integer userId, String botCode, String input) {
+        lock.lock();
+        try {
+            bots.add(new Bot(userId, botCode, input));
+            condition.signalAll();
+        } finally {
+            lock.unlock();
+        }
+    }
+    
+    private void consume(Bot bot) {
+    
+    }
+    
+    @Override
+    public void run() {
+        while(true) {
+            lock.lock();
+            if(bots.isEmpty()) {
+                try {
+                    // 若执行了await会自动释放锁
+                    condition.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    lock.unlock();
+                    break;
+                }
+            } else {
+                Bot bot = bots.remove();
+                lock.unlock();
+                // 耗时操作，因此要在释放锁之后执行
+                consume(bot);
+            }
+        }
+    }
+```
+}
+BotRunningServiceImpl.java
+加任务
+
+BotRunningServiceImpl.java
+
+package com.kob.botrunningsystem.service.impl;
+
+...
+
+import com.kob.botrunningsystem.service.impl.utils.BotPool;
+
+@Service
+public class BotRunningServiceImpl implements BotRunningService {
+    public static final BotPool botPool = new BotPool();
+```
+
+
+
+    @Override
+    public String addBot(Integer userId, String botCode, String input) {
+        System.out.println("add bot: " + userId + " " + botCode + " " + input);
+        botPool.addBot(userId, botCode, input);
+        return "add bot success";
+    }
+```
+}
+
+BotPool线程的启动
+BotRunningSystemApplication.java
+
+package com.kob.botrunningsystem;
+
+...
+
+@SpringBootApplication
+public class BotRunningSystemApplication {
+    public static void main(String[] args) {
+        BotRunningServiceImpl.botPool.start();
+        SpringApplication.run(BotRunningSystemApplication.class, args);
+    }
+}
+BotInterface.java
+用户写Bot实现的接口
+
+BotInterface.java
+
+package com.kob.botrunningsystem.utils;
+
+public interface BotInterface {
+    Integer nextMove(String input);
+}
+
+Bot.java
+Bot.java
+
+package com.kob.botrunningsystem.utils;
+
+public class Bot implements BotInterface {
+```
+
+
+
+    @Override
+    public Integer nextMove(String input) {
+        return 0;   // 向上走
+    }
+```
+}
+Consumer的实现
+docker与沙箱分别有什么区别
+
+Consumer.java
+
+package com.kob.botrunningsystem.service.impl.utils;
+
+import com.kob.botrunningsystem.utils.BotInterface;
+import org.joor.Reflect;
+
+import java.util.UUID;
+
+public class Consumer extends Thread {
+    private Bot bot;
+```
+
+
+
+    public void startTimeout(long timeout, Bot  bot) {
+        this.bot = bot;
+        this.start();
+    
+        // 在 程序运行结束后 或 程序在指定timeout时间后还未执行完毕 直接中断代码执行
+        try {
+            this.join(timeout);
+            this.interrupt();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            this.interrupt();
+        }
+    }
+    
+    private String addUid(String code, String uid) {    // 在code中的Bot类名后添加uid
+        int k = code.indexOf(" implements BotInterface");
+        return code.substring(0, k) + uid + code.substring(k);
+    }
+    
+    @Override
+    public void run() {
+        UUID uuid = UUID.randomUUID();
+        String uid = uuid.toString().substring(0, 8);
+        BotInterface botInterface = Reflect.compile(
+                "com.kob.botrunningsystem.utils.Bot" + uid,
+                addUid(bot.getBotCode(), uid)
+        ).create().get();
+    
+        Integer direction = botInterface.nextMove(bot.getInput());
+        System.out.println("move-direction: " + bot.getUserId() + " " + direction);
+    }
+```
+}
+BotPool.java
+调用Consumer
+
+BotPool.java
+
+package com.kob.botrunningsystem.service.impl.utils;
+
+...
+
+public class BotPool extends Thread {
+```
+
+​    ...
+
+    private void consume(Bot bot) {
+        Consumer consumer = new Consumer();
+        consumer.startTimeout(2000, bot);
+    }
+    
+    ...
+```
+}
+测试
+前端Bug的修改
+
+在游戏结束后，点到其他页面再点回pk页面，结果没有消失
+
+PkIndexView.vue
+
+<template>
+    ...
+</template>
+
+
+<script>
+...
+
+export default {
+    ...
+```
+
+
+
+    setup() {
+        const store = useStore();
+        const socketUrl = `ws://127.0.0.1:3000/websocket/${store.state.user.token}/`;
+    
+        store.commit("updateLoser", 'none');
+    
+        ...
+    }
+```
+}
+</script>
+
+<style scoped>
+
+
+</style>
+将Bot执行结果传给前端
+1.BackEnd接收Bot代码的结果
+
+文件结构
+backend
+    controller
+        pk
+            ReceiveBotMoveController.java
+    service
+        impl
+            pk
+                ReceiveBotMoveServiceImpl.java
+        pk
+            ReceiveBotMoveService.java
+接口
+ReceiveBotMoveService.java
+
+package com.kob.backend.service.pk;
+
+public interface ReceiveBotMoveService {
+```
+
+
+
+    String receiveBotMove(Integer userId, Integer direction);
+```
+}
+WebSocketServer操作类
+将game改为public
+
+WebSocketServer.java
+
+package com.kob.backend.consumer;
+
+...
+
+@Component
+// url链接：ws://127.0.0.1:3000/websocket/**
+@ServerEndpoint("/websocket/{token}")  // 注意不要以'/'结尾
+public class WebSocketServer {
+```
+
+​    ...
+
+    public Game game = null;
+    
+    ...
+```
+}
+接口实现
+ReceiveBotMoveServiceImpl.java
+
+package com.kob.backend.service.impl.pk;
+
+import com.kob.backend.consumer.WebSocketServer;
+import com.kob.backend.consumer.utils.Game;
+import com.kob.backend.service.pk.ReceiveBotMoveService;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ReceiveBotMoveServiceImpl implements ReceiveBotMoveService {
+```
+
+
+
+    @Override
+    public String receiveBotMove(Integer userId, Integer direction) {
+        System.out.println("receive bot move: " + userId + " " + direction + " ");
+        if(WebSocketServer.users.get(userId) != null) {
+            Game game = WebSocketServer.users.get(userId).game;
+            if(game != null) {
+                if(game.getPlayerA().getId().equals(userId)) {
+                    game.setNextStepA(direction);
+                } else if(game.getPlayerB().getId().equals(userId)) {
+                    game.setNextStepB(direction);
+                }
+            }
+        }
+        return "receive bot move success";
+    }
+}
+
+```
+控制器
+ReceiveBotMoveController.java
+
+package com.kob.backend.controller.pk;
+
+import com.kob.backend.service.pk.ReceiveBotMoveService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Objects;
+
+@RestController
+public class ReceiveBotMoveController {
+    @Autowired
+    private ReceiveBotMoveService receiveBotMoveService;
+```
+
+
+
+    @PostMapping("/pk/receive/bot/move/")
+    public String receiveBotMove(@RequestParam MultiValueMap<String, String> data) {
+        Integer userId = Integer.parseInt(Objects.requireNonNull(data.getFirst("user_id")));
+        Integer direction = Integer.parseInt(Objects.requireNonNull(data.getFirst("direction")));
+        return receiveBotMoveService.receiveBotMove(userId, direction);
+    }
+}
+权限控制(网关)
+放行接口
+
+```
+SecurityConfig.java
+
+package com.kob.backend.config;
+
+...
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+```
+
+​    ...
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.csrf().disable()
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeRequests()
+                // 放行这两个接口
+                .antMatchers("/user/account/token/", "/user/account/register/", "/getKaptcha").permitAll()
+                .antMatchers("/pk/start/game/", "/pk/receive/bot/move/").hasIpAddress("127.0.0.1")
+                .antMatchers(HttpMethod.OPTIONS).permitAll()
+                .anyRequest().authenticated();
+    
+        http.addFilterBefore(jwtAuthenticationTokenFilter, UsernamePasswordAuthenticationFilter.class);
+    }
+    
+    ...
+}
+2.BotRunningSystem返回Bot执行结果
+
+```
+Consumer.java
+Consumer.java
+
+package com.kob.botrunningsystem.service.impl.utils;
+
+import com.kob.botrunningsystem.utils.BotInterface;
+import org.joor.Reflect;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.UUID;
+
+@Component
+public class Consumer extends Thread {
+    private Bot bot;
+    private static RestTemplate restTemplate;
+    private static final String receiveBotMoveUrl = "http://127.0.0.1:3000/pk/receive/bot/move/";
+```
+
+
+
+    @Autowired
+    public void setRestTemplate(RestTemplate restTemplate) {
+        Consumer.restTemplate = restTemplate;
+    }
+    
+    ...
+    
+    @Override
+    public void run() {
+        UUID uuid = UUID.randomUUID();
+        String uid = uuid.toString().substring(0, 8);
+        BotInterface botInterface = Reflect.compile(
+                "com.kob.botrunningsystem.utils.Bot" + uid,
+                addUid(bot.getBotCode(), uid)
+        ).create().get();
+    
+        Integer direction = botInterface.nextMove(bot.getInput());
+        System.out.println("move-direction: " + bot.getUserId() + " " + direction);
+    
+        MultiValueMap<String, String> data = new LinkedMultiValueMap<>();
+        data.add("user_id", bot.getUserId().toString());
+        data.add("direction", direction.toString());
+    
+        restTemplate.postForObject(receiveBotMoveUrl, data, String.class);
+    }
+}
+测试
+y总bot代码：
+
+```
+Bot.java
+
+package com.kob.botrunningsystem.utils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bot implements BotInterface {
+```
+
+
+
+    static class Cell {
+        public int x, y;
+        public Cell(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+    
+    // 检查当前回合，蛇的长度是否会增加
+    private boolean check_tail_increasing(int step) {
+        if(step <= 10) return true;
+        return step % 3 == 1;
+    }
+    
+    public List<Cell> getCells(int sx, int sy, String steps) {
+        steps = steps.substring(1, steps.length() - 1);
+        List<Cell> res = new ArrayList<>();
+    
+        int[] dx = {-1, 0, 1, 0}, dy = {0, 1, 0, -1};
+        int x = sx, y = sy;
+        int step = 0;
+        res.add(new Cell(x, y));
+        for(int i = 0; i < steps.length(); i++) {
+            int d = steps.charAt(i) - '0';
+            x += dx[d];
+            y += dy[d];
+            res.add(new Cell(x, y));
+            if(!check_tail_increasing(++step)) {
+                res.remove(0);
+            }
+        }
+        return res;
+    }
+    
+    @Override
+    public Integer nextMove(String input) {
+        // 地图#my.sx#my.sy#(my操作)#you.sx#you.sy#(you操作)
+        String[] strs = input.split("#");
+        int[][] g = new int[13][14];
+        for(int i = 0, k = 0; i < 13; i++) {
+            for(int j = 0; j < 14; j++, k++) {
+                if(strs[0].charAt(k) == '1') {
+                    g[i][j] = 1;
+                }
+            }
+        }
+    
+        int aSx = Integer.parseInt(strs[1]), aSy = Integer.parseInt(strs[2]);
+        int bSx = Integer.parseInt(strs[4]), bSy = Integer.parseInt(strs[5]);
+    
+        List<Cell> aCells = getCells(aSx, aSy, strs[3]);
+        List<Cell> bCells = getCells(bSx, bSy, strs[6]);
+    
+        for(Cell c : aCells) g[c.x][c.y] = 1;
+        for(Cell c : bCells) g[c.x][c.y] = 1;
+    
+        int[] dx = {-1, 0, 1, 0}, dy = {0, 1, 0, -1};
+        for(int i = 0; i < 4; i++) {
+            int x = aCells.get(aCells.size() - 1).x + dx[i];
+            int y = aCells.get(aCells.size() - 1).y + dy[i];
+            if(x >= 0 && x < 13 && y >= 0 && y < 14 && g[x][y] == 0) {
+                return i;
+            }
+        }
+        return 0;
+    }
+}
+

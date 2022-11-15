@@ -21,6 +21,7 @@
         
         const store = useStore();
         store.commit("updateLoser", "none");
+        store.commit("updateIsRecord", false);
         //字符串中有${}表达式操作的话要用``，不能用引号
         const socketUrl = `ws://127.0.0.1:8089/websocket/${store.state.user.token}/`;
 
@@ -51,7 +52,7 @@
                     });
                     setTimeout(()=>{
                         store.commit("updateStatus", "playing");
-                    },200); //延时函数，单位是毫秒 
+                    },2000); //延时函数，单位是毫秒 
                     store.commit("updateGame", data.game);
                 }else if(data.event ==="move"){
                     const game = store.state.pk.gameObject;

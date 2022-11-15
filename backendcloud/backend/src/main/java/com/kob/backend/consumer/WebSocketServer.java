@@ -31,7 +31,7 @@ public class WebSocketServer {
 //    private final static CopyOnWriteArraySet<User> matchpool = new CopyOnWriteArraySet<>();
     private Session session = null;
 
-    private static UserMapper userMapper;
+    public static UserMapper userMapper;
     private static BotMapper botMapper;
     public static RecordMapper recordMapper;
     public static RestTemplate restTemplate;
