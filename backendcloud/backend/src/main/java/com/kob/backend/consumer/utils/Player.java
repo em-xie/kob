@@ -16,8 +16,12 @@ import java.util.List;
 @NoArgsConstructor
 public class Player {
     private Integer id;
+    private Integer botId;  // -1表示亲自出马，否则表示用AI打
+    private String botCode;
     private Integer sx;
     private Integer sy;
+
+
     // 蛇每个球的方向
     private List<Integer> steps;
 

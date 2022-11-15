@@ -20,6 +20,7 @@
       setup(){
         
         const store = useStore();
+        store.commit("updateLoser", "none");
         //字符串中有${}表达式操作的话要用``，不能用引号
         const socketUrl = `ws://127.0.0.1:8089/websocket/${store.state.user.token}/`;
 
