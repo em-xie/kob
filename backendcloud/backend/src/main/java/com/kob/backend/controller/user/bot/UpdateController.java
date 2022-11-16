@@ -1,4 +1,4 @@
-package com.kob.backend.controller.bot;
+package com.kob.backend.controller.user.bot;
 
 import com.kob.backend.service.user.bot.UpdateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class UpdateController {
     private UpdateService updateService;
 
 
-    @PostMapping("/user/bot/update/")
+    @PostMapping("/api/user/bot/update/")
     public Map<String,String> update(@RequestParam Map<String,String> data){
         return  updateService.update(data);
     }
