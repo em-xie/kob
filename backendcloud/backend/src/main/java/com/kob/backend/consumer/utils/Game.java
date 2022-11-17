@@ -28,7 +28,7 @@ public class Game extends Thread{
 
     private String status = "playing";  //playing ->finished
     private String loser = ""; //all:平局, A:A平局, B:B平局
-    private static final String addBotUrl = "http://127.0.0.1:8091/bot/add/";
+    private static final String addBotUrl = "http://127.0.0.1:3002/bot/add/";
 
 //    加锁
     private ReentrantLock lock = new ReentrantLock();
