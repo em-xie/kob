@@ -43,6 +43,7 @@ export default{
 </script>
 
 <style scoped>
+
     div.result-board{
         height: 30vh;
         width: 30vw;
@@ -50,6 +51,13 @@ export default{
         top: 30vh;
         left: 35vw;
         background-color: rgba(50, 50, 50, 0.5);
+         /* 绝对定位的居中 */
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
     div.result-board-text{
         text-align: center;

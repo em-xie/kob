@@ -12,7 +12,7 @@ export default {
         
     },
     setup() {
-
+      
     }
 }
 </script>
