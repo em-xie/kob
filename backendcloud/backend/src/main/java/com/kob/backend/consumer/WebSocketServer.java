@@ -68,7 +68,7 @@ public class WebSocketServer {
 
         if (this.user != null) {
             users.put(userId, this);
-            System.out.println("connected！");
+            //System.out.println("connected！");
         } else {
             this.session.close();
         }
@@ -77,7 +77,7 @@ public class WebSocketServer {
     @OnClose
     public void onClose() {
         // 关闭链接
-        System.out.println("disconnected！");
+       // System.out.println("disconnected！");
         if (this.user != null) {
             users.remove(this.user.getId());
 //            matchpool.remove(this.user);
@@ -126,7 +126,7 @@ public class WebSocketServer {
         if(users.get(a.getId()) != null)
             users.get(a.getId()).sendMessage(respA.toJSONString());
 
-        System.out.println(respA.toJSONString());
+        //System.out.println(respA.toJSONString());
         JSONObject respB = new JSONObject();
         respB.put("event", "start-matching");
         respB.put("opponent_username", a.getUsername());
@@ -139,7 +139,7 @@ public class WebSocketServer {
 
 
     private void startMatching(Integer botId) {
-        System.out.println("start matching!");
+        //System.out.println("start matching!");
         MultiValueMap<String, String> data = new LinkedMultiValueMap<>();
         data.add("user_id",this.user.getId().toString());
         data.add("rating",this.user.getRating().toString());
@@ -159,7 +159,7 @@ public class WebSocketServer {
     }
 
     private void stopMatching() {
-        System.out.println("stop matching!");
+        //System.out.println("stop matching!");
         MultiValueMap<String, String> data = new LinkedMultiValueMap<>();
         data.add("user_id",this.user.getId().toString());
         restTemplate.postForObject(removePlayerUrl,data,String.class);
@@ -179,7 +179,7 @@ public class WebSocketServer {
     @OnMessage
     public void onMessage(String message, Session session) {
         // 从Client接收消息
-        System.out.println("receive message！" + message);
+        //System.out.println("receive message！" + message);
         JSONObject data = JSONObject.parseObject(message);
         String event = data.getString("event");
         if ("start-matching".equals(event)) {

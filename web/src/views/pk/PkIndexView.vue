@@ -39,14 +39,14 @@
             //当当前页面打开时调用
             socket = new WebSocket(socketUrl); //js自带的WebSocket()
             socket.onopen = () => { //连接成功时调用的函数
-                console.log("connected!");
+                //console.log("connected!");
                 store.commit("updateSocket",socket);
             }
 
             socket.onmessage = msg => { //前端接收到信息时调用的函数
-                console.log(msg.data)
+                //console.log(msg.data)
                 const data = JSON.parse(msg.data); //不同的框架数据定义的格式不一样
-                console.log(data.gamemap)
+                //console.log(data.gamemap)
                 if (data.event === "start-matching") { //这个这个start-matching是respA或respB返回的
                     //匹配成功,更新对手信息
                     store.commit("updateOpponent",{
@@ -65,7 +65,7 @@
                 }else if(data.event ==="result"){
                     const game = store.state.pk.gameObject;
                     const [snake0, snake1] = game.Snakes;
-                    console.log(data.loser);
+                   // console.log(data.loser);
                     if(data.loser ==="all" || data.loser==="A"){
                         snake0.status = "die";
                     }
@@ -77,7 +77,7 @@
             }
 
             socket.onclose = () => { //关闭时调用的函数
-                console.log("disconnected!");
+                //console.log("disconnected!");
             }
         });
 

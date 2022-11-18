@@ -7,6 +7,7 @@ import UserBotIndexView from '../views/user/bot/UserBotIndexView'
 import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegister from '../views/user/account/UserAccountRegisterView.vue'
+import UserAccountAcWingWebReceiveCodeView from '../views/user/account/UserAccountAcWingWebReceiveCodeView'
 import store from '@/store'
 const routes = [  
   {
@@ -72,6 +73,14 @@ const routes = [
     component: UserAccountRegister,
     meta: {
       requestAuth: false,
+    }
+  },
+  {
+    path: "/user/account/acwing/web/receive_code/",
+    name: "user_account_acwing_web_receive_code",
+    component: UserAccountAcWingWebReceiveCodeView,
+    meta: {
+        requestAuth: false,
     }
   },
   {

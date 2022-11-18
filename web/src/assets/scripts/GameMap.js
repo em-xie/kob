@@ -106,7 +106,7 @@ export class GameMap extends AcGameObject {
     // }
     create_walls() {
         const g = this.store.state.pk.gamemap;
-        console.log(this.store.state.pk.gamemap);
+        //.log(this.store.state.pk.gamemap);
         for (let r = 0; r < this.rows; r ++ ) {
             for (let c = 0; c < this.cols; c ++ ) {
                 

@@ -8,6 +8,7 @@ export default {
         token: "",
         is_login: false,
         pulling_info: true, //是否正在拉取信息
+        AcWingOS: "AcWingOS",
     },
     getters: {
     },

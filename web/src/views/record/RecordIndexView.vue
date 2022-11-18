@@ -104,9 +104,7 @@ export default {
                     total_records = resp.records_count;
                     udpate_pages();
                 },
-                error(resp) {
-                    console.log(resp);
-                }
+
             })
         }
 
