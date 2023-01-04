@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col-4">
                 <div class="user-photo">
-                    <img :src="$store.state.user.photo" alt="">
+                    <img :src="photo" alt="">
                 </div>
                 <div class="user-name">
-                    {{ $store.state.user.username }}
+                    {{username }}
                 </div>
             </div>
 
@@ -25,10 +25,10 @@
             <div class="col-4">
 
                 <div class="user-photo">
-                    <img :src="$store.state.pk.opponent_photo" alt="">
+                    <img :src="opponent_photo" alt="">
                 </div>
                 <div class="user-name">
-                    {{ $store.state.pk.opponent_username }}
+                    {{ opponent_username }}
                 </div>
             </div>
             <div class="col-12" style="text-align:center ;padding-top: 15vh;">
@@ -43,38 +43,45 @@
 <script>
 
 import {ref} from 'vue'
-import $ from 'jquery';
-import store from '@/store';
+import {getlist} from '@/api/bot/bot'
+import { pkStore } from '@/store/modules/pk'
+import {useUserStore} from '@/store/modules/user'
+import {recordStore} from '@/store/modules/record'
+import { storeToRefs } from 'pinia'
 export default {
     setup() {
+        const userStore = useUserStore()
+        const pkstore = pkStore();
+        const rstore = recordStore();
+        const { opponent_photo,opponent_username} = storeToRefs(pkstore)
+        const { photo,username } = storeToRefs(userStore)
         let bots = ref([]);
         let select_bot = ref("-1");
         let match_btn_info = ref("开始匹配");
         const click_match_btn = () => {
             if(match_btn_info.value==="开始匹配"){
                 match_btn_info.value="取消";
-                store.state.pk.socket.send(JSON.stringify({
+                pkstore.socket.send(JSON.stringify({
                     event: "start-matching",
                     bot_id: select_bot.value,
                 }));
             }else{
                 match_btn_info.value = "开始匹配";
-                store.state.pk.socket.send(JSON.stringify({
+                pkstore.socket.send(JSON.stringify({
                     event: "stop-matching",
                 }));
             }
         };
         const refresh_bots = () => {
-            $.ajax({
-                url: "https://app3943.acapp.acwing.com.cn/api/user/bot/getlist/",
-                type: "get",
-                headers: {
-                    'Authorization': "Bearer " + store.state.user.token,
-                },
-                success(resp) {
-                    bots.value = resp;
-                }
+            return new Promise((resolve, reject) => {
+                getlist().then(res => {
+                bots.value = res;
+                resolve(res)
+            }).catch(error => {
+                reject(error)
             })
+        })
+            
         };
         refresh_bots();
 
@@ -85,6 +92,13 @@ export default {
             click_match_btn,
             bots,
             select_bot,
+            pkstore,
+            userStore,
+            rstore,
+            opponent_photo,
+            opponent_username,
+            username,
+            photo
         }
     }
 

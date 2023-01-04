@@ -1,11 +1,16 @@
 package com.kob.backend.controller.user.bot;
 
 import com.kob.backend.service.user.bot.AddService;
+import com.ruoyi.common.constant.Constants;
+import com.ruoyi.common.core.domain.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -19,8 +24,11 @@ public class AddController {
     @Autowired
     private AddService addService;
 
-    @PostMapping("/api/user/bot/add/")
-    public Map<String, String> add(@RequestParam Map<String, String> data) {
-        return  addService.add(data);
+    @PostMapping("/user/bot/add/")
+    public R<Map<String, Object>> add(@Validated @RequestBody Map<String, String> data) {
+        Map<String, Object> ajax = new HashMap<>();
+        Map<String, String> res = addService.add(data);
+        ajax.put("add",res);
+        return  R.ok(ajax);
     }
 }

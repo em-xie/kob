@@ -1,16 +1,22 @@
 import { AcGameObject } from "./AcGameObject";
 import { Wall } from "./Wall";
 import { Snake } from './Snake';
-
-
+import { pkStore } from '@/store/modules/pk'
+import { recordStore } from '@/store/modules/record'
 
 export class GameMap extends AcGameObject {
-    constructor(ctx, parent, store) {
+    constructor(ctx, parent) {
         super();
-
+        const pkstore = pkStore();
+        const rStore = recordStore();
+        //this.gamemap =gamemap;
+        this.pkstore = pkstore;
+        this.rStore = rStore;
         this.ctx = ctx;
         this.parent = parent;
-        this.store = store;
+
+        
+
         this.L = 0;
 
         this.rows = 13;
@@ -105,11 +111,11 @@ export class GameMap extends AcGameObject {
     //     // return true;
     // }
     create_walls() {
-        const g = this.store.state.pk.gamemap;
-        //.log(this.store.state.pk.gamemap);
+        
+        const g = this.pkstore.gamemap;
+        //console.log(g);
         for (let r = 0; r < this.rows; r ++ ) {
             for (let c = 0; c < this.cols; c ++ ) {
-                
                 if (g[r][c]) {
                     this.walls.push(new Wall(r, c, this));
                 }
@@ -120,13 +126,32 @@ export class GameMap extends AcGameObject {
     
 
       add_listening_events() {
-        
-        if (this.store.state.record.is_record) {
-            let k = 0;
+        // this.ctx.canvas.focus();
+        //     this.ctx.canvas.addEventListener("keydown", e => {
+                
+        //         let d = -1;
+        //         if(e.key === 'w') d = 0;
+        //         else if(e.key === 'd') d = 1;
+        //         else if(e.key === 's') d = 2;
+        //         else if(e.key === 'a') d = 3;
+        //         // else if(e.key === 'ArrowUp') snake1.set_direction(0);
+        //         // else if(e.key === 'ArrowRight') snake1.set_direction(1);
+        //         // else if(e.key === 'ArrowDown') snake1.set_direction(2);
+        //         // else if(e.key === 'ArrowLeft') snake1.set_direction(3);
+        //         if(d >= 0) {
+        //             this.pkstore.socket.send(JSON.stringify({
+        //                 event: "move",
+        //                 direction: d,
+        //             }));
+        //         }
+        //     });
 
-            const a_steps = this.store.state.record.a_steps;
-            const b_steps = this.store.state.record.b_steps;
-            const loser = this.store.state.record.record_loser;
+        if (this.rStore.is_record!=="false") {
+            let k = 0;
+            const a_steps = this.rStore.a_steps;
+            const b_steps = this.rStore.b_steps;
+            console.log(a_steps)
+            const loser = this.rStore.record_loser;
             const [snake0, snake1] = this.Snakes;
             const interval_id = setInterval(() => {
                 if (k >= a_steps.length - 1) {
@@ -138,6 +163,7 @@ export class GameMap extends AcGameObject {
                     }
                     clearInterval(interval_id);
                 } else {
+                    
                     snake0.set_direction(parseInt(a_steps[k]));
                     snake1.set_direction(parseInt(b_steps[k]));
                 }
@@ -146,6 +172,7 @@ export class GameMap extends AcGameObject {
         } else {
             this.ctx.canvas.focus();
             this.ctx.canvas.addEventListener("keydown", e => {
+                
                 let d = -1;
                 if(e.key === 'w') d = 0;
                 else if(e.key === 'd') d = 1;
@@ -155,9 +182,8 @@ export class GameMap extends AcGameObject {
                 // else if(e.key === 'ArrowRight') snake1.set_direction(1);
                 // else if(e.key === 'ArrowDown') snake1.set_direction(2);
                 // else if(e.key === 'ArrowLeft') snake1.set_direction(3);
-
                 if(d >= 0) {
-                    this.store.state.pk.socket.send(JSON.stringify({
+                    this.pkstore.socket.send(JSON.stringify({
                         event: "move",
                         direction: d,
                     }));

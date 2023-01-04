@@ -1,11 +1,15 @@
 package com.kob.backend.controller.user.bot;
 
 import com.kob.backend.service.user.bot.RemoveService;
+import com.ruoyi.common.core.domain.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -17,8 +21,11 @@ public class RemoveController {
     @Autowired
     private RemoveService removeService;
 
-    @PostMapping("/api/user/bot/remove/")
-    public Map<String,String> remove(@RequestParam Map<String,String> data){
-        return removeService.remove(data);
+    @PostMapping("/user/bot/remove/")
+    public R<Map<String, Object>> remove(@Validated @RequestBody Map<String,String> data){
+        Map<String, Object> ajax = new HashMap<>();
+        Map<String, String> res = removeService.remove(data);
+        ajax.put("remove",res);
+        return  R.ok(ajax);
     }
 }

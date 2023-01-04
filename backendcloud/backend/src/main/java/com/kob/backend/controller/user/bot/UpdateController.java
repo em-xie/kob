@@ -1,11 +1,15 @@
 package com.kob.backend.controller.user.bot;
 
 import com.kob.backend.service.user.bot.UpdateService;
+import com.ruoyi.common.core.domain.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -19,8 +23,11 @@ public class UpdateController {
     private UpdateService updateService;
 
 
-    @PostMapping("/api/user/bot/update/")
-    public Map<String,String> update(@RequestParam Map<String,String> data){
-        return  updateService.update(data);
+    @PostMapping("/user/bot/update/")
+    public R<Map<String, Object>> update(@Validated @RequestBody Map<String,String> data){
+        Map<String, Object> ajax = new HashMap<>();
+        Map<String, String> res = updateService.update(data);
+        ajax.put("remove",res);
+        return  R.ok(ajax);
     }
 }

@@ -8,7 +8,8 @@ import NotFound from '../views/error/NotFound'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegister from '../views/user/account/UserAccountRegisterView.vue'
 import UserAccountAcWingWebReceiveCodeView from '../views/user/account/UserAccountAcWingWebReceiveCodeView'
-import store from '@/store'
+import { useUserStore } from '@/store/modules/user'
+import { storeToRefs } from 'pinia'
 const routes = [  
   {
     // 重定向到pk页面
@@ -110,7 +111,10 @@ const router = createRouter({
 // to跳转到哪个页面， from表示从哪个页面跳转过去
 // next的表示将页面要不要执行下一步操作，写之前首先要记录每一个未授权界面
 router.beforeEach((to, from, next) => {
-  if (to.meta.requestAuth && !store.state.user.is_login) {
+  const store = useUserStore()
+  const { is_login} = storeToRefs(store)
+ // console.log(is_login)
+  if (to.meta.requestAuth && !is_login) {
     next({name: "user_account_login"})
   } else {
     next();

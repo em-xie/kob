@@ -26,7 +26,7 @@ public class Consumer extends Thread {
     public void setRestTemplate(RestTemplate restTemplate) {
         Consumer.restTemplate = restTemplate;
     }
-    private static final String receiveBotMoveUrl = "http://127.0.0.1:3000/pk/receive/bot/move/";
+    private static final String receiveBotMoveUrl = "http://127.0.0.1:3000/kob/pk/receive/bot/move/";
     public void startTimeout(long timeout, Bot  bot) {
         this.bot = bot;
         this.start();

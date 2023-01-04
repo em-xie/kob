@@ -48,9 +48,11 @@
 
 <script>
 import ContentField from '../../components/ContentField.vue'
-import { useStore } from 'vuex';
+import { pkStore } from '@/store/modules/pk'
+import {useUserStore} from '@/store/modules/user'
+import {recordStore} from '@/store/modules/record'
 import { ref } from 'vue';
-import $ from 'jquery';
+import {getlist} from '@/api/record/record'
 import router from '../../router/index'
 
 export default {
@@ -58,7 +60,9 @@ export default {
         ContentField
     },
     setup() {
-        const store = useStore();
+        const userStore = useUserStore()
+        const pkstore = pkStore();
+        const rstore = recordStore();
         let records = ref([]);
         let current_page = 1;
         let total_records = 0;
@@ -90,22 +94,17 @@ export default {
 
         const pull_page = page => {
             current_page = page;
-            $.ajax({
-                url: "https://app3943.acapp.acwing.com.cn/api/record/getlist/",
-                data: {
-                    page,
-                },
-                type: "get",
-                headers: {
-                    Authorization: "Bearer " + store.state.user.token,
-                },
-                success(resp) {
-                    records.value = resp.records;
-                    total_records = resp.records_count;
-                    udpate_pages();
-                },
 
+            return new Promise((resolve, reject) => {
+                getlist(page).then(res => {
+                    records.value = res.records;
+                    total_records = res.records_count;
+                    udpate_pages();
+              resolve()
+            }).catch(error => {
+              reject(error)
             })
+          })
         }
 
         pull_page(current_page);
@@ -126,8 +125,8 @@ export default {
         const open_record_content = recordId => {
             for (const record of records.value) {
                 if (record.record.id === recordId) {
-                    store.commit("updateIsRecord", true);
-                    store.commit("updateGame", {
+                    rstore.updateIsRecord(true);
+                    pkstore.updateGame( {
                         gamemap: stringTo2D(record.record.map),
                         a_id: record.record.aid,
                         a_sx: record.record.asx,
@@ -136,11 +135,11 @@ export default {
                         b_sx: record.record.bsx,
                         b_sy: record.record.bsy,
                     });
-                    store.commit("updateSteps", {
+                    rstore.updateSteps({
                         a_steps: record.record.asteps,
                         b_steps: record.record.bsteps,
                     });
-                    store.commit("updateRecordLoser", record.record.loser);
+                    rstore.updateRecordLoser(record.record.loser);
                     router.push({
                         name: "record_content",
                         params: {
@@ -156,7 +155,10 @@ export default {
             records,
             open_record_content,
             pages,
-            click_page
+            click_page,
+            pkStore,
+            userStore,
+            rstore
         }
     }
 }

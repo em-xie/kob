@@ -3,7 +3,7 @@
         <div class="row justify-content-md-center">
             <div class="col-3">
                 <!--submit.prevent阻止掉默认行为  -->
-                <form @submit.prevent="register">
+                <form @submit.prevent="UserRegister">
                     <div class="mb-3">
                         <label for="username" class="form-label">用户名</label>
                         <input v-model="username" type="text" class="form-control" id="username" placeholder="请输入用户名">
@@ -28,7 +28,7 @@
 import ContentField from '../../../components/ContentField'
 import { ref } from 'vue';
 import router from '../../../router/index'
-import $ from 'jquery'
+import {register} from '@/api/login'
 export default {
     components: {
         ContentField
@@ -39,32 +39,35 @@ export default {
         let confirmedPassword = ref('');
         let error_message = ref('');
 
-        const register = () => {
-            $.ajax({
-                url: "https://app3943.acapp.acwing.com.cn/api/user/account/register/",
-                type: "post",
-                data: {
+        const UserRegister = () => {
+            const data = {
                     username: username.value,
                     password: password.value,
                     confirmedPassword: confirmedPassword.value,
-                },
-                success(resp) {
-                    // 成功直接返回登录界面
-                    if (resp.error_message === "success") {
+                }
+          
+            return new Promise((resolve, reject) => {
+            register(data).then(res => {
+                 // 成功直接返回登录界面
+                 if (res.error_message === "success") {
                         router.push({name: "user_account_login"});
                     } else {
-                        error_message.value = resp.error_message;
+                        error_message.value = res.error_message;
                     }
-                },
-              });
-        }
-
+              resolve()
+            }).catch(error => {
+              reject(error)
+            })
+          })
+    }
+        
+        
         return {
             username,
             password,
             confirmedPassword,
             error_message,
-            register,
+            UserRegister,
         }
     }
 }

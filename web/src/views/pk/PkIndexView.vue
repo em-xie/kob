@@ -1,9 +1,9 @@
 <template>
-    <PlayGround v-if="$store.state.pk.status === 'playing'"/>
-    <MatchGround v-if="$store.state.pk.status === 'matching'" />
-    <ResultBoard v-if="$store.state.pk.loser !== 'none'"></ResultBoard>
-    <div class="user-color" v-if="$store.state.pk.status === 'playing' && parseInt($store.state.user.id) === parseInt($store.state.pk.a_id)">左下角</div>
-    <div class="user-color" v-if="$store.state.pk.status === 'playing' && parseInt($store.state.user.id) === parseInt($store.state.pk.b_id)">右上角</div>
+    <PlayGround v-if="status === 'playing'"/>
+    <MatchGround v-if="status === 'matching'" />
+    <ResultBoard v-if="loser !== 'none'"></ResultBoard>
+    <div class="user-color" v-if="status === 'playing' && parseInt(id) === parseInt(a_id)">左下角</div>
+    <div class="user-color" v-if="status === 'playing' && parseInt(id) === parseInt(b_id)">右上角</div>
 
   </template>
   
@@ -13,7 +13,10 @@
   import MatchGround from '@/components/MatchGround.vue'
   import ResultBoard from '@/components/ResultBoard.vue'
   import { onMounted,onUnmounted } from 'vue';
-  import { useStore } from 'vuex';
+  import { pkStore } from '@/store/modules/pk'
+  import {useUserStore} from '@/store/modules/user'
+  import {recordStore} from '@/store/modules/record'
+import { storeToRefs } from 'pinia'
   export default {
       components: {
           PlayGround,
@@ -22,25 +25,36 @@
       },
       setup(){
         
-        const store = useStore();
-        store.commit("updateLoser", "none");
-        store.commit("updateIsRecord", false);
+        const userStore = useUserStore()
+        const store = pkStore();
+        const rstore = recordStore();
+        const { status, loser ,a_id,b_id} = storeToRefs(store)
+       
+        const { id } = storeToRefs(userStore)
+        //console.log(id)
+        store.updateLoser("none");
+        rstore.updateIsRecord("false");
         //字符串中有${}表达式操作的话要用``，不能用引号
-        const socketUrl = `wss://app3943.acapp.acwing.com.cn/websocket/${store.state.user.token}/`;
+        const socketUrl = `ws://localhost:3000/kob/websocket/${userStore.token}/`;
 
         let socket = null;
         onMounted(() => { 
-            //调用updateOpponent函数 pk.js
-            store.commit("updateOpponent",{
+            store.updateOpponent({
                 username: "我的对手",
                 photo: "https://cdn.acwing.com/media/article/image/2022/08/09/1_1db2488f17-anonymous.png"
             })
+            //调用updateOpponent函数 pk.js
+            // store.commit("updateOpponent",{
+            //     username: "我的对手",
+            //     photo: "https://cdn.acwing.com/media/article/image/2022/08/09/1_1db2488f17-anonymous.png"
+            // })
 
             //当当前页面打开时调用
             socket = new WebSocket(socketUrl); //js自带的WebSocket()
             socket.onopen = () => { //连接成功时调用的函数
                 //console.log("connected!");
-                store.commit("updateSocket",socket);
+
+                store.updateSocket(socket);
             }
 
             socket.onmessage = msg => { //前端接收到信息时调用的函数
@@ -49,21 +63,27 @@
                 //console.log(data.gamemap)
                 if (data.event === "start-matching") { //这个这个start-matching是respA或respB返回的
                     //匹配成功,更新对手信息
-                    store.commit("updateOpponent",{
+                    store.updateOpponent({
                         username: data.opponent_username,
                         photo: data.opponent_photo,
-                    });
+                    })
+                    // store.commit("updateOpponent",{
+                    //     username: data.opponent_username,
+                    //     photo: data.opponent_photo,
+                    // });
                     setTimeout(()=>{
-                        store.commit("updateStatus", "playing");
+                        store.updateStatus("playing");
                     },2000); //延时函数，单位是毫秒 
-                    store.commit("updateGame", data.game);
+                    store.updateGame(data.game);
                 }else if(data.event ==="move"){
-                    const game = store.state.pk.gameObject;
+                    const game = store.gameObject;
+                    console.log(data.a_direction)
                     const [snake0, snake1] = game.Snakes;
                     snake0.set_direction(data.a_direction);
                     snake1.set_direction(data.b_direction);
                 }else if(data.event ==="result"){
-                    const game = store.state.pk.gameObject;
+                    const game = store.gameObject;
+                    //console.log(game)
                     const [snake0, snake1] = game.Snakes;
                    // console.log(data.loser);
                     if(data.loser ==="all" || data.loser==="A"){
@@ -72,7 +92,7 @@
                     if(data.loser ==="all" || data.loser==="B"){
                         snake1.status = "die";
                     }
-                    store.commit("updateLoser",data.loser);
+                    store.updateLoser(data.loser);
                 }
             }
 
@@ -83,8 +103,20 @@
 
         onUnmounted(() => { //当当前页面关闭时调用
             socket.close(); //卸载的时候断开连接
-            store.commit("updateStatus", "matching");
+            store.updateStatus("matching");
         });
+
+        return {
+            userStore,
+            pkStore,
+            rstore,
+            status,
+            loser,
+            a_id,
+            b_id,
+            id
+
+        }
       }
   }
   </script>

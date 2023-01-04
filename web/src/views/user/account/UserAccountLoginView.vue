@@ -1,5 +1,5 @@
 <template>
-    <ContentField v-if="!$store.state.user.pulling_info">
+    <ContentField v-if="!userStore.pulling_info">
         <div class="row justify-content-md-center">
             <div class="col-3">
                 <!--submit.prevent阻止掉默认行为  -->
@@ -27,7 +27,9 @@
 
 <script>
 import ContentField from '../../../components/ContentField.vue'
-import { useStore } from 'vuex';
+import {useUserStore} from '@/store/modules/user'
+//import { storeToRefs } from 'pinia'
+import {getToken} from '@/utils/auth'
 import { ref } from 'vue';
 import router from '../../../router/index'
 import $ from 'jquery'
@@ -36,31 +38,28 @@ export default {
         ContentField
     },
     setup(){
-        const store = useStore();
+        const userStore = useUserStore()
         let username = ref('');
         let password = ref('');
         let error_message = ref('');
 
-        const jwt_token = localStorage.getItem("jwt_token");
+        const jwt_token = getToken();
         if(jwt_token){
             // commit 调用user里面的mutations函数  同步
             //dispatch action 异步
-            store.commit("updateToken",jwt_token);
-            store.dispatch("getinfo",{
-                success() {
+
+            userStore.getInfo().then(() => {
                     router.push({ name: 'home' });
-                    store.commit("updatePullingInfo", false);
-                },
-                error() {
-                    store.commit("updatePullingInfo", false);
-                }
-            })
+                    userStore.updatePullingInfo(false);
+                        }).catch(()=>{
+                    userStore.updatePullingInfo(false);
+                })
         }else {
-            store.commit("updatePullingInfo", false);
+            userStore.updatePullingInfo(false);
         }
         const acwing_login = () => {
             $.ajax({
-                url: "https://app3943.acapp.acwing.com.cn/api/user/account/acwing/web/apply_code/",
+                url: "http://127.0.0.1:3000/kob/user/account/acwing/web/apply_code/",
                 type: "GET",
                 success: resp => {
                     if(resp.result === "success") {
@@ -74,23 +73,21 @@ export default {
         const login = () => {
             error_message.value = "";
             // dispatch 调用user.js
-            store.dispatch("login", {
-                username: username.value,
-                password: password.value,
-                success() {
-                  //登陆成功后获取用户信息
-                  store.dispatch("getinfo", {
-                        success() {
+            const userInfo = {username: username.value,
+                password: password.value,}
+            userStore.login(userInfo).then(() => {
+                        userStore.getInfo().then(() => {
+                            //console.log(userStore.is_login)
                             router.push({ name: 'home' });
-                            //console.log(store.state.user);
-                        }
-                    })
-                },
-                error(){
+                        }).catch(()=>{
+
+                        })
+                        
+             }).catch(() => {
                     error_message.value="用户名或密码错误";
-                    
-                }
             })
+
+            
         }
 
         return {
@@ -99,6 +96,7 @@ export default {
             error_message,
             login,
             acwing_login,
+            userStore
 
         }
     }

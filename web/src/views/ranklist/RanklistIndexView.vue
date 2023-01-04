@@ -36,16 +36,19 @@
 
 <script>
 import ContentField from '../../components/ContentField.vue'
-import { useStore } from 'vuex';
+import {useUserStore} from '@/store/modules/user'
+
 import { ref } from 'vue';
-import $ from 'jquery';
+import {getlist} from '@/api//rankList/rankList'
 
 export default {
     components: {
         ContentField
     },
     setup() {
-        const store = useStore();
+        // const pkStore = useStore('pk');
+        // const recordStore = useStore('record');
+        const userStore = useUserStore()
         let users = ref([]);
         let current_page = 1;
         let total_users = 0;
@@ -77,23 +80,20 @@ export default {
 
         const pull_page = page => {
             current_page = page;
-            $.ajax({
-                url: "https://app3943.acapp.acwing.com.cn/api/ranklist/getlist/",
-                data: {
-                    page,
-                },
-                type: "get",
-                headers: {
-                    Authorization: "Bearer " + store.state.user.token,
-                },
-                success(resp) {
-                    users.value = resp.users;
+            return new Promise((resolve, reject) => {
+                //console.log(page)
+                getlist(page).then(res => {
+                    users.value = res.users;
                     //console.log(users.value);
-                    total_users = resp.users_count;
+                    total_users = res.users_count;
                     udpate_pages();
-                },
-
+                    
+              resolve()
+            }).catch(error => {
+              reject(error)
             })
+          })
+           
         }
 
         pull_page(current_page);
@@ -101,7 +101,11 @@ export default {
         return {
             users,
             pages,
-            click_page
+            click_page,      
+            // pkStore,
+             userStore,
+            // recordStore
+        
         }
     }
 }

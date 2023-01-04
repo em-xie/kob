@@ -5,7 +5,7 @@
             <div class="col-3">
                 <div class="card" style="margin-top: 20px;">
                     <div class="card-body">
-                        <img :src="$store.state.user.photo" alt="" style="width: 100%;">
+                        <img :src="photo" alt="" style="width: 100%;">
                     </div>
                 </div>
             </div>
@@ -123,10 +123,11 @@
 
 <script>
 import { ref,reactive} from 'vue'
-import $ from 'jquery'
-import { useStore } from 'vuex'
+import {getlist,addBot,removeBot,updateBot} from '@/api/bot/bot'
+import {useUserStore} from '@/store/modules/user'
 import { Modal } from 'bootstrap/dist/js/bootstrap'
 import { VAceEditor } from 'vue3-ace-editor';
+import { storeToRefs } from 'pinia'
 import ace from 'ace-builds';
 
 export default {
@@ -138,7 +139,8 @@ export default {
         ace.config.set(
         "basePath", 
         "https://cdn.jsdelivr.net/npm/ace-builds@" + require('ace-builds').version + "/src-noconflict/")
-    const store = useStore();
+        const userStore = useUserStore()
+        const { photo } = storeToRefs(userStore)
     let bots = ref([]);
     const botadd = reactive({
         title: "",
@@ -147,36 +149,29 @@ export default {
         error_message: "",
     })
     const refresh_bots = () => {
-            $.ajax({
-                    url: "https://app3943.acapp.acwing.com.cn/api/user/bot/getlist/",
-                    type: "get",
-                    headers: {
-                        Authorization: "Bearer " + store.state.user.token,
-                    },
-                    success(resp) {
-                        bots.value = resp;
-                    }
-                })
-        }
+        return new Promise((resolve, reject) => {
+                getlist().then(res => {
+                bots.value = res;
+                resolve(res)
+            }).catch(error => {
+                reject(error)
+            })
+        })
+    }
         // 执行
         refresh_bots();
 
         //创建一个 bot
         const add_bot = () => {
-                    botadd.error_message = "";
-                    $.ajax({
-                        url: "https://app3943.acapp.acwing.com.cn/api/user/bot/add/",
-                        type: "post",
-                        data: {
-                            title: botadd.title,
-                            description: botadd.description,
-                            content: botadd.content,
-                        },
-                        headers: {
-                            Authorization: "Bearer " + store.state.user.token,
-                        },
-                        success(resp) {
-                            if (resp.error_message === "success") {
+            botadd.error_message = "";
+            const data = {
+                    title: botadd.title,
+                    description: botadd.description,
+                    content: botadd.content,
+                }
+            return new Promise((resolve, reject) => {
+            addBot(data).then(res => {
+                if (res.data.add.error_message === "success") {
                                 botadd.title = "";
                                 botadd.description = "";
                                 botadd.content = "";
@@ -184,55 +179,57 @@ export default {
                                 Modal.getInstance("#add-bot-btn").hide();
                                 refresh_bots();
                             } else {
-                                botadd.error_message = resp.error_message;
+                                botadd.error_message = res.error_message;
                             }
-                        }
-                    })
+              resolve()
+            }).catch(error => {
+              reject(error)
+            })
+          })
                 }
+
+                
          //删除一个 bot
          const remove_bot = (bot) => {
-            $.ajax({
-                url: "https://app3943.acapp.acwing.com.cn/api/user/bot/remove/",
-                type: "post",
-                data: {
-                    bot_id: bot.id,
-                },
-                headers: {
-                    Authorization: "Bearer " + store.state.user.token,
-                },
-                success(resp) {
-                   // console.log(resp);
-                    if (resp.error_message === "success") {
+            const data = {
+                bot_id: bot.id
+            }
+            return new Promise((resolve, reject) => {
+                removeBot(data).then(res => {
+                    if (res.data.remove.error_message === "success") {
                         refresh_bots();
                     }
-                }
+              resolve()
+            }).catch(error => {
+              reject(error)
             })
+          })
+        
         }
 
         const update_bot = (bot) => {
             botadd.error_message = "";
-            $.ajax({
-                url: "https://app3943.acapp.acwing.com.cn/api/user/bot/update/",
-                type: "post",
-                data: {
+            return new Promise((resolve, reject) => {
+                const data = {
                     bot_id: bot.id,
                     title: bot.title,
                     description: bot.description,
                     content: bot.content,
-                },
-                headers: {
-                    Authorization: "Bearer " + store.state.user.token,
-                },
-                success(resp) {
-                    if (resp.error_message === "success") {
+                }
+            updateBot(data).then(res => {
+                if (res.data.remove.error_message === "success") {
                          // 模态框关闭
                         Modal.getInstance('#update-bot-modal-' + bot.id).hide();
                         refresh_bots();
                     } else {
-                        botadd.error_message = resp.error_message;
+                        botadd.error_message = res.error_message;
                     }
-                }
+              resolve()
+            }).catch(error => {
+              reject(error)
             })
+          })
+
         }
 
 
@@ -248,6 +245,8 @@ export default {
             add_bot,
             remove_bot,
             update_bot,
+            userStore,
+            photo,
         };
     }
 }
