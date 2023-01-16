@@ -1,12 +1,13 @@
 package com.kob.backend.service.Imp.user.account.acwing;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kob.backend.mapper.UserMapper;
 import com.kob.backend.pojo.User;
 import com.kob.backend.service.Imp.user.account.acwing.utils.HttpClientUtil;
 import com.kob.backend.service.user.account.acwing.AcAppService;
-import com.kob.backend.utils.JwtUtil;
+//import com.kob.backend.utils.JwtUtil;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -92,7 +93,9 @@ public class AcAppServiceImpl implements AcAppService {
         List<User> users = userMapper.selectList(queryWrapper);
         if(!users.isEmpty()) {
             User user = users.get(0);
-            String jwt = JwtUtil.createJWT(user.getId().toString());
+            StpUtil.login(user.getId().toString());
+            String jwt;
+            jwt = StpUtil.getTokenValue();
             resp.put("result", "success");
             resp.put("jwt_token", jwt);
             return resp;
@@ -110,7 +113,9 @@ public class AcAppServiceImpl implements AcAppService {
         users = userMapper.selectList(queryWrapper);
         if(!users.isEmpty()) {
             User user = users.get(0);
-            String jwt = JwtUtil.createJWT(user.getId().toString());
+            StpUtil.login(user.getId().toString());
+            String jwt;
+            jwt = StpUtil.getTokenValue();
             resp.put("result", "success");
             resp.put("jwt_token", jwt);
             return resp;
@@ -137,7 +142,9 @@ public class AcAppServiceImpl implements AcAppService {
                 openid
         );
         userMapper.insert(user);
-        String jwt = JwtUtil.createJWT(user.getId().toString());
+        StpUtil.login(user.getId().toString());
+        String jwt;
+        jwt = StpUtil.getTokenValue();
         resp.put("result", "success");
         resp.put("jwt_token", jwt);
         return resp;

@@ -151,6 +151,7 @@ export default {
     const refresh_bots = () => {
         return new Promise((resolve, reject) => {
                 getlist().then(res => {
+                console.log(res)
                 bots.value = res;
                 resolve(res)
             }).catch(error => {

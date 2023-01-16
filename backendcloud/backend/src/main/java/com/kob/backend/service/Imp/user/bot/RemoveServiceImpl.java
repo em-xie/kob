@@ -1,10 +1,11 @@
 package com.kob.backend.service.Imp.user.bot;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.kob.backend.mapper.BotMapper;
 import com.kob.backend.pojo.Bot;
 import com.kob.backend.pojo.User;
 import com.kob.backend.service.user.bot.RemoveService;
-import com.kob.backend.utils.UserUtil;
+//import com.kob.backend.utils.UserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,10 @@ public class RemoveServiceImpl implements RemoveService {
     private BotMapper botMapper;
     @Override
     public Map<String, String> remove(Map<String, String> data) {
-        User user =  UserUtil.getUser();
+
+//        User user = UserUtil.getUser();
+        Integer loginId = StpUtil.getLoginIdAsInt();
+
         int bot_id =Integer.parseInt(data.get("bot_id"));
         Bot bot = botMapper.selectById(bot_id);
         Map<String, String> map = new HashMap<>();
@@ -30,7 +34,7 @@ public class RemoveServiceImpl implements RemoveService {
             return map;
         }
 
-        if (!bot.getUserId().equals(user.getId())) {
+        if (!bot.getUserId().equals(loginId)) {
             map.put("error_message", "没有权限删除该Bot");
             return map;
         }

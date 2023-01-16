@@ -1,11 +1,12 @@
 package com.kob.backend.service.Imp.user.account;
 
+        import cn.dev33.satoken.secure.BCrypt;
         import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
         import com.kob.backend.mapper.UserMapper;
         import com.kob.backend.pojo.User;
         import com.kob.backend.service.user.account.RegisterService;
         import org.springframework.beans.factory.annotation.Autowired;
-        import org.springframework.security.crypto.password.PasswordEncoder;
+//        import org.springframework.security.crypto.password.PasswordEncoder;
         import org.springframework.stereotype.Service;
 
         import java.util.HashMap;
@@ -21,8 +22,8 @@ public class RegisterServiceImpl implements RegisterService {
     @Autowired
     private UserMapper userMapper;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
     @Override
     public Map<String, String> register(String username, String password, String confirmedPassword) {
 
@@ -72,7 +73,7 @@ public class RegisterServiceImpl implements RegisterService {
             return map;
         }
 
-        String encodePassword = passwordEncoder.encode(password);
+        String encodePassword = BCrypt.hashpw(password);
         String photo = "https://cdn.acwing.com/media/user/profile/photo/245919_lg_d984357855.jpg";
         User user = new User(null,username,encodePassword,photo,1500,null);
         userMapper.insert(user);

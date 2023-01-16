@@ -8,5 +8,5 @@ package com.kob.backend.service.user.account;
  */
 public interface LoginService {
 
-    public  Map<String,String> getToken(String username, String password);
+    public String getToken(String username, String password);
 }

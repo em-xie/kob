@@ -29,7 +29,7 @@
 import ContentField from '../../../components/ContentField.vue'
 import {useUserStore} from '@/store/modules/user'
 //import { storeToRefs } from 'pinia'
-import {getToken} from '@/utils/auth'
+import {setToken,getToken} from '@/utils/auth'
 import { ref } from 'vue';
 import router from '../../../router/index'
 import $ from 'jquery'
@@ -44,10 +44,12 @@ export default {
         let error_message = ref('');
 
         const jwt_token = getToken();
+        
+        //console.log(jwt_token)
         if(jwt_token){
             // commit 调用user里面的mutations函数  同步
             //dispatch action 异步
-
+            setToken(jwt_token);
             userStore.getInfo().then(() => {
                     router.push({ name: 'home' });
                     userStore.updatePullingInfo(false);

@@ -10,6 +10,7 @@
         <module>backend</module>
         <module>botrunningsystem</module>
         <module>xie-common</module>
+        <module>xie-oss</module>
     </modules>
     <name>backendcloud</name>
     <description>backendcloud</description>
@@ -34,6 +35,10 @@
         <spring-boot.mybatis>2.2.2</spring-boot.mybatis>
         <redisson.version>3.17.5</redisson.version>
         <lock4j.version>2.2.2</lock4j.version>
+        <tlog.version>1.4.3</tlog.version>
+
+        <!-- OSS 配置 -->
+        <aws-java-sdk-s3.version>1.12.264</aws-java-sdk-s3.version>
     </properties>
 
     <!-- 依赖声明 -->
@@ -58,7 +63,11 @@
                 <scope>import</scope>
             </dependency>
 
-
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-s3</artifactId>
+                <version>${aws-java-sdk-s3.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.springdoc</groupId>
@@ -164,8 +173,35 @@
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
+            <!-- 通用工具-->
+            <dependency>
+                <groupId>com.xie.oss</groupId>
+                <artifactId>xie-oss</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
 
+
+
+            <dependency>
+                <groupId>com.yomahub</groupId>
+                <artifactId>tlog-web-spring-boot-starter</artifactId>
+                <version>${tlog.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>log4j</artifactId>
+                        <groupId>log4j</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>dom4j</artifactId>
+                        <groupId>dom4j</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-beanutils</artifactId>
+                        <groupId>commons-beanutils</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
 
         </dependencies>

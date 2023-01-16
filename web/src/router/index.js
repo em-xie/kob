@@ -1,21 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PkIndexView from '../views/pk/PkIndexView'
 import RanklistIndexView from '../views/ranklist/RanklistIndexView'
+import ExternIndexView from '../views/extern/ExternIndexView'
 import RecordIndexView from '../views/record/RecordIndexView'
 import RecordContentView from '../views/record/RecordContentView'
 import UserBotIndexView from '../views/user/bot/UserBotIndexView'
 import NotFound from '../views/error/NotFound'
+import PictureIndexView from '../views/picture/PictureIndexView.vue'
+import PictureDownload from '../views/picture/PictureDownload.vue'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegister from '../views/user/account/UserAccountRegisterView.vue'
 import UserAccountAcWingWebReceiveCodeView from '../views/user/account/UserAccountAcWingWebReceiveCodeView'
 import { useUserStore } from '@/store/modules/user'
-import { storeToRefs } from 'pinia'
 const routes = [  
   {
     // 重定向到pk页面
     path: "/",
     name: "home",
-    redirect: "/pk/",
+    redirect: "/extern/",
     meta: {
       requestAuth: true,
     }
@@ -48,6 +50,14 @@ const routes = [
     path: "/ranklist/",
     name: "ranklist_index",
     component: RanklistIndexView,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/extern/",
+    name: "extern_index",
+    component: ExternIndexView,
     meta: {
       requestAuth: true,
     }
@@ -98,7 +108,24 @@ const routes = [
     meta: {
       requestAuth: false,
     }
-  }
+  },
+  {
+    path: "/picture/",
+    name: "picture_index",
+    component: PictureIndexView,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/picturedownload/",
+    name: "picturedownload_index",
+    component: PictureDownload,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  
 ]
 
 
@@ -112,9 +139,9 @@ const router = createRouter({
 // next的表示将页面要不要执行下一步操作，写之前首先要记录每一个未授权界面
 router.beforeEach((to, from, next) => {
   const store = useUserStore()
-  const { is_login} = storeToRefs(store)
- // console.log(is_login)
-  if (to.meta.requestAuth && !is_login) {
+  
+  //console.log(store.is_login)
+  if (to.meta.requestAuth && !store.is_login) {
     next({name: "user_account_login"})
   } else {
     next();

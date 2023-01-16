@@ -1,17 +1,17 @@
 package com.kob.backend;
 
+import cn.dev33.satoken.stp.StpUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
+
 
 @SpringBootTest
 class BackendApplicationTests {
 
     @Test
     void contextLoads() {
-        PasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-        System.out.println(bCryptPasswordEncoder.encode("123456"));
+
+        System.out.println(StpUtil.getTokenValue());
     }
 
 }

@@ -1,8 +1,8 @@
 package com.kob.backend.consumer;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.kob.backend.consumer.utils.Game;
-import com.kob.backend.consumer.utils.JwtAuthentication;
 import com.kob.backend.mapper.BotMapper;
 import com.kob.backend.mapper.RecordMapper;
 import com.kob.backend.mapper.UserMapper;
@@ -63,7 +63,11 @@ public class WebSocketServer {
     public void onOpen(Session session, @PathParam("token") String token) throws IOException {
         // 建立连接
         this.session = session;
-        Integer userId = JwtAuthentication.getUserId(token);
+
+        //Integer userId = JwtAuthentication.getUserId(token);
+        //token = StpUtil.getTokenValue();
+        Integer userId = Integer.valueOf(String.valueOf(StpUtil.getLoginIdByToken(token)));
+
         this.user = userMapper.selectById(userId);
 
         if (this.user != null) {

@@ -15,6 +15,13 @@ server:
 spring:
   profiles:
     active: @profiles.active@
+  # 文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size: 10MB
+      # 设置总上传的文件大小
+      max-request-size: 20MB
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     serialization:
@@ -68,6 +75,81 @@ mybatis-plus:
       # 字段验证策略之 select,在 select 的时候的字段验证策略既 wrapper 根据内部 entity 生成的 where 条件
       where-strategy: NOT_NULL
 
+# 日志配置
+logging:
+  level:
+    com.ruoyi: @logging.level@
+    org.springframework: warn
+  config: classpath:logback.xml
+
+
+# Sa-Token配置
+sa-token:
+  # token名称 (同时也是cookie名称)
+  token-name: Authorization
+  # token有效期 设为一天 (必定过期) 单位: 秒
+  timeout: 86400
+  # token临时有效期 (指定时间无操作就过期) 单位: 秒
+  activity-timeout: 1800
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # 是否尝试从header里读取token
+  is-read-head: true
+  # 是否尝试从cookie里读取token
+  is-read-cookie: false
+  # token前缀
+  token-prefix: "Bearer"
+  # jwt秘钥
+  jwt-secret-key: abcdefghijklmnopqrstuvwxyz
+  # 是否输出操作日志
+  is-log: true
+
+
+# security配置
+security:
+  # 排除路径
+  excludes:
+    # 静态资源
+    - /*.html
+    - /**/*.html
+    - /**/*.css
+    - /**/*.js
+    # swagger 文档配置
+    - /favicon.ico
+    - /*/api-docs
+    - /*/api-docs/**
+    # druid 监控配置
+    - /druid/**
+    # actuator 监控配置
+    - /actuator
+    - /actuator/**
+    #本地文件路径
+    #    - /profile/**
+    #免检接口
+    - /core/nocheck/**
+    - /user/account/token/
+    - /user/account/register/
+    - /pk/start/game/
+    - /pk/receive/bot/move/
+    - /websocket/**
+
+
+--- # redisson 缓存配置
+redisson:
+  cacheGroup:
+    # 用例: @Cacheable(cacheNames="groupId", key="#XXX") 方可使用缓存组配置
+    - groupId: redissonCacheMap
+      # 组过期时间(脚本监控)
+      ttl: 60000
+      # 组最大空闲时间(脚本监控)
+      maxIdleTime: 60000
+      # 组最大长度
+      maxSize: 0
+    - groupId: testCache
+      ttl: 1000
+      maxIdleTime: 500
 #spring.datasource.username=root
 #spring.datasource.password=123456
 #spring.datasource.url=jdbc:mysql://localhost:3306/kob?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8

@@ -1,0 +1,570 @@
+2023-01-14 13:34:42 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 12132 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 13:34:42 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 13:34:42 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 13:34:50 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 13:34:51 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 13:34:51 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 13:34:55 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:34:55 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:34:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:34:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 13:34:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 13:34:57 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 13:34:58 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 13:34:58 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 13:35:09 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:35:09 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 28.838 seconds (JVM running for 42.625)
+2023-01-14 13:35:10 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 13:35:10 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 13:35:10 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 13:35:10 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 13:35:10 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 13:35:10 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:35:10 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 13:35:12 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 13:39:39 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 13:39:39 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 13:39:51 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 11844 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 13:39:51 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 13:39:51 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 13:39:58 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 13:39:59 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 13:39:59 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 13:40:03 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:40:03 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:40:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:40:04 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 13:40:04 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 13:40:05 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 13:40:05 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 13:40:06 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 13:40:14 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:40:15 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 25.365 seconds (JVM running for 30.832)
+2023-01-14 13:40:15 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 13:40:15 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 13:40:15 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 13:40:15 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 13:40:15 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 13:40:15 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:40:15 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 13:40:17 [RMI TCP Connection(9)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 13:41:34 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 13:41:34 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 13:41:45 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 13:41:45 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 1316 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 13:41:45 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 13:41:50 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 13:41:51 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 13:41:51 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 13:41:54 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:41:54 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:41:55 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:41:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 13:41:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 13:41:56 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 13:41:56 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 13:41:56 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 13:42:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:42:03 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 19.626 seconds (JVM running for 23.862)
+2023-01-14 13:42:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 13:42:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 13:42:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 13:42:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 13:42:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 13:42:04 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:42:04 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 13:42:05 [RMI TCP Connection(2)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 13:46:16 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 13:46:16 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 13:46:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 13:46:24 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 5968 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 13:46:24 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 13:46:31 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 13:46:31 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 13:46:32 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 13:46:35 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:46:35 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:46:37 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:46:37 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 13:46:37 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 13:46:38 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 13:46:38 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 13:46:38 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 13:46:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:46:47 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 24.566 seconds (JVM running for 29.042)
+2023-01-14 13:46:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 13:46:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 13:46:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 13:46:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 13:46:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 13:46:47 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:46:47 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 13:46:49 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 13:48:47 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 13:48:47 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 13:49:00 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 32 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 13:49:00 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 13:49:00 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 13:49:06 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 13:49:07 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 13:49:07 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 13:49:11 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:49:11 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:49:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:49:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 13:49:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 13:49:13 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 13:49:13 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 13:49:14 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 13:49:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:49:22 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 24.164 seconds (JVM running for 28.984)
+2023-01-14 13:49:23 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 13:49:23 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 13:49:23 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 13:49:23 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 13:49:23 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 13:49:23 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:49:23 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 13:49:23 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 13:53:43 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 13:53:43 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 13:53:54 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 13:53:54 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 9112 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 13:53:54 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 13:54:00 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 13:54:01 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 13:54:02 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 13:54:05 [redisson-netty-2-7] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:54:06 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 13:54:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:54:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 13:54:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 13:54:07 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 13:54:08 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 13:54:08 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 13:54:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 13:54:17 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 25.976 seconds (JVM running for 30.051)
+2023-01-14 13:54:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 13:54:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 13:54:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 13:54:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 13:54:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 13:54:18 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:54:18 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 13:54:19 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 14:13:57 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 14:13:57 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 14:14:14 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 14:14:14 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 2172 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 14:14:14 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 14:14:20 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 14:14:21 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 14:14:21 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 14:14:25 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:14:25 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:14:26 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:14:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 14:14:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 14:14:26 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 14:14:27 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 14:14:27 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 14:14:35 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:14:36 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 23.441 seconds (JVM running for 27.614)
+2023-01-14 14:14:36 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 14:14:36 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 14:14:36 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 14:14:36 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 14:14:36 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 14:14:36 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:14:36 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 14:14:38 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 14:30:13 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 14:30:13 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 14:30:24 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 6888 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 14:30:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 14:30:24 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 14:30:31 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 14:30:32 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 14:30:32 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 14:30:35 [redisson-netty-2-7] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:30:35 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:30:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:30:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 14:30:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 14:30:37 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 14:30:37 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 14:30:38 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 14:30:46 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:30:46 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 23.882 seconds (JVM running for 27.913)
+2023-01-14 14:30:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 14:30:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 14:30:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 14:30:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 14:30:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 14:30:47 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:30:47 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 14:30:48 [RMI TCP Connection(7)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 14:37:07 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 14:37:07 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 14:37:19 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 14:37:19 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 14240 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 14:37:19 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 14:37:25 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 14:37:26 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 14:37:26 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 14:37:30 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:37:30 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:37:31 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:37:31 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 14:37:31 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 14:37:31 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 14:37:32 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 14:37:32 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 14:37:41 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:37:41 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 23.91 seconds (JVM running for 28.58)
+2023-01-14 14:37:42 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 14:37:42 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 14:37:42 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 14:37:42 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 14:37:42 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 14:37:42 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:37:42 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 14:37:43 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 14:41:33 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 14:41:33 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 14:41:43 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 14:41:43 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 3892 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 14:41:43 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 14:41:50 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 14:41:50 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 14:41:51 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 14:41:54 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:41:54 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:41:56 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:41:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 14:41:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 14:41:56 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 14:41:56 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 14:41:57 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 14:42:06 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:42:06 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 24.246 seconds (JVM running for 28.007)
+2023-01-14 14:42:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 14:42:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 14:42:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 14:42:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 14:42:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 14:42:07 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:42:07 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 14:42:07 [RMI TCP Connection(2)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 14:57:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 14:57:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 14:57:52 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 14:57:52 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 14116 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 14:57:52 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 14:57:57 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 14:57:58 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 14:57:58 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 14:58:02 [redisson-netty-2-7] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:58:02 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:58:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:58:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 14:58:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 14:58:03 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 14:58:04 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 14:58:04 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 14:58:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:58:12 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 21.844 seconds (JVM running for 26.532)
+2023-01-14 14:58:13 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 14:58:13 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 14:58:13 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 14:58:13 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 14:58:13 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 14:58:13 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:58:13 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 14:58:15 [RMI TCP Connection(5)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 14:59:25 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 14:59:25 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 14:59:35 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 8024 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 14:59:35 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 14:59:35 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 14:59:41 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 14:59:42 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 14:59:42 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 14:59:46 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:59:46 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 14:59:47 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:59:47 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 14:59:47 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 14:59:47 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 14:59:48 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 14:59:48 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 14:59:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 14:59:57 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 23.239 seconds (JVM running for 27.237)
+2023-01-14 14:59:58 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 14:59:58 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 14:59:58 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 14:59:58 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 14:59:58 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 14:59:58 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:59:58 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 14:59:58 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 15:02:12 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 15:02:12 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 15:02:22 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 15:02:22 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 15344 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 15:02:22 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 15:02:29 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 15:02:29 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 15:02:30 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 15:02:33 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 15:02:33 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 15:02:35 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 15:02:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 15:02:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 15:02:35 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 15:02:36 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 15:02:36 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 15:02:45 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 15:02:45 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 24.276 seconds (JVM running for 28.152)
+2023-01-14 15:02:46 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 15:02:46 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 15:02:46 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 15:02:46 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 15:02:46 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 15:02:46 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 15:02:46 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 15:02:47 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 15:55:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 15:55:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 15:55:50 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 15:55:50 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 3520 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 15:55:50 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 15:55:54 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 15:55:55 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 15:55:55 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 15:55:57 [redisson-netty-2-7] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 15:55:57 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 15:55:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 15:55:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 15:55:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 15:55:59 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 15:55:59 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 15:55:59 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 15:56:05 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 15:56:05 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 16.785 seconds (JVM running for 20.343)
+2023-01-14 15:56:06 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 15:56:06 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 15:56:06 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 15:56:06 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 15:56:06 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 15:56:06 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 15:56:06 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 15:56:08 [RMI TCP Connection(5)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 15:58:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 15:58:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 15:58:49 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 15:58:49 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 16504 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 15:58:49 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 15:58:53 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 15:58:54 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 15:58:54 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 15:58:57 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 15:58:57 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 15:58:58 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 15:58:58 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 15:58:58 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 15:58:58 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 15:58:58 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 15:58:58 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 15:59:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 15:59:04 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 17.143 seconds (JVM running for 20.906)
+2023-01-14 15:59:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 15:59:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 15:59:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 15:59:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 15:59:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 15:59:05 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 15:59:05 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 15:59:06 [RMI TCP Connection(5)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 16:24:38 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 16:24:38 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 16:24:47 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 15464 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 16:24:47 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 16:24:47 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 16:24:52 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 16:24:53 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 16:24:53 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 16:24:56 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 16:24:56 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 16:24:57 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 16:24:57 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 16:24:57 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 16:24:57 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 16:24:58 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 16:24:58 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 16:25:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 16:25:04 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 18.26 seconds (JVM running for 21.924)
+2023-01-14 16:25:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 16:25:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 16:25:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 16:25:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 16:25:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 16:25:05 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 16:25:05 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 16:25:07 [RMI TCP Connection(7)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 16:25:52 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 16:25:52 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 16:26:04 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 16:26:04 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 1848 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 16:26:04 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 16:26:09 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 16:26:09 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 16:26:10 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 16:26:12 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 16:26:12 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 16:26:13 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 16:26:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 16:26:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 16:26:14 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 16:26:14 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 16:26:14 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 16:26:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 16:26:20 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 16.838 seconds (JVM running for 23.777)
+2023-01-14 16:26:21 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 16:26:21 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 16:26:21 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 16:26:21 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 16:26:21 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 16:26:21 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 16:26:21 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 16:26:22 [RMI TCP Connection(4)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 16:36:37 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 16:36:37 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 16:36:48 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 4448 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 16:36:48 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 16:36:48 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 16:36:54 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 16:36:54 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 16:36:55 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 16:36:58 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 16:36:58 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 16:36:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 16:36:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 16:36:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 16:36:59 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 16:36:59 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 16:37:00 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 16:37:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 16:37:07 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 20.923 seconds (JVM running for 25.069)
+2023-01-14 16:37:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 16:37:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 16:37:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 16:37:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 16:37:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 16:37:07 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 16:37:07 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 16:37:08 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 17:40:32 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 17:40:32 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 17:40:42 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 17:40:42 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 12984 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 17:40:42 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 17:40:47 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 17:40:48 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 17:40:48 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 17:40:51 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 17:40:51 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 17:40:52 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 17:40:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 17:40:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 17:40:52 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 17:40:52 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 17:40:53 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 17:40:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 17:40:59 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 18.443 seconds (JVM running for 22.511)
+2023-01-14 17:41:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 17:41:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 17:41:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 17:41:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 17:41:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 17:41:00 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 17:41:00 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 17:41:00 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 17:57:18 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 17:57:18 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 17:57:41 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 17472 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 17:57:41 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 17:57:41 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 17:57:47 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 17:57:48 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 17:57:48 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 17:57:50 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 17:57:50 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 17:57:52 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 17:57:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 17:57:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 17:57:53 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 17:57:53 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 17:57:53 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 17:57:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 17:57:59 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 19.967 seconds (JVM running for 24.816)
+2023-01-14 17:58:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 17:58:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 17:58:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 17:58:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 17:58:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 17:58:00 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 17:58:00 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 17:58:01 [RMI TCP Connection(4)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 17:59:17 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 17:59:17 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 17:59:26 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 17840 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 17:59:26 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 17:59:26 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 17:59:31 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 17:59:32 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 17:59:32 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 17:59:35 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 17:59:35 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 17:59:36 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 17:59:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 17:59:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 17:59:36 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 17:59:36 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 17:59:37 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 17:59:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 17:59:43 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 18.076 seconds (JVM running for 21.712)
+2023-01-14 17:59:43 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 17:59:43 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 17:59:43 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 17:59:43 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 17:59:43 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 17:59:44 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 17:59:44 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 17:59:46 [RMI TCP Connection(8)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-14 18:13:02 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2023-01-14 18:13:02 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2023-01-14 18:13:12 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.3.Final
+2023-01-14 18:13:12 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 15976 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-01-14 18:13:12 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-01-14 18:13:16 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-01-14 18:13:17 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-01-14 18:13:17 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-01-14 18:13:20 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 18:13:20 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-01-14 18:13:21 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-01-14 18:13:21 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-01-14 18:13:21 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-14 18:13:22 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-01-14 18:13:22 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2023-01-14 18:13:22 [main] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2023-01-14 18:13:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-01-14 18:13:29 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 18.734 seconds (JVM running for 22.719)
+2023-01-14 18:13:29 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-01-14 18:13:29 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-01-14 18:13:29 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-01-14 18:13:29 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-01-14 18:13:29 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-01-14 18:13:29 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 18:13:30 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-01-14 18:13:31 [RMI TCP Connection(6)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'

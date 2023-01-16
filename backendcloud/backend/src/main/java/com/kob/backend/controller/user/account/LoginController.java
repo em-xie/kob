@@ -31,7 +31,7 @@ public class LoginController {
     public R<Map<String, Object>> getToken(@Validated @RequestBody LoginBody loginBody){
         Map<String, Object> ajax = new HashMap<>();
         // 生成令牌
-        Map<String, String> token = loginService.getToken(loginBody.getUsername(), loginBody.getPassword());
+        String token = loginService.getToken(loginBody.getUsername(), loginBody.getPassword());
         ajax.put(Constants.TOKEN, token);
         return R.ok(ajax);
     }

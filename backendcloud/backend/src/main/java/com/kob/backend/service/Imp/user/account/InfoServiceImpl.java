@@ -1,10 +1,13 @@
 package com.kob.backend.service.Imp.user.account;
 
+import cn.dev33.satoken.stp.StpUtil;
+import com.kob.backend.mapper.UserMapper;
 import com.kob.backend.pojo.User;
-import com.kob.backend.service.Imp.utils.UserDetailsImpl;
+
 import com.kob.backend.service.user.account.InfoService;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -14,18 +17,21 @@ import java.util.Map;
  * @作者：xie
  * @时间：2022/11/7 14:56
  */
-
+@Slf4j
 @Service
 public class InfoServiceImpl implements InfoService {
+
+    @Autowired
+    private UserMapper userMapper;
+
 
 
     @Override
     public Map<String, String> getInfo() {
-        UsernamePasswordAuthenticationToken authentication =
-                (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
 
-        UserDetailsImpl loginUser = (UserDetailsImpl) authentication.getPrincipal();
-        User user = loginUser.getUser();
+        Integer loginId = StpUtil.getLoginIdAsInt();
+        //log.info(String.valueOf(StpUtil.getLoginIdAsInt()));
+        User user = userMapper.selectById(loginId);
         HashMap<String, String> map = new HashMap<>();
         map.put("error_message", "success");
         map.put("id", user.getId().toString());

@@ -25,9 +25,9 @@ export const useUserStore = defineStore(
     //         state.is_login = user.is_login;
             
     //     },
-    //     // updateToken(state, token) {
-    //     //     state.token = token;
-    //     // },
+    // updateToken(state, token) {
+    //      state.token = token;
+    // },
     //     updatePullingInfo(state, pulling_info) {
     //         state.pulling_info = pulling_info;
     //     },
@@ -40,6 +40,9 @@ export const useUserStore = defineStore(
     //     },
     // },
     actions: {
+       updateToken( token) {
+        this.token = token;
+        },
        updateUser(user) {
             this.id = user.id;
             this.username = user.username;
@@ -62,8 +65,8 @@ export const useUserStore = defineStore(
           const password = userInfo.password
           return new Promise((resolve, reject) => {
             login(username, password).then(res => {
-              setToken(res.data.token.token)
-              this.token = res.data.token.token
+              setToken(res.data.token)
+              this.token = res.data.token
               resolve()
             }).catch(error => {
               reject(error)

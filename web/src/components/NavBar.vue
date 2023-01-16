@@ -17,6 +17,9 @@
         <li class="nav-item">
           <router-link :class="route_name == 'ranklist_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'ranklist_index'}">排行榜</router-link>
         </li>
+        <li class="nav-item">
+          <router-link :class="route_name == 'extern_index' ? 'nav-link active' : 'nav-link'" :to="{name: 'extern_index'}">扩展</router-link>
+        </li>
       </ul>
       <ul class="navbar-nav" v-if="is_login">
         <li class="nav-item dropdown">
@@ -63,8 +66,6 @@ import { useRoute } from 'vue-router'
 import { computed } from 'vue'
 import {useUserStore} from '@/store/modules/user'
 import { storeToRefs } from 'pinia'
-import {getToken} from '@/utils/auth'
-import router from '@/router/index'
 export default {
     setup() {
         const userStore = useUserStore()
@@ -72,20 +73,21 @@ export default {
         const { logOut } = userStore
         const route = useRoute();
         let route_name = computed(() => route.name)
-        const jwt_token = getToken();
-        if(jwt_token){
-            // commit 调用user里面的mutations函数  同步
-            //dispatch action 异步
+        // const jwt_token = getToken();
+        // if(jwt_token){
+        //     // commit 调用user里面的mutations函数  同步
+        //     //dispatch action 异步
 
-            userStore.getInfo().then(() => {
-                    router.push({ name: 'home' });
-                    userStore.updatePullingInfo(false);
-                        }).catch(()=>{
-                    userStore.updatePullingInfo(false);
-                })
-        }else {
-            userStore.updatePullingInfo(false);
-        }
+        //     userStore.getInfo().then(() => {
+        //             router.push({ name: 'home' });
+        //             userStore.updatePullingInfo(false);
+        //                 }).catch(()=>{
+        //             userStore.updatePullingInfo(false);
+        //         })
+        // }else {
+        //     userStore.updatePullingInfo(false);
+        // }
+
         const logout = () => {
             logOut();
         }

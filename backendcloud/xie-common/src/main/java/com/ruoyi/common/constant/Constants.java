@@ -63,6 +63,11 @@ public interface Constants {
     Integer CAPTCHA_EXPIRATION = 2;
 
     /**
+     * record 有效期（分钟）
+     */
+    Integer RECORD_EXPIRATION = 30;
+
+    /**
      * 令牌
      */
     String TOKEN = "token";

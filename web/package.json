@@ -4,15 +4,15 @@
   "private": true,
   "scripts": {
     "lint": "vue-cli-service lint",
-    "dev":"vue-cli-service serve --mode development",
+    "dev": "vue-cli-service serve --mode development",
     "build:prod": "vue-cli-service --mode production"
-
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.2",
     "core-js": "^3.8.3",
+    "file-saver": "^2.0.5",
     "jquery": "^3.6.1",
     "js-cookie": "^3.0.1",
     "pinia": "^2.0.28",

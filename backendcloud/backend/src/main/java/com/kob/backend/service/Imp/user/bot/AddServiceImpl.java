@@ -1,11 +1,12 @@
 package com.kob.backend.service.Imp.user.bot;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kob.backend.mapper.BotMapper;
 import com.kob.backend.pojo.Bot;
 import com.kob.backend.pojo.User;
 import com.kob.backend.service.user.bot.AddService;
-import com.kob.backend.utils.UserUtil;
+//import com.kob.backend.utils.UserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +25,9 @@ public class AddServiceImpl implements AddService {
     private BotMapper botMapper;
     @Override
     public Map<String, String> add(Map<String, String> data) {
-        User user =  UserUtil.getUser();
+        //        User user = UserUtil.getUser();
+        Integer loginId = StpUtil.getLoginIdAsInt();
+
         String title = data.get("title");
         String description = data.get("description");
         String content = data.get("content");
@@ -59,14 +62,14 @@ public class AddServiceImpl implements AddService {
         }
 
         QueryWrapper<Bot> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_id", user.getId());
+        queryWrapper.eq("user_id", loginId);
         if(botMapper.selectCount(queryWrapper) >= 10) {
             map.put("error_message", "每个用户最多只能创建10个Bot！");
             return map;
         }
 
         Date now = new Date();
-        Bot bot = new Bot(null, user.getId(), title, description, content, now, now);
+        Bot bot = new Bot(null, loginId, title, description, content, now, now);
 
 
         botMapper.insert(bot);

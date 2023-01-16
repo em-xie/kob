@@ -1,10 +1,11 @@
 package com.kob.backend.service.Imp.user.bot;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.kob.backend.mapper.BotMapper;
 import com.kob.backend.pojo.Bot;
 import com.kob.backend.pojo.User;
 import com.kob.backend.service.user.bot.UpdateService;
-import com.kob.backend.utils.UserUtil;
+//import com.kob.backend.utils.UserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,9 @@ public class UpdateServiceImpl implements UpdateService {
     private BotMapper botMapper;
     @Override
     public Map<String, String> update(Map<String, String> data) {
-        User user =UserUtil.getUser();
+
+        Integer loginId = StpUtil.getLoginIdAsInt();
+
         int bot_id = Integer.parseInt(data.get("bot_id"));
         String title = data.get("title");
         String description = data.get("description");
@@ -62,14 +65,14 @@ public class UpdateServiceImpl implements UpdateService {
             return map;
         }
 
-        if (!bot.getUserId().equals(user.getId())) {
+        if (!bot.getUserId().equals(loginId)) {
             map.put("error_message", "没有权限修改该Bot");
             return map;
         }
 
         Bot new_bot = new Bot(
                 bot.getId(),
-                user.getId(),
+                loginId,
                 title,
                 description,
                 content,

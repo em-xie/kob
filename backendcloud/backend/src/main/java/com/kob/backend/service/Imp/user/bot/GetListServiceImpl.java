@@ -1,11 +1,12 @@
 package com.kob.backend.service.Imp.user.bot;
 
+import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kob.backend.mapper.BotMapper;
 import com.kob.backend.pojo.Bot;
 import com.kob.backend.pojo.User;
 import com.kob.backend.service.user.bot.GetListService;
-import com.kob.backend.utils.UserUtil;
+//import com.kob.backend.utils.UserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,9 +22,9 @@ public class GetListServiceImpl implements GetListService {
     private BotMapper botMapper;
     @Override
     public List<Bot> getList() {
-        User user = UserUtil.getUser();
+        Integer loginId = StpUtil.getLoginIdAsInt();
         QueryWrapper<Bot> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_id",user.getId());
+        queryWrapper.eq("user_id",loginId);
 
         return botMapper.selectList(queryWrapper);
     }

@@ -97,8 +97,9 @@ export default {
 
             return new Promise((resolve, reject) => {
                 getlist(page).then(res => {
+                    console.log(res)
                     records.value = res.records;
-                    total_records = res.records_count;
+                    total_records = res.records.records_count;
                     udpate_pages();
               resolve()
             }).catch(error => {
