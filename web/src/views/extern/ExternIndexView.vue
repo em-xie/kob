@@ -54,6 +54,10 @@
       <div class="col-4 themed-grid-col">
           <button type="button" class="btn btn-outline-secondary" @click="pictureDownload">图片下载</button>
       </div>
+
+      <div class="col-4 themed-grid-col">
+          <button type="button" class="btn btn-outline-secondary" @click="mailSend">邮件发送</button>
+      </div>
     </div>
 
 
@@ -77,6 +81,10 @@ export default {
           router.push({ name: 'picture_index' });
       }
 
+      const mailSend = () => {
+          router.push({ name: 'mail_index' });
+      }
+
       const pictureDownload = () => {
           router.push({ name: 'picturedownload_index' });
       }
@@ -89,7 +97,8 @@ export default {
            isclick,
            pictureUpload,
            pictureDownload,
-           wechat
+           wechat,
+           mailSend
         }
     }
 }

@@ -128,7 +128,6 @@ security:
     #本地文件路径
     #    - /profile/**
     #免检接口
-    - /core/nocheck/**
     - /user/account/token/
     - /user/account/register/
     - /pk/start/game/

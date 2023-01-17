@@ -8,6 +8,7 @@ import UserBotIndexView from '../views/user/bot/UserBotIndexView'
 import NotFound from '../views/error/NotFound'
 import PictureIndexView from '../views/picture/PictureIndexView.vue'
 import PictureDownload from '../views/picture/PictureDownload.vue'
+import MailIndexView from '../views/mail/MailIndexView.vue'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegister from '../views/user/account/UserAccountRegisterView.vue'
 import UserAccountAcWingWebReceiveCodeView from '../views/user/account/UserAccountAcWingWebReceiveCodeView'
@@ -121,6 +122,14 @@ const routes = [
     path: "/picturedownload/",
     name: "picturedownload_index",
     component: PictureDownload,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/mail/",
+    name: "mail_index",
+    component: MailIndexView,
     meta: {
       requestAuth: true,
     }

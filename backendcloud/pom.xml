@@ -36,7 +36,9 @@
         <redisson.version>3.17.5</redisson.version>
         <lock4j.version>2.2.2</lock4j.version>
         <tlog.version>1.4.3</tlog.version>
+        <p6spy.version>3.9.1</p6spy.version>
 
+        <dynamic-ds.version>3.5.1</dynamic-ds.version>
         <!-- OSS 配置 -->
         <aws-java-sdk-s3.version>1.12.264</aws-java-sdk-s3.version>
     </properties>
@@ -54,6 +56,14 @@
                 <scope>import</scope>
             </dependency>
 
+
+            <!-- dynamic-datasource 多数据源-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic-ds.version}</version>
+            </dependency>
+
             <!-- hutool 的依赖配置-->
             <dependency>
                 <groupId>cn.hutool</groupId>
@@ -61,6 +71,13 @@
                 <version>${hutool.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- sql性能分析插件 -->
+            <dependency>
+                <groupId>p6spy</groupId>
+                <artifactId>p6spy</artifactId>
+                <version>${p6spy.version}</version>
             </dependency>
 
             <dependency>
