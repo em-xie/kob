@@ -1,8 +1,8 @@
 package com.kob.backend.config.properties;
 
 import cn.hutool.core.util.ReUtil;
-import com.ruoyi.common.annotation.Anonymous;
-import com.ruoyi.common.utils.spring.SpringUtils;
+import com.kob.common.annotation.Anonymous;
+import com.kob.common.utils.spring.SpringUtils;
 import lombok.Getter;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.annotation.Lazy;

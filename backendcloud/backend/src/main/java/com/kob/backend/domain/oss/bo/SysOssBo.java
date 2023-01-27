@@ -1,6 +1,6 @@
 package com.kob.backend.domain.oss.bo;
 
-import com.ruoyi.common.core.domain.BaseEntity;
+import com.kob.common.core.domain.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

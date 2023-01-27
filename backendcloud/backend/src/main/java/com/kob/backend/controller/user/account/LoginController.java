@@ -1,13 +1,10 @@
 package com.kob.backend.controller.user.account;
 
-import com.kob.backend.pojo.User;
 import com.kob.backend.service.user.account.LoginService;
-import com.ruoyi.common.annotation.Anonymous;
-import com.ruoyi.common.constant.Constants;
-import com.ruoyi.common.core.domain.R;
-import com.ruoyi.common.core.domain.model.LoginBody;
+import com.kob.common.constant.Constants;
+import com.kob.common.core.domain.R;
+import com.kob.common.core.domain.model.LoginBody;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 

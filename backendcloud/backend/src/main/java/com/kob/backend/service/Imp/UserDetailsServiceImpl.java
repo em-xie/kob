@@ -3,7 +3,7 @@
 //
 //import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 //import com.kob.backend.mapper.UserMapper;
-//import com.kob.backend.pojo.User;
+//import com.kob.backend.domain.User;
 //import com.kob.backend.service.Imp.utils.UserDetailsImpl;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.core.userdetails.UserDetails;

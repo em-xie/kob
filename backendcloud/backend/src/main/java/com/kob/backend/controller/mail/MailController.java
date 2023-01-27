@@ -1,7 +1,7 @@
 package com.kob.backend.controller.mail;
 
-import com.ruoyi.common.core.domain.R;
-import com.ruoyi.common.utils.email.MailUtils;
+import com.kob.common.core.domain.R;
+import com.kob.common.utils.email.MailUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

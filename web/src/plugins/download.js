@@ -29,7 +29,23 @@ export default {
       
     })
   },
-
+  zip(url, name) {
+    // eslint-disable-next-line no-redeclare
+    var url = baseURL + url
+    axios({
+      method: 'get',
+      url: url,
+      responseType: 'blob',
+      headers: {
+        'Authorization': 'Bearer ' + getToken(),
+        'datasource': localStorage.getItem("dataName")
+      }
+    }).then(async (res) => {
+        const blob = new Blob([res.data], { type: 'application/zip' })
+        this.saveAs(blob, name)
+      
+    })
+  },
   saveAs(text, name, opts) {
     saveAs(text, name, opts);
   },

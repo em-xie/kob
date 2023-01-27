@@ -1,6 +1,6 @@
 package com.kob.backend.config.handle;
 
-import com.ruoyi.common.utils.StringUtils;
+import com.kob.common.utils.StringUtils;
 import org.redisson.api.NameMapper;
 
 /**

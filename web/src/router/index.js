@@ -9,6 +9,7 @@ import NotFound from '../views/error/NotFound'
 import PictureIndexView from '../views/picture/PictureIndexView.vue'
 import PictureDownload from '../views/picture/PictureDownload.vue'
 import MailIndexView from '../views/mail/MailIndexView.vue'
+import GenIndexView from '../views/tool/gen/GenIndexView.vue'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegister from '../views/user/account/UserAccountRegisterView.vue'
 import UserAccountAcWingWebReceiveCodeView from '../views/user/account/UserAccountAcWingWebReceiveCodeView'
@@ -130,6 +131,14 @@ const routes = [
     path: "/mail/",
     name: "mail_index",
     component: MailIndexView,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/tool/gen",
+    name: "toolgen_index",
+    component: GenIndexView,
     meta: {
       requestAuth: true,
     }

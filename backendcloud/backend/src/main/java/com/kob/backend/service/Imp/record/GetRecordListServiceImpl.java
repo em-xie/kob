@@ -1,23 +1,17 @@
 package com.kob.backend.service.Imp.record;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.kob.backend.mapper.RecordMapper;
 import com.kob.backend.mapper.UserMapper;
-import com.kob.backend.pojo.Record;
-import com.kob.backend.pojo.User;
+import com.kob.backend.domain.Record;
+import com.kob.backend.domain.User;
 import com.kob.backend.service.record.GetRecordListService;
-import com.ruoyi.common.constant.Constants;
-import com.ruoyi.common.utils.JsonUtils;
-import com.ruoyi.common.utils.redis.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.xml.crypto.Data;
-import java.time.Duration;
 import java.util.LinkedList;
 import java.util.List;
 

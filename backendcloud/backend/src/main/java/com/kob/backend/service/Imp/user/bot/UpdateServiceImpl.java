@@ -2,8 +2,7 @@ package com.kob.backend.service.Imp.user.bot;
 
 import cn.dev33.satoken.stp.StpUtil;
 import com.kob.backend.mapper.BotMapper;
-import com.kob.backend.pojo.Bot;
-import com.kob.backend.pojo.User;
+import com.kob.backend.domain.Bot;
 import com.kob.backend.service.user.bot.UpdateService;
 //import com.kob.backend.utils.UserUtil;
 import org.springframework.beans.factory.annotation.Autowired;

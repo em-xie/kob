@@ -4,7 +4,7 @@ import cn.dev33.satoken.stp.StpUtil;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.kob.backend.mapper.UserMapper;
-import com.kob.backend.pojo.User;
+import com.kob.backend.domain.User;
 import com.kob.backend.service.Imp.user.account.acwing.utils.HttpClientUtil;
 import com.kob.backend.service.user.account.acwing.AcAppService;
 //import com.kob.backend.utils.JwtUtil;

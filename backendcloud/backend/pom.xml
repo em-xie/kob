@@ -54,11 +54,7 @@
 
 
 
-        <!-- dynamic-datasource 多数据源-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-        </dependency>
+
 
         <!-- Mysql驱动包 -->
         <dependency>
@@ -86,28 +82,17 @@
 
 
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-            <version>2.7.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
-            <scope>provided</scope>
-        </dependency>
 
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.1</version>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.5.1</version>
-        </dependency>
+
+
+
+
+
+<!--        <dependency>-->
+<!--            <groupId>com.baomidou</groupId>-->
+<!--            <artifactId>mybatis-plus-generator</artifactId>-->
+<!--            <version>3.5.1</version>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.yomahub</groupId>
@@ -132,12 +117,24 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.xie.common</groupId>
+            <groupId>com.kob.common</groupId>
             <artifactId>xie-common</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.xie.oss</groupId>
+            <groupId>com.kob.oss</groupId>
             <artifactId>xie-oss</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kob.generator</groupId>
+            <artifactId>xie-generator</artifactId>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>com.kob.test</groupId>
+            <artifactId>test</artifactId>
         </dependency>
     </dependencies>
 

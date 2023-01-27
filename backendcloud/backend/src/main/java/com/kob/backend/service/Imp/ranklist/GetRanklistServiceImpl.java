@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.kob.backend.mapper.UserMapper;
-import com.kob.backend.pojo.User;
+import com.kob.backend.domain.User;
 import com.kob.backend.service.ranklist.GetRanklistService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

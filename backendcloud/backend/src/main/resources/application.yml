@@ -40,7 +40,7 @@ mybatis-plus:
   # 对应的 XML 文件位置
   mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.kob.**.pojo
+  typeAliasesPackage: com.kob.**.domain
   # 启动时是否检查 MyBatis XML 文件的存在，默认不检查
   checkConfigLocation: false
   configuration:
@@ -130,6 +130,7 @@ security:
     #免检接口
     - /user/account/token/
     - /user/account/register/
+    - /bot/context/example/
     - /pk/start/game/
     - /pk/receive/bot/move/
     - /websocket/**
@@ -156,3 +157,4 @@ redisson:
 #
 #spring.jackson.date-format=yyyy-MM-dd HH:mm:ss
 #spring.jackson.time-zone=GMT+8
+

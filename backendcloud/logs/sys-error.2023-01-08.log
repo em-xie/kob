@@ -1,8 +1,8 @@
 2023-01-08 14:35:05 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[Tomcat].[localhost] - Exception Processing /kob/user/account/token/
 org.springframework.context.NoSuchMessageException: No message found under code 'user.not.exists' for locale 'zh_CN'.
 	at org.springframework.context.support.DelegatingMessageSource.getMessage(DelegatingMessageSource.java:76)
-	at com.ruoyi.common.utils.MessageUtils.message(MessageUtils.java:27)
-	at com.ruoyi.common.exception.base.BaseException.getMessage(BaseException.java:67)
+	at com.kob.common.utils.MessageUtils.message(MessageUtils.java:27)
+	at com.kob.common.exception.base.BaseException.getMessage(BaseException.java:67)
 	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:78)
 	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:62)
 	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:119)

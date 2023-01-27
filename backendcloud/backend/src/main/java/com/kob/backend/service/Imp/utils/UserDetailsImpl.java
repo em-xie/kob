@@ -1,6 +1,6 @@
 //package com.kob.backend.service.Imp.utils;
 //
-//import com.kob.backend.pojo.User;
+//import com.kob.backend.domain.User;
 //import lombok.AllArgsConstructor;
 //import lombok.Data;
 //import lombok.NoArgsConstructor;

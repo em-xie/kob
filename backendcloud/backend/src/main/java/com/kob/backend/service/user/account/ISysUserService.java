@@ -1,7 +1,6 @@
 package com.kob.backend.service.user.account;
 
-import com.kob.backend.pojo.User;
-import com.ruoyi.common.core.domain.entity.SysUser;
+import com.kob.backend.domain.User;
 
 /**
  * @作者：xie

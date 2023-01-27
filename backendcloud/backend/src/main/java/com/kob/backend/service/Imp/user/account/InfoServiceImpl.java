@@ -2,7 +2,7 @@ package com.kob.backend.service.Imp.user.account;
 
 import cn.dev33.satoken.stp.StpUtil;
 import com.kob.backend.mapper.UserMapper;
-import com.kob.backend.pojo.User;
+import com.kob.backend.domain.User;
 
 import com.kob.backend.service.user.account.InfoService;
 

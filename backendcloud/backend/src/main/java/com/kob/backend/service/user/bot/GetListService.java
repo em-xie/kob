@@ -1,6 +1,6 @@
 package com.kob.backend.service.user.bot;
 
-import com.kob.backend.pojo.Bot;
+import com.kob.backend.domain.Bot;
 
 import java.util.List;
 

@@ -18,7 +18,9 @@ export default {
 
 <style>
 body {
-  background-image: url("@/assets/images/background.png");
+  background-image: url("@/assets/images/Eminem.jpg") ;
   background-size: cover;
+  
+  
 }
 </style>

@@ -3,7 +3,7 @@ package com.kob.backend.service.Imp.user.account;
         import cn.dev33.satoken.secure.BCrypt;
         import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
         import com.kob.backend.mapper.UserMapper;
-        import com.kob.backend.pojo.User;
+        import com.kob.backend.domain.User;
         import com.kob.backend.service.user.account.RegisterService;
         import org.springframework.beans.factory.annotation.Autowired;
 //        import org.springframework.security.crypto.password.PasswordEncoder;

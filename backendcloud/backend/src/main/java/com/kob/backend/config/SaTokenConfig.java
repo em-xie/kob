@@ -8,7 +8,7 @@ import cn.dev33.satoken.stp.StpLogic;
 import cn.dev33.satoken.stp.StpUtil;
 import com.kob.backend.config.properties.ExcludeUrlProperties;
 import com.kob.backend.config.properties.SecurityProperties;
-import com.ruoyi.common.utils.spring.SpringUtils;
+import com.kob.common.utils.spring.SpringUtils;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

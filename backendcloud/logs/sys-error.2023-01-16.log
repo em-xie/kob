@@ -1,10 +1,10 @@
 2023-01-16 21:36:35 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:429)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:171)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:154)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:95)
-	at com.ruoyi.common.utils.email.MailUtils.sendText(MailUtils.java:65)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:429)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:171)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:154)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:95)
+	at com.kob.common.utils.email.MailUtils.sendText(MailUtils.java:65)
 	at com.kob.backend.controller.mail.MailController.sendSimpleMessage(MailController.java:34)
 	at com.kob.backend.controller.mail.MailController$$FastClassBySpringCGLIB$$4c19262f.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
@@ -187,11 +187,11 @@ Caused by: cn.dev33.satoken.exception.NotLoginException: 未能读取到有效To
 	... 39 common frames omitted
 2023-01-16 21:38:43 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:429)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:171)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:154)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:95)
-	at com.ruoyi.common.utils.email.MailUtils.sendText(MailUtils.java:65)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:429)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:171)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:154)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:95)
+	at com.kob.common.utils.email.MailUtils.sendText(MailUtils.java:65)
 	at com.kob.backend.controller.mail.MailController.sendSimpleMessage(MailController.java:34)
 	at com.kob.backend.controller.mail.MailController$$FastClassBySpringCGLIB$$4c19262f.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
@@ -374,11 +374,11 @@ Caused by: cn.dev33.satoken.exception.NotLoginException: 未能读取到有效To
 	... 39 common frames omitted
 2023-01-16 21:39:50 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:429)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:171)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:154)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:95)
-	at com.ruoyi.common.utils.email.MailUtils.sendText(MailUtils.java:65)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:429)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:171)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:154)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:95)
+	at com.kob.common.utils.email.MailUtils.sendText(MailUtils.java:65)
 	at com.kob.backend.controller.mail.MailController.sendSimpleMessage(MailController.java:34)
 	at com.kob.backend.controller.mail.MailController$$FastClassBySpringCGLIB$$4c19262f.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
@@ -561,11 +561,11 @@ Caused by: cn.dev33.satoken.exception.NotLoginException: 未能读取到有效To
 	... 39 common frames omitted
 2023-01-16 21:42:02 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:429)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:171)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:154)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:95)
-	at com.ruoyi.common.utils.email.MailUtils.sendText(MailUtils.java:65)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:429)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:171)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:154)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:95)
+	at com.kob.common.utils.email.MailUtils.sendText(MailUtils.java:65)
 	at com.kob.backend.controller.mail.MailController.sendSimpleMessage(MailController.java:34)
 	at com.kob.backend.controller.mail.MailController$$FastClassBySpringCGLIB$$4c19262f.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
@@ -748,11 +748,11 @@ Caused by: cn.dev33.satoken.exception.NotLoginException: 未能读取到有效To
 	... 39 common frames omitted
 2023-01-16 21:43:29 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
 java.lang.NullPointerException: null
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:429)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:171)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:154)
-	at com.ruoyi.common.utils.email.MailUtils.send(MailUtils.java:95)
-	at com.ruoyi.common.utils.email.MailUtils.sendText(MailUtils.java:65)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:429)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:171)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:154)
+	at com.kob.common.utils.email.MailUtils.send(MailUtils.java:95)
+	at com.kob.common.utils.email.MailUtils.sendText(MailUtils.java:65)
 	at com.kob.backend.controller.mail.MailController.sendSimpleMessage(MailController.java:34)
 	at com.kob.backend.controller.mail.MailController$$FastClassBySpringCGLIB$$4c19262f.invoke(<generated>)
 	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)

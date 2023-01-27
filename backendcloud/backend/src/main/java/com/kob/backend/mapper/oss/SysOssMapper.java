@@ -2,7 +2,7 @@ package com.kob.backend.mapper.oss;
 
 import com.kob.backend.domain.oss.SysOss;
 import com.kob.backend.domain.oss.vo.SysOssVo;
-import com.ruoyi.common.core.mapper.BaseMapperPlus;
+import com.kob.common.core.mapper.BaseMapperPlus;
 import org.apache.ibatis.annotations.Mapper;
 
 

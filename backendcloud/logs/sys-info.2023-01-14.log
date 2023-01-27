@@ -19,7 +19,7 @@
 2023-01-14 13:35:10 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 13:35:10 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 13:35:10 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 13:35:10 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:35:10 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 13:35:10 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 13:35:12 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 13:39:39 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -45,7 +45,7 @@
 2023-01-14 13:40:15 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 13:40:15 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 13:40:15 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 13:40:15 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:40:15 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 13:40:15 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 13:40:17 [RMI TCP Connection(9)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 13:41:34 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -71,7 +71,7 @@
 2023-01-14 13:42:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 13:42:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 13:42:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 13:42:04 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:42:04 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 13:42:04 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 13:42:05 [RMI TCP Connection(2)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 13:46:16 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -97,7 +97,7 @@
 2023-01-14 13:46:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 13:46:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 13:46:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 13:46:47 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:46:47 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 13:46:47 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 13:46:49 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 13:48:47 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -123,7 +123,7 @@
 2023-01-14 13:49:23 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 13:49:23 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 13:49:23 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 13:49:23 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:49:23 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 13:49:23 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 13:49:23 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 13:53:43 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -149,7 +149,7 @@
 2023-01-14 13:54:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 13:54:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 13:54:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 13:54:18 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 13:54:18 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 13:54:18 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 13:54:19 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 14:13:57 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -175,7 +175,7 @@
 2023-01-14 14:14:36 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 14:14:36 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 14:14:36 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 14:14:36 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:14:36 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 14:14:36 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 14:14:38 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 14:30:13 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -201,7 +201,7 @@
 2023-01-14 14:30:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 14:30:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 14:30:47 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 14:30:47 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:30:47 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 14:30:47 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 14:30:48 [RMI TCP Connection(7)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 14:37:07 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -227,7 +227,7 @@
 2023-01-14 14:37:42 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 14:37:42 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 14:37:42 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 14:37:42 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:37:42 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 14:37:42 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 14:37:43 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 14:41:33 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -253,7 +253,7 @@
 2023-01-14 14:42:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 14:42:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 14:42:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 14:42:07 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:42:07 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 14:42:07 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 14:42:07 [RMI TCP Connection(2)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 14:57:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -279,7 +279,7 @@
 2023-01-14 14:58:13 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 14:58:13 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 14:58:13 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 14:58:13 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:58:13 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 14:58:13 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 14:58:15 [RMI TCP Connection(5)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 14:59:25 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -305,7 +305,7 @@
 2023-01-14 14:59:58 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 14:59:58 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 14:59:58 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 14:59:58 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 14:59:58 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 14:59:58 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 14:59:58 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 15:02:12 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -331,7 +331,7 @@
 2023-01-14 15:02:46 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 15:02:46 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 15:02:46 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 15:02:46 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 15:02:46 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 15:02:46 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 15:02:47 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 15:55:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -357,7 +357,7 @@
 2023-01-14 15:56:06 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 15:56:06 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 15:56:06 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 15:56:06 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 15:56:06 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 15:56:06 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 15:56:08 [RMI TCP Connection(5)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 15:58:40 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -383,7 +383,7 @@
 2023-01-14 15:59:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 15:59:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 15:59:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 15:59:05 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 15:59:05 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 15:59:05 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 15:59:06 [RMI TCP Connection(5)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 16:24:38 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -409,7 +409,7 @@
 2023-01-14 16:25:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 16:25:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 16:25:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 16:25:05 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 16:25:05 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 16:25:05 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 16:25:07 [RMI TCP Connection(7)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 16:25:52 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -435,7 +435,7 @@
 2023-01-14 16:26:21 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 16:26:21 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 16:26:21 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 16:26:21 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 16:26:21 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 16:26:21 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 16:26:22 [RMI TCP Connection(4)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 16:36:37 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -461,7 +461,7 @@
 2023-01-14 16:37:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 16:37:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 16:37:07 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 16:37:07 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 16:37:07 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 16:37:07 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 16:37:08 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 17:40:32 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -487,7 +487,7 @@
 2023-01-14 17:41:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 17:41:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 17:41:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 17:41:00 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 17:41:00 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 17:41:00 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 17:41:00 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 17:57:18 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -513,7 +513,7 @@
 2023-01-14 17:58:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 17:58:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 17:58:00 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 17:58:00 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 17:58:00 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 17:58:00 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 17:58:01 [RMI TCP Connection(4)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 17:59:17 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -539,7 +539,7 @@
 2023-01-14 17:59:43 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 17:59:43 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 17:59:43 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 17:59:44 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 17:59:44 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 17:59:44 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 17:59:46 [RMI TCP Connection(8)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-01-14 18:13:02 [SpringApplicationShutdownHook] INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
@@ -565,6 +565,6 @@
 2023-01-14 18:13:29 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
 2023-01-14 18:13:29 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
 2023-01-14 18:13:29 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
-2023-01-14 18:13:29 [main] INFO  com.ruoyi.oss.factory.OssFactory - 初始化OSS工厂
+2023-01-14 18:13:29 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
 2023-01-14 18:13:30 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
 2023-01-14 18:13:31 [RMI TCP Connection(6)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'

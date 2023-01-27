@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.xie.common</groupId>
+    <groupId>com.kob.common</groupId>
     <artifactId>xie-common</artifactId>
 
     <description>
@@ -76,7 +76,12 @@
             <artifactId>snakeyaml</artifactId>
         </dependency>
 
+        <!-- dynamic-datasource 多数据源-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
 
+        </dependency>
 
         <!-- servlet包 -->
         <dependency>
@@ -156,6 +161,10 @@
             <groupId>com.baomidou</groupId>
             <artifactId>lock4j-redisson-spring-boot-starter</artifactId>
         </dependency>
+
+
+
+
 
     </dependencies>
 </project>

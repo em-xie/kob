@@ -1,8 +1,7 @@
 package com.kob.backend.controller.user.account;
 
-import cn.dev33.satoken.stp.StpUtil;
 import com.kob.backend.service.user.account.InfoService;
-import com.ruoyi.common.core.domain.R;
+import com.kob.common.core.domain.R;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

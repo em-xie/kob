@@ -2,7 +2,7 @@
 //
 //import cn.dev33.satoken.stp.StpUtil;
 //import com.kob.backend.mapper.UserMapper;
-//import com.kob.backend.pojo.User;
+//import com.kob.backend.domain.User;
 //import org.springframework.beans.factory.annotation.Autowired;
 //
 //

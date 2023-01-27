@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.xie.oss</groupId>
+    <groupId>com.kob.oss</groupId>
     <artifactId>xie-oss</artifactId>
 
 
@@ -17,7 +17,7 @@
 
         <!-- 通用工具-->
         <dependency>
-            <groupId>com.xie.common</groupId>
+            <groupId>com.kob.common</groupId>
             <artifactId>xie-common</artifactId>
         </dependency>
 

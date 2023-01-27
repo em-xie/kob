@@ -2,9 +2,9 @@ package com.kob.backend.consumer.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.kob.backend.consumer.WebSocketServer;
-import com.kob.backend.pojo.Bot;
-import com.kob.backend.pojo.Record;
-import com.kob.backend.pojo.User;
+import com.kob.backend.domain.Bot;
+import com.kob.backend.domain.Record;
+import com.kob.backend.domain.User;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
@@ -12,7 +12,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class Game extends Thread{

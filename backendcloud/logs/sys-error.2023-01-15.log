@@ -1,8 +1,8 @@
-2023-01-15 11:28:38 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A5DC657A43247; S3 Extended Request ID: acac451f-f871-4f6b-8418-55208e768b68; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A5DC657A43247; S3 Extended Request ID: acac451f-f871-4f6b-8418-55208e768b68; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-15 11:28:38 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A5DC657A43247; S3 Extended Request ID: acac451f-f871-4f6b-8418-55208e768b68; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A5DC657A43247; S3 Extended Request ID: acac451f-f871-4f6b-8418-55208e768b68; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -73,13 +73,13 @@ com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-15 14:10:29 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: No route to host: connect]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: No route to host: connect]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-15 14:10:29 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: No route to host: connect]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: No route to host: connect]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)

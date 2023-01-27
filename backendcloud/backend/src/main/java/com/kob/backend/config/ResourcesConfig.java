@@ -1,6 +1,6 @@
 package com.kob.backend.config;
 
-//import com.ruoyi.framework.interceptor.PlusWebInvokeTimeInterceptor;
+//import com.kob.framework.interceptor.PlusWebInvokeTimeInterceptor;
 //import com.yomahub.tlog.web.interceptor.TLogWebInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

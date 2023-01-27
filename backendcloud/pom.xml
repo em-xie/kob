@@ -11,6 +11,8 @@
         <module>botrunningsystem</module>
         <module>xie-common</module>
         <module>xie-oss</module>
+        <module>xie-generator</module>
+        <module>test</module>
     </modules>
     <name>backendcloud</name>
     <description>backendcloud</description>
@@ -31,13 +33,13 @@
         <easyexcel.version>3.1.1</easyexcel.version>
         <velocity.version>2.3</velocity.version>
         <satoken.version>1.30.0</satoken.version>
-        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <spring-boot.mybatis>2.2.2</spring-boot.mybatis>
         <redisson.version>3.17.5</redisson.version>
         <lock4j.version>2.2.2</lock4j.version>
         <tlog.version>1.4.3</tlog.version>
         <p6spy.version>3.9.1</p6spy.version>
-
+        <velocity.version>2.3</velocity.version>
         <dynamic-ds.version>3.5.1</dynamic-ds.version>
         <!-- OSS 配置 -->
         <aws-java-sdk-s3.version>1.12.264</aws-java-sdk-s3.version>
@@ -56,6 +58,13 @@
                 <scope>import</scope>
             </dependency>
 
+
+            <!-- velocity代码生成使用模板 -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity.version}</version>
+            </dependency>
 
             <!-- dynamic-datasource 多数据源-->
             <dependency>
@@ -185,15 +194,28 @@
 
             <!-- 通用工具-->
             <dependency>
-                <groupId>com.xie.common</groupId>
+                <groupId>com.kob.common</groupId>
                 <artifactId>xie-common</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
             <!-- 通用工具-->
             <dependency>
-                <groupId>com.xie.oss</groupId>
+                <groupId>com.kob.oss</groupId>
                 <artifactId>xie-oss</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <!-- 通用工具-->
+            <dependency>
+                <groupId>com.kob.generator</groupId>
+                <artifactId>xie-generator</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.kob.test</groupId>
+                <artifactId>test</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 

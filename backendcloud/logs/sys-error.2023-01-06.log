@@ -24,12 +24,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-Parameter 1 of constructor in com.kob.backend.service.Imp.user.account.LoginServiceImpl required a bean of type 'com.ruoyi.common.core.service.LogininforService' that could not be found.
+Parameter 1 of constructor in com.kob.backend.service.Imp.user.account.LoginServiceImpl required a bean of type 'com.kob.common.core.service.LogininforService' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'com.ruoyi.common.core.service.LogininforService' in your configuration.
+Consider defining a bean of type 'com.kob.common.core.service.LogininforService' in your configuration.
 
 2023-01-06 17:56:03 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
 

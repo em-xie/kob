@@ -3,9 +3,9 @@ package com.kob.backend.service.oss;
 import com.kob.backend.domain.oss.SysOss;
 import com.kob.backend.domain.oss.bo.SysOssBo;
 import com.kob.backend.domain.oss.vo.SysOssVo;
-import com.ruoyi.common.core.domain.PageQuery;
+import com.kob.common.core.domain.PageQuery;
 
-import com.ruoyi.common.core.page.TableDataInfo;
+import com.kob.common.core.page.TableDataInfo;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Collection;

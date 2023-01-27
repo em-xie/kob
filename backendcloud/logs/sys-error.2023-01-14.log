@@ -166,13 +166,13 @@ Caused by: cn.dev33.satoken.exception.NotLoginException: Token无效：eyJ0eXAiO
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
 	... 39 common frames omitted
-2023-01-14 13:41:05 [http-nio-3000-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 13:41:05 [http-nio-3000-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -411,13 +411,13 @@ Caused by: cn.dev33.satoken.exception.NotLoginException: Token无效：eyJ0eXAiO
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
 	... 39 common frames omitted
-2023-01-14 13:42:32 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 13:42:32 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -656,13 +656,13 @@ Caused by: cn.dev33.satoken.exception.NotLoginException: Token无效：eyJ0eXAiO
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
 	... 39 common frames omitted
-2023-01-14 13:48:16 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 13:48:16 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -733,13 +733,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 13:49:50 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 13:49:50 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -810,13 +810,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 13:54:41 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 13:54:41 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -887,13 +887,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 14:15:10 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:15:10 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -964,13 +964,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 14:30:11 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:30:11 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1119,13 +1119,13 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 	at org.apache.coyote.Response.action(Response.java:209)
 	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
 	... 56 common frames omitted
-2023-01-14 14:31:21 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:31:21 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1196,13 +1196,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 14:32:12 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:32:12 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1283,13 +1283,13 @@ org.redisson.client.RedisTimeoutException: Command execution timeout for command
 	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 14:34:29 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:34:29 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1438,13 +1438,13 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 	at org.apache.coyote.Response.action(Response.java:209)
 	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
 	... 56 common frames omitted
-2023-01-14 14:39:02 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:39:02 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1515,13 +1515,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 14:44:09 [http-nio-3000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:44:09 [http-nio-3000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1592,13 +1592,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 14:49:57 [http-nio-3000-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:49:57 [http-nio-3000-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: test.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1669,13 +1669,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 14:58:53 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Bucket name should be between 3 and 63 characters long]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Bucket name should be between 3 and 63 characters long]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 14:58:53 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Bucket name should be between 3 and 63 characters long]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Bucket name should be between 3 and 63 characters long]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1746,13 +1746,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 15:00:14 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: nima.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: nima.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 15:00:14 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: nima.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: nima.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1823,13 +1823,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 15:03:11 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 15:03:11 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1900,13 +1900,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 15:14:42 [http-nio-3000-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 15:14:42 [http-nio-3000-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -1987,13 +1987,13 @@ org.redisson.client.RedisTimeoutException: Command execution timeout for command
 	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 15:27:47 [http-nio-3000-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 15:27:47 [http-nio-3000-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2142,13 +2142,13 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 	at org.apache.coyote.Response.action(Response.java:209)
 	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
 	... 56 common frames omitted
-2023-01-14 15:56:59 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 15:56:59 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2219,13 +2219,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 15:59:33 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 15:59:33 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2296,13 +2296,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 16:25:23 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[S3 API Requests must be made to API port. (Service: Amazon S3; Status Code: 400; Error Code: InvalidArgument; Request ID: 0; S3 Extended Request ID: null; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[S3 API Requests must be made to API port. (Service: Amazon S3; Status Code: 400; Error Code: InvalidArgument; Request ID: 0; S3 Extended Request ID: null; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 16:25:23 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[S3 API Requests must be made to API port. (Service: Amazon S3; Status Code: 400; Error Code: InvalidArgument; Request ID: 0; S3 Extended Request ID: null; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[S3 API Requests must be made to API port. (Service: Amazon S3; Status Code: 400; Error Code: InvalidArgument; Request ID: 0; S3 Extended Request ID: null; Proxy: null)]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2373,13 +2373,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 16:37:20 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 16:37:20 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2450,13 +2450,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 16:38:56 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 16:38:56 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2527,13 +2527,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 16:57:32 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 16:57:32 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2604,13 +2604,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 17:24:55 [http-nio-3000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 17:24:55 [http-nio-3000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2681,13 +2681,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 17:28:16 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 17:28:16 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2758,13 +2758,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 17:28:40 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 17:28:40 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2835,13 +2835,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 17:29:59 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 17:29:59 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2912,11 +2912,11 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 17:33:56 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2320D1756E3D; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2320D1756E3D; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 17:33:56 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2320D1756E3D; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2320D1756E3D; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -2987,11 +2987,11 @@ com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 17:41:22 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2388A7D3C994; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2388A7D3C994; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 17:41:22 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2388A7D3C994; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2388A7D3C994; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3062,11 +3062,11 @@ com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 17:54:06 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A23CC843C6B5E; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A23CC843C6B5E; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 17:54:06 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A23CC843C6B5E; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A23CC843C6B5E; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3215,12 +3215,12 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 	at org.apache.coyote.Response.action(Response.java:209)
 	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
 	... 56 common frames omitted
-2023-01-14 17:58:31 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 配置错误! 请检查系统配置:[java.net.URISyntaxException: Expected authority at index 7: http://]] with root cause
-com.ruoyi.oss.exception.OssException: 配置错误! 请检查系统配置:[java.net.URISyntaxException: Expected authority at index 7: http://]
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:69)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 17:58:31 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 配置错误! 请检查系统配置:[java.net.URISyntaxException: Expected authority at index 7: http://]] with root cause
+com.kob.oss.exception.OssException: 配置错误! 请检查系统配置:[java.net.URISyntaxException: Expected authority at index 7: http://]
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:69)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3291,11 +3291,11 @@ com.ruoyi.oss.exception.OssException: 配置错误! 请检查系统配置:[java.
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:00:00 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A248D1C3786CD; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A248D1C3786CD; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 18:00:00 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A248D1C3786CD; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A248D1C3786CD; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3366,11 +3366,11 @@ com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:06:28 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A24E7738ED14D; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A24E7738ED14D; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 18:06:28 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A24E7738ED14D; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A24E7738ED14D; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3441,11 +3441,11 @@ com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:06:44 [http-nio-3000-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A24EB2BF567D0; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A24EB2BF567D0; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 18:06:44 [http-nio-3000-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A24EB2BF567D0; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A24EB2BF567D0; S3 Extended Request ID: e59dbb32-f728-4a67-a74e-af4332915efd; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3516,13 +3516,13 @@ com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:14:04 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 18:14:04 [http-nio-3000-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3593,13 +3593,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:15:10 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 18:15:10 [http-nio-3000-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3670,13 +3670,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:16:02 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 18:16:02 [http-nio-3000-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3747,13 +3747,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:18:23 [http-nio-3000-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 18:18:23 [http-nio-3000-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3824,13 +3824,13 @@ com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:19:23 [http-nio-3000-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 18:19:23 [http-nio-3000-exec-8] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -3931,13 +3931,13 @@ org.redisson.client.RedisTimeoutException: Command execution timeout for command
 	at io.netty.util.HashedWheelTimer$Worker.run(HashedWheelTimer.java:503)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:22:27 [http-nio-3000-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
-com.ruoyi.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
-	at com.ruoyi.oss.core.OssClient.createBucket(OssClient.java:84)
-	at com.ruoyi.oss.core.OssClient.<init>(OssClient.java:64)
-	at com.ruoyi.oss.factory.OssFactory.refresh(OssFactory.java:70)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:58)
-	at com.ruoyi.oss.factory.OssFactory.instance(OssFactory.java:49)
+2023-01-14 18:22:27 [http-nio-3000-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]] with root cause
+com.kob.oss.exception.OssException: 创建Bucket失败, 请核对配置信息:[Unable to execute HTTP request: xie.www.xiemingquan.top]
+	at com.kob.oss.core.OssClient.createBucket(OssClient.java:84)
+	at com.kob.oss.core.OssClient.<init>(OssClient.java:64)
+	at com.kob.oss.factory.OssFactory.refresh(OssFactory.java:70)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:58)
+	at com.kob.oss.factory.OssFactory.instance(OssFactory.java:49)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:89)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -4086,11 +4086,11 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 	at org.apache.coyote.Response.action(Response.java:209)
 	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
 	... 56 common frames omitted
-2023-01-14 18:28:20 [http-nio-3000-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2618D6320619; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2618D6320619; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 18:28:20 [http-nio-3000-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2618D6320619; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2618D6320619; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -4161,11 +4161,11 @@ com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:28:20 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2618D60274DA; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2618D60274DA; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 18:28:20 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2618D60274DA; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2618D60274DA; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -4314,11 +4314,11 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 	at org.apache.coyote.Response.action(Response.java:209)
 	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
 	... 56 common frames omitted
-2023-01-14 18:28:35 [http-nio-3000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A261C60619F12; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A261C60619F12; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 18:28:35 [http-nio-3000-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A261C60619F12; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A261C60619F12; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)
@@ -4389,11 +4389,11 @@ com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
-2023-01-14 18:29:32 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2629AA85B688; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]] with root cause
-com.ruoyi.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2629AA85B688; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:102)
-	at com.ruoyi.oss.core.OssClient.upload(OssClient.java:89)
-	at com.ruoyi.oss.core.OssClient.uploadSuffix(OssClient.java:117)
+2023-01-14 18:29:32 [http-nio-3000-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/kob] threw exception [Request processing failed; nested exception is com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2629AA85B688; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]] with root cause
+com.kob.oss.exception.OssException: 上传文件失败，请检查配置信息:[The specified bucket does not exist (Service: Amazon S3; Status Code: 404; Error Code: NoSuchBucket; Request ID: 173A2629AA85B688; S3 Extended Request ID: afacc346-84c3-4ca0-b02f-a368a2cc7ed2; Proxy: null)]
+	at com.kob.oss.core.OssClient.upload(OssClient.java:102)
+	at com.kob.oss.core.OssClient.upload(OssClient.java:89)
+	at com.kob.oss.core.OssClient.uploadSuffix(OssClient.java:117)
 	at com.kob.backend.service.Imp.oss.SysOssServiceImpl.upload(SysOssServiceImpl.java:92)
 	at com.kob.backend.controller.oss.SysOssController.upload(SysOssController.java:85)
 	at com.kob.backend.controller.oss.SysOssController$$FastClassBySpringCGLIB$$d1e6fb8.invoke(<generated>)

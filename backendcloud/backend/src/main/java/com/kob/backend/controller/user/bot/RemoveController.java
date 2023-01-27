@@ -1,12 +1,11 @@
 package com.kob.backend.controller.user.bot;
 
 import com.kob.backend.service.user.bot.RemoveService;
-import com.ruoyi.common.core.domain.R;
+import com.kob.common.core.domain.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;

@@ -1,7 +1,6 @@
 package com.kob.backend.runner;
 
 import com.kob.backend.service.oss.ISysOssConfigService;
-import com.ruoyi.common.config.RuoYiConfig;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

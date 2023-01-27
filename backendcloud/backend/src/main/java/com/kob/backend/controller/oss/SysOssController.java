@@ -1,7 +1,6 @@
 package com.kob.backend.controller.oss;
 
 
-import cn.dev33.satoken.annotation.SaCheckPermission;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.http.HttpException;
@@ -10,15 +9,15 @@ import com.kob.backend.domain.oss.SysOss;
 import com.kob.backend.domain.oss.bo.SysOssBo;
 import com.kob.backend.domain.oss.vo.SysOssVo;
 import com.kob.backend.service.oss.ISysOssService;
-import com.ruoyi.common.annotation.Log;
-import com.ruoyi.common.core.controller.BaseController;
-import com.ruoyi.common.core.domain.PageQuery;
-import com.ruoyi.common.core.domain.R;
-import com.ruoyi.common.core.page.TableDataInfo;
-import com.ruoyi.common.core.validate.QueryGroup;
-import com.ruoyi.common.enums.BusinessType;
-import com.ruoyi.common.exception.ServiceException;
-import com.ruoyi.common.utils.file.FileUtils;
+import com.kob.common.annotation.Log;
+import com.kob.common.core.controller.BaseController;
+import com.kob.common.core.domain.PageQuery;
+import com.kob.common.core.domain.R;
+import com.kob.common.core.page.TableDataInfo;
+import com.kob.common.core.validate.QueryGroup;
+import com.kob.common.enums.BusinessType;
+import com.kob.common.exception.ServiceException;
+import com.kob.common.utils.file.FileUtils;
 
 
 import lombok.RequiredArgsConstructor;

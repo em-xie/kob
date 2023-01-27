@@ -1,8 +1,8 @@
 package com.kob.backend.domain.oss.bo;
 
-import com.ruoyi.common.core.domain.BaseEntity;
-import com.ruoyi.common.core.validate.AddGroup;
-import com.ruoyi.common.core.validate.EditGroup;
+import com.kob.common.core.domain.BaseEntity;
+import com.kob.common.core.validate.AddGroup;
+import com.kob.common.core.validate.EditGroup;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

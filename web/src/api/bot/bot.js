@@ -23,7 +23,20 @@ export function addBot(data) {
       method: 'post',
       data: data
     })
-  }
+}
+
+
+export function BotContextExample() {
+  return request({
+    url: '/bot/context/example/',
+    headers: {
+      isToken: true
+    },
+    method: 'post',
+    
+  })
+}
+
 export function updateBot(data) {
     return request({
       url: '/user/bot/update/',

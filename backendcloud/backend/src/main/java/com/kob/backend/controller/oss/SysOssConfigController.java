@@ -1,19 +1,18 @@
 package com.kob.backend.controller.oss;
 
-import cn.dev33.satoken.annotation.SaCheckPermission;
 import com.kob.backend.domain.oss.bo.SysOssConfigBo;
 import com.kob.backend.domain.oss.vo.SysOssConfigVo;
 import com.kob.backend.service.oss.ISysOssConfigService;
-import com.ruoyi.common.annotation.Log;
-import com.ruoyi.common.annotation.RepeatSubmit;
-import com.ruoyi.common.core.controller.BaseController;
-import com.ruoyi.common.core.domain.PageQuery;
-import com.ruoyi.common.core.domain.R;
-import com.ruoyi.common.core.page.TableDataInfo;
-import com.ruoyi.common.core.validate.AddGroup;
-import com.ruoyi.common.core.validate.EditGroup;
-import com.ruoyi.common.core.validate.QueryGroup;
-import com.ruoyi.common.enums.BusinessType;
+import com.kob.common.annotation.Log;
+import com.kob.common.annotation.RepeatSubmit;
+import com.kob.common.core.controller.BaseController;
+import com.kob.common.core.domain.PageQuery;
+import com.kob.common.core.domain.R;
+import com.kob.common.core.page.TableDataInfo;
+import com.kob.common.core.validate.AddGroup;
+import com.kob.common.core.validate.EditGroup;
+import com.kob.common.core.validate.QueryGroup;
+import com.kob.common.enums.BusinessType;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.validation.annotation.Validated;

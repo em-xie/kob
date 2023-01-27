@@ -110,7 +110,7 @@ div.matchGround {
     /* 浏览器的宽高 */
     width: 60vw;
     height: 70vh;
-    background-color: rgba(50,50,50,50);
+    background-color: rgb(124, 83, 54);
     /* 居中 */
     margin: 40px auto;
 }

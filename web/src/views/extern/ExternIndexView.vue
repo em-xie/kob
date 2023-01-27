@@ -7,7 +7,7 @@
         <div class="col-4 themed-grid-col">
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Launch static backdrop modal
+            贪吃蛇游戏说明
           </button>
 
 <!-- Modal -->
@@ -15,15 +15,21 @@
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">贪吃蛇游戏说明</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        在线匹配对战回合制游戏
+        <br>
+        <span>
+          亲自操作：键盘的WASD 为上下左右 
+        </span>
+        <br>
+        <span>
+          bot操作：配置一个bot进行对战
+        </span>
+        <br>
+        ........................... 
       </div>
     </div>
   </div>
@@ -33,17 +39,30 @@
 
 
         <div class="col-4 themed-grid-col">
-          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+          <!-- Button trigger modal -->
+          <button @click="getBotContextExample" type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+            bot代码例子
+          </button>
 
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              ...
-            </div>
-          </div>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">bot代码</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+<VAceEditor
+  v-model:value="botadd.content"
+  @init="editorInit"
+  lang="c_cpp"
+   theme="textmate"
+  style="height: 300px" />
+      </div>
+    </div>
+  </div>
+</div>
         </div>
     </div>
     <div class="row mb-3 text-center">
@@ -60,6 +79,14 @@
       </div>
     </div>
 
+    <div class="row mb-3 text-center">
+      <div class="col-4 themed-grid-col">
+          <button type="button" class="btn btn-outline-secondary" @click="gen">代码生成</button>
+      </div>
+
+     
+    </div>
+
 
 
     </ContentField>
@@ -67,13 +94,43 @@
 
 <script>
 import ContentField from '../../components/ContentField.vue'
+import { VAceEditor } from 'vue3-ace-editor';
+import {BotContextExample} from '@/api/bot/bot'
+import ace from 'ace-builds';
 import router from '@/router/index'
+import { reactive} from 'vue'
 export default {
     components: {
-        ContentField
+        ContentField,
+        VAceEditor
+  
     },
     setup() {
-      let isclick = false
+
+      ace.config.set(
+        "basePath", 
+        "https://cdn.jsdelivr.net/npm/ace-builds@" + require('ace-builds').version + "/src-noconflict/")
+
+        const botadd = reactive({
+       
+        content: ""
+        
+        })
+
+
+      const getBotContextExample = () => {
+        return new Promise((resolve, reject) => {
+                BotContextExample().then(res => {
+                console.log(res)
+                botadd.content = res.data.example;
+                resolve(res)
+            }).catch(error => {
+                reject(error)
+            })
+        })
+    }
+
+  
       const pk = () => {
           router.push({ name: 'pk_index' });
       }
@@ -88,17 +145,19 @@ export default {
       const pictureDownload = () => {
           router.push({ name: 'picturedownload_index' });
       }
-      const wechat = () => {
-          isclick = true
-      }
      
+     
+      const gen = () => {
+        router.push({ name: 'toolgen_index' });
+      }
         return {
            pk,
-           isclick,
+           getBotContextExample,
            pictureUpload,
            pictureDownload,
-           wechat,
-           mailSend
+           botadd,
+           mailSend,
+           gen
         }
     }
 }
