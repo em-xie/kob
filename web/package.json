@@ -5,17 +5,20 @@
   "scripts": {
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build",
     "build:prod": "vue-cli-service --mode production"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.2",
+    "compression-webpack-plugin": "^10.0.0",
     "core-js": "^3.8.3",
     "file-saver": "^2.0.5",
     "jquery": "^3.6.1",
     "js-cookie": "^3.0.1",
     "pinia": "^2.0.28",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "vue3-ace-editor": "^2.2.2"
@@ -30,6 +33,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "image-webpack-loader": "^8.1.0",
     "vue-cli-plugin-pinia": "^0.2.1"
   },
   "eslintConfig": {

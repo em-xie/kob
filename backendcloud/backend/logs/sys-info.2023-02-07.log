@@ -1,0 +1,198 @@
+2023-02-07 18:34:50 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kob.backend.BackendApplicationTests], using SpringBootContextLoader
+2023-02-07 18:34:50 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.kob.backend.BackendApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-07 18:34:50 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.kob.backend.BackendApplicationTests]: BackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-07 18:34:51 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.kob.backend.BackendApplication for test class com.kob.backend.BackendApplicationTests
+2023-02-07 18:34:52 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-07 18:34:52 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4716be8b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1fc32e4f, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2f67b837, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1869fbd2, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6af9fcb2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6cce16f4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7efaad5a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@291a7e3c, org.springframework.test.context.event.EventPublishingTestExecutionListener@ca30bc1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1046d517, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3b7d3a38, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@416c58f5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5505ae1a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@73cd37c0, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@21337f7b]
+2023-02-07 18:34:53 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-07 18:34:53 [main] INFO  c.k.backend.BackendApplicationTests - Starting BackendApplicationTests using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 13484 (started by A in E:\java2\kob\backendcloud\backend)
+2023-02-07 18:34:53 [main] INFO  c.k.backend.BackendApplicationTests - The following 1 profile is active: "dev"
+2023-02-07 18:35:02 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-02-07 18:35:03 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-02-07 18:35:05 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-02-07 18:35:08 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-02-07 18:35:08 [redisson-netty-2-3] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-02-07 18:35:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-02-07 18:35:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-07 18:35:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-02-07 18:35:13 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-02-07 18:35:14 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2023-02-07 18:35:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2023-02-07 18:35:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2023-02-07 18:35:15 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2023-02-07 18:35:15 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2023-02-07 18:35:15 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2023-02-07 18:35:22 [main] INFO  com.kob.job.config.XxlJobConfig - >>>>>>>>>>> xxl-job config init.
+2023-02-07 18:35:30 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:CallMeHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3fc4038f[class com.kob.job.service.CallMeService#CallMeHandler]
+2023-02-07 18:35:30 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4cd9ee2c[class com.kob.job.service.SampleService#demoJobHandler]
+2023-02-07 18:35:30 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1631dbbc[class com.kob.job.service.SampleService#demoJobHandler2]
+2023-02-07 18:35:30 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3b663112[class com.kob.job.service.SampleService#httpJobHandler]
+2023-02-07 18:35:30 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@24a1858a[class com.kob.job.service.SampleService#shardingJobHandler]
+2023-02-07 18:35:30 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@270ab7bc[class com.kob.job.service.SampleService#commandJobHandler]
+2023-02-07 18:35:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2023-02-07 18:35:30 [main] INFO  c.k.backend.BackendApplicationTests - Started BackendApplicationTests in 38.59 seconds (JVM running for 44.517)
+2023-02-07 18:35:31 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-02-07 18:35:31 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-02-07 18:35:31 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-02-07 18:35:31 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-02-07 18:35:31 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-02-07 18:35:32 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
+2023-02-07 18:35:32 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-02-07 18:35:32 [main] INFO  c.k.backend.BackendApplicationTests - 1675766533000
+2023-02-07 18:35:32 [main] INFO  c.k.backend.BackendApplicationTests - 1675767733000
+2023-02-07 18:35:32 [main] INFO  c.k.backend.BackendApplicationTests - 2023-02-07 18:43:13
+2023-02-07 18:35:33 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-02-07 18:35:33 [xxl-job, executor JobLogFileCleanThread] INFO  c.x.j.c.thread.JobLogFileCleanThread - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-02-07 18:35:33 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-02-07 18:35:33 [Thread-10] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-02-07 18:35:33 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2023-02-07 18:35:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2023-02-07 18:35:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2023-02-07 18:35:33 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2023-02-07 18:55:04 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kob.backend.BackendApplicationTests], using SpringBootContextLoader
+2023-02-07 18:55:04 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.kob.backend.BackendApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-07 18:55:04 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.kob.backend.BackendApplicationTests]: BackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-07 18:55:05 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.kob.backend.BackendApplication for test class com.kob.backend.BackendApplicationTests
+2023-02-07 18:55:06 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-07 18:55:06 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67545b57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6c2c1385, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5f354bcf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3daf7722, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78641d23, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74589991, org.springframework.test.context.transaction.TransactionalTestExecutionListener@146dfe6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4716be8b, org.springframework.test.context.event.EventPublishingTestExecutionListener@1fc32e4f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f67b837, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1869fbd2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6af9fcb2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6cce16f4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7efaad5a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@291a7e3c]
+2023-02-07 18:55:07 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-07 18:55:07 [main] INFO  c.k.backend.BackendApplicationTests - Starting BackendApplicationTests using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 17928 (started by A in E:\java2\kob\backendcloud\backend)
+2023-02-07 18:55:07 [main] INFO  c.k.backend.BackendApplicationTests - The following 1 profile is active: "dev"
+2023-02-07 18:55:16 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-02-07 18:55:17 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-02-07 18:55:19 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-02-07 18:55:23 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-02-07 18:55:23 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-02-07 18:55:32 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-02-07 18:55:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-07 18:55:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-02-07 18:55:34 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-02-07 18:55:37 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2023-02-07 18:55:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2023-02-07 18:55:39 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2023-02-07 18:55:39 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2023-02-07 18:55:39 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2023-02-07 18:55:39 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2023-02-07 18:55:57 [main] INFO  com.kob.job.config.XxlJobConfig - >>>>>>>>>>> xxl-job config init.
+2023-02-07 18:56:12 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:CallMeHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@f1e1d66[class com.kob.job.service.CallMeService#CallMeHandler]
+2023-02-07 18:56:12 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3cd28235[class com.kob.job.service.SampleService#httpJobHandler]
+2023-02-07 18:56:12 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@75312c94[class com.kob.job.service.SampleService#demoJobHandler]
+2023-02-07 18:56:12 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@140cfc5f[class com.kob.job.service.SampleService#demoJobHandler2]
+2023-02-07 18:56:12 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@6b063695[class com.kob.job.service.SampleService#shardingJobHandler]
+2023-02-07 18:56:12 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@43edd2ea[class com.kob.job.service.SampleService#commandJobHandler]
+2023-02-07 18:56:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2023-02-07 18:56:13 [main] INFO  c.k.backend.BackendApplicationTests - Started BackendApplicationTests in 66.779 seconds (JVM running for 72.831)
+2023-02-07 18:56:14 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-02-07 18:56:14 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-02-07 18:56:14 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-02-07 18:56:14 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-02-07 18:56:14 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-02-07 18:56:14 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
+2023-02-07 18:56:14 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-02-07 18:56:15 [main] INFO  c.k.backend.BackendApplicationTests - 1675766533000
+2023-02-07 18:56:15 [main] INFO  c.k.backend.BackendApplicationTests - 1675767733000
+2023-02-07 18:56:15 [main] INFO  c.k.backend.BackendApplicationTests - 2023-02-07 18:43:13
+2023-02-07 18:56:16 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-02-07 18:56:16 [xxl-job, executor JobLogFileCleanThread] INFO  c.x.j.c.thread.JobLogFileCleanThread - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-02-07 18:56:16 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-02-07 18:56:16 [Thread-10] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-02-07 18:56:16 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2023-02-07 18:56:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2023-02-07 18:56:16 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2023-02-07 18:56:16 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2023-02-07 19:53:21 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kob.backend.BackendApplicationTests], using SpringBootContextLoader
+2023-02-07 19:53:21 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.kob.backend.BackendApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-07 19:53:21 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.kob.backend.BackendApplicationTests]: BackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-07 19:53:22 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.kob.backend.BackendApplication for test class com.kob.backend.BackendApplicationTests
+2023-02-07 19:53:22 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-07 19:53:22 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67545b57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6c2c1385, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5f354bcf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3daf7722, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78641d23, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74589991, org.springframework.test.context.transaction.TransactionalTestExecutionListener@146dfe6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4716be8b, org.springframework.test.context.event.EventPublishingTestExecutionListener@1fc32e4f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f67b837, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1869fbd2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6af9fcb2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6cce16f4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7efaad5a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@291a7e3c]
+2023-02-07 19:53:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-07 19:53:24 [main] INFO  c.k.backend.BackendApplicationTests - Starting BackendApplicationTests using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 408 (started by A in E:\java2\kob\backendcloud\backend)
+2023-02-07 19:53:24 [main] INFO  c.k.backend.BackendApplicationTests - The following 1 profile is active: "dev"
+2023-02-07 19:53:33 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-02-07 19:53:34 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-02-07 19:53:35 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-02-07 19:53:38 [redisson-netty-2-7] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-02-07 19:53:38 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-02-07 19:53:43 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-02-07 19:53:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-07 19:53:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-02-07 19:53:43 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-02-07 19:53:44 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2023-02-07 19:53:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2023-02-07 19:53:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2023-02-07 19:53:45 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2023-02-07 19:53:45 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2023-02-07 19:53:45 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2023-02-07 19:53:54 [main] INFO  com.kob.job.config.XxlJobConfig - >>>>>>>>>>> xxl-job config init.
+2023-02-07 19:54:02 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:CallMeHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@820b78a[class com.kob.job.service.CallMeService#CallMeHandler]
+2023-02-07 19:54:02 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@6a9ac8b[class com.kob.job.service.SampleService#commandJobHandler]
+2023-02-07 19:54:02 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7683ea43[class com.kob.job.service.SampleService#shardingJobHandler]
+2023-02-07 19:54:02 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@15a41088[class com.kob.job.service.SampleService#demoJobHandler2]
+2023-02-07 19:54:02 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@18356951[class com.kob.job.service.SampleService#httpJobHandler]
+2023-02-07 19:54:02 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@53335328[class com.kob.job.service.SampleService#demoJobHandler]
+2023-02-07 19:54:03 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2023-02-07 19:54:03 [main] INFO  c.k.backend.BackendApplicationTests - Started BackendApplicationTests in 40.158 seconds (JVM running for 45.68)
+2023-02-07 19:54:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-02-07 19:54:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-02-07 19:54:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-02-07 19:54:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-02-07 19:54:04 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-02-07 19:54:04 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
+2023-02-07 19:54:04 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-02-07 19:54:06 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-02-07 19:54:06 [xxl-job, executor JobLogFileCleanThread] INFO  c.x.j.c.thread.JobLogFileCleanThread - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-02-07 19:54:06 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-02-07 19:54:06 [Thread-10] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-02-07 19:54:06 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2023-02-07 19:54:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2023-02-07 19:54:06 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2023-02-07 19:54:06 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2023-02-07 20:05:07 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kob.backend.BackendApplicationTests], using SpringBootContextLoader
+2023-02-07 20:05:07 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.kob.backend.BackendApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-07 20:05:07 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.kob.backend.BackendApplicationTests]: BackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-07 20:05:07 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.kob.backend.BackendApplication for test class com.kob.backend.BackendApplicationTests
+2023-02-07 20:05:08 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-07 20:05:08 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67545b57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6c2c1385, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5f354bcf, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3daf7722, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78641d23, org.springframework.test.context.support.DirtiesContextTestExecutionListener@74589991, org.springframework.test.context.transaction.TransactionalTestExecutionListener@146dfe6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4716be8b, org.springframework.test.context.event.EventPublishingTestExecutionListener@1fc32e4f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2f67b837, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1869fbd2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6af9fcb2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6cce16f4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7efaad5a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@291a7e3c]
+2023-02-07 20:05:10 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-02-07 20:05:10 [main] INFO  c.k.backend.BackendApplicationTests - Starting BackendApplicationTests using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 8900 (started by A in E:\java2\kob\backendcloud\backend)
+2023-02-07 20:05:10 [main] INFO  c.k.backend.BackendApplicationTests - The following 1 profile is active: "dev"
+2023-02-07 20:05:18 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-02-07 20:05:19 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-02-07 20:05:20 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-02-07 20:05:24 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-02-07 20:05:24 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-02-07 20:05:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-auto-1"]
+2023-02-07 20:05:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-07 20:05:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-02-07 20:05:30 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-02-07 20:05:31 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2023-02-07 20:05:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2023-02-07 20:05:31 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2023-02-07 20:05:31 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2023-02-07 20:05:31 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2023-02-07 20:05:31 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2023-02-07 20:05:40 [main] INFO  com.kob.job.config.XxlJobConfig - >>>>>>>>>>> xxl-job config init.
+2023-02-07 20:05:48 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:CallMeHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3a0b6aff[class com.kob.job.service.CallMeService#CallMeHandler]
+2023-02-07 20:05:48 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@f1e1d66[class com.kob.job.service.SampleService#httpJobHandler]
+2023-02-07 20:05:48 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3cd28235[class com.kob.job.service.SampleService#demoJobHandler2]
+2023-02-07 20:05:48 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@75312c94[class com.kob.job.service.SampleService#demoJobHandler]
+2023-02-07 20:05:48 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@140cfc5f[class com.kob.job.service.SampleService#shardingJobHandler]
+2023-02-07 20:05:48 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@6b063695[class com.kob.job.service.SampleService#commandJobHandler]
+2023-02-07 20:05:48 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-auto-1"]
+2023-02-07 20:05:48 [main] INFO  c.k.backend.BackendApplicationTests - Started BackendApplicationTests in 39.899 seconds (JVM running for 44.782)
+2023-02-07 20:05:49 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-02-07 20:05:49 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-02-07 20:05:49 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-02-07 20:05:49 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-02-07 20:05:49 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-02-07 20:05:49 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
+2023-02-07 20:05:49 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-02-07 20:05:51 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-02-07 20:05:51 [xxl-job, executor JobLogFileCleanThread] INFO  c.x.j.c.thread.JobLogFileCleanThread - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-02-07 20:05:51 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-02-07 20:05:51 [Thread-10] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-02-07 20:05:51 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2023-02-07 20:05:51 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2023-02-07 20:05:51 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2023-02-07 20:05:51 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye

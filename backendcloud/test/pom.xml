@@ -14,10 +14,10 @@
 
 
     <dependencies>
-    <!-- 通用工具-->
-    <dependency>
-        <groupId>com.kob.common</groupId>
-        <artifactId>xie-common</artifactId>
-    </dependency>
+        <!-- 通用工具-->
+        <dependency>
+            <groupId>com.kob.common</groupId>
+            <artifactId>xie-common</artifactId>
+        </dependency>
 </dependencies>
 </project>

@@ -13,6 +13,9 @@
         <module>xie-oss</module>
         <module>xie-generator</module>
         <module>test</module>
+        <module>xie-job</module>
+        <module>xie-extend</module>
+
     </modules>
     <name>backendcloud</name>
     <description>backendcloud</description>
@@ -23,7 +26,7 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <spring-boot.version>2.7.2</spring-boot.version>
+        <spring-boot.version>2.7.7</spring-boot.version>
         <lombok.version>1.18.24</lombok.version>
         <hutool.version>5.8.5</hutool.version>
         <okhttp.version>4.10.0</okhttp.version>
@@ -43,6 +46,12 @@
         <dynamic-ds.version>3.5.1</dynamic-ds.version>
         <!-- OSS 配置 -->
         <aws-java-sdk-s3.version>1.12.264</aws-java-sdk-s3.version>
+        <xxl-job.version>2.3.1</xxl-job.version>
+
+        <spring-boot-admin.version>2.7.10</spring-boot-admin.version>
+<!--        &lt;!&ndash; SMS 配置 &ndash;&gt;-->
+<!--        <aliyun.sms.version>2.0.23</aliyun.sms.version>-->
+<!--        <tencent.sms.version>3.1.660</tencent.sms.version>-->
     </properties>
 
     <!-- 依赖声明 -->
@@ -56,6 +65,20 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring-boot-admin.version}</version>
+            </dependency>
+
+
+            <!-- xxl-job-core -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl-job.version}</version>
             </dependency>
 
 
@@ -206,6 +229,8 @@
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
+
+
             <!-- 通用工具-->
             <dependency>
                 <groupId>com.kob.generator</groupId>
@@ -219,6 +244,12 @@
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
 
+            <!-- 定时任务 -->
+            <dependency>
+                <groupId>com.kob.job</groupId>
+                <artifactId>xie-job</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
 
 
@@ -325,6 +356,7 @@
                 <profiles.active>prod</profiles.active>
                 <logging.level>warn</logging.level>
             </properties>
+
         </profile>
     </profiles>
 

@@ -71,6 +71,7 @@ public class WebSocketServer {
         if (this.user != null) {
             users.put(userId, this);
             //System.out.println("connected！");
+
         } else {
             this.session.close();
         }

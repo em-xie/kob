@@ -84,6 +84,10 @@
           <button type="button" class="btn btn-outline-secondary" @click="gen">代码生成</button>
       </div>
 
+      <div class="col-4 themed-grid-col">
+          <button type="button" class="btn btn-outline-secondary" @click="callme">xxl-job-demo 预约提醒</button>
+      </div>
+
      
     </div>
 
@@ -150,6 +154,10 @@ export default {
       const gen = () => {
         router.push({ name: 'toolgen_index' });
       }
+
+      const callme = () => {
+        router.push({ name: 'callme_index' });
+      }
         return {
            pk,
            getBotContextExample,
@@ -157,7 +165,8 @@ export default {
            pictureDownload,
            botadd,
            mailSend,
-           gen
+           gen,
+           callme
         }
     }
 }

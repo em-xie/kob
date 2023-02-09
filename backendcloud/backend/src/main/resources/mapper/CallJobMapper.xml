@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kob.job.mapper.CallJobMapper">
+
+    <resultMap id="CallJob" type="com.kob.job.domain.CallJob" >
+        <result column="id" property="id" />
+        <result column="final_time" property="finalTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="to_who" property="toWho" />
+        <result column="create_time" property="createTime" />
+        <result column="status" property="status" />
+        <result column="user_id" property="userId" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        t.id,
+        t.final_time,
+        t.update_time,
+        t.to_who,
+        t.create_time,
+        t.status,
+        t.user_id
+    </sql>
+
+
+
+
+
+    <select id="selectByStatus"  resultMap="CallJob">
+        select *
+        from call_job  t
+        WHERE t.status = '0'
+    </select>
+
+    <update id="UpdateStatus" parameterType="com.kob.job.domain.CallJob"  >
+        UPDATE call_job
+        SET
+            status = #{status}
+        WHERE id = #{id}
+    </update>
+
+    <update id="UpdateUpdateTime" parameterType="com.kob.job.domain.CallJob"  >
+        UPDATE call_job
+        SET
+            update_time = #{updateTime}
+        WHERE id = #{id}
+    </update>
+
+
+<!--    <select id="selectUserById"  resultMap="CallJob">-->
+<!--        select *-->
+<!--        from call_job  inner join user-->
+<!--        on-->
+<!--        grade.gradeid=student.gradeid-->
+
+<!--    </select>-->
+
+</mapper>

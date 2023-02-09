@@ -15,11 +15,11 @@
                     <div class="error-message">{{ error_message }}</div>
                     <button type="submit" class="btn btn-primary">提交</button>
                 </form>
-                <div style="text-align: center; margin-top: 20px; cursor: pointer;" @click="acwing_login">
+                <!-- <div style="text-align: center; margin-top: 20px; cursor: pointer;" @click="acwing_login">
                     <img width="30" src="https://cdn.acwing.com/media/article/image/2022/09/06/1_32f001fd2d-acwing_logo.png" alt="">
                     <br>
                     AcWing一键登录
-                </div>
+                </div> -->
             </div>
         </div>
     </ContentField>

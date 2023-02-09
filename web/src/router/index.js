@@ -10,6 +10,7 @@ import PictureIndexView from '../views/picture/PictureIndexView.vue'
 import PictureDownload from '../views/picture/PictureDownload.vue'
 import MailIndexView from '../views/mail/MailIndexView.vue'
 import GenIndexView from '../views/tool/gen/GenIndexView.vue'
+import CallMeIndexView from '../views/xxl-job/CallMeIndexView.vue'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegister from '../views/user/account/UserAccountRegisterView.vue'
 import UserAccountAcWingWebReceiveCodeView from '../views/user/account/UserAccountAcWingWebReceiveCodeView'
@@ -139,6 +140,14 @@ const routes = [
     path: "/tool/gen",
     name: "toolgen_index",
     component: GenIndexView,
+    meta: {
+      requestAuth: true,
+    }
+  },
+  {
+    path: "/xxl/job",
+    name: "callme_index",
+    component: CallMeIndexView,
     meta: {
       requestAuth: true,
     }

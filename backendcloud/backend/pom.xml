@@ -20,6 +20,11 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.kob.job</groupId>
+            <artifactId>xie-job</artifactId>
+        </dependency>
+
         <!-- sql性能分析插件 -->
         <dependency>
             <groupId>p6spy</groupId>
@@ -46,11 +51,11 @@
 <!--        </dependency>-->
 
             <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
+                   <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
 
-            </dependency>
+        </dependency>
 
 
 
