@@ -1,6 +1,9 @@
 <template>
   <NavBar></NavBar>
-  <router-view></router-view>
+  
+    <router-view/>
+  
+  <!-- <router-view></router-view> -->
 
 
   <!--信息提示栏-->
@@ -25,6 +28,7 @@ import {showStore} from '@/store/modules/show'
 import { onMounted,onUnmounted } from 'vue';
 import $ from 'jquery'
 import bootstrap from 'bootstrap/dist/js/bootstrap'
+
 export default {
   components: {
     NavBar
@@ -34,11 +38,13 @@ export default {
     const userStore = useUserStore()
     const store = showStore();
     let socket = null;
-   
+
  //字符串中有${}表达式操作的话要用``，不能用引号
-    const socketUrl = `ws://localhost:3000/kob/websocket/call/${userStore.token}/`;
+    //const socketUrl = `ws://localhost:3000/kob/websocket/call/${userStore.token}/`;
+    const socketUrl = `wss://app3943.acapp.acwing.com.cn/kob/websocket/call/${userStore.token}/`;
     onMounted(() => { 
 
+     
             //当当前页面打开时调用
             socket = new WebSocket(socketUrl); //js自带的WebSocket()
             socket.onopen = () => { //连接成功时调用的函数
@@ -72,7 +78,6 @@ export default {
             socket.close(); //卸载的时候断开连接
             // store.updateStatus("matching");
         });
-
 
         return {
             userStore,

@@ -35,7 +35,7 @@ export default {
         let mail = ref('');
         let site = ref('');
         let error_message = ref('');
-        console.log(site.value)
+       // console.log(site.value)
         const callme = () => {
         return new Promise((resolve, reject) => {
             addCallMe(mail.value,site.value).then(res => {

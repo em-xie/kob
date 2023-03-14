@@ -18,6 +18,19 @@
                 </tr>
             </tbody>
         </table>
+        <!-- <SoftPagination>
+            <SoftPaginationItem :label="前一页" @click="click_page(-2)">
+                
+            </SoftPaginationItem>
+            <SoftPaginationItem>
+
+            </SoftPaginationItem>
+            <SoftPaginationItem>
+
+            </SoftPaginationItem>
+        </SoftPagination> -->
+        
+
         <nav aria-label="...">
         <ul class="pagination" style="float: right;">
             <li class="page-item" @click="click_page(-2)">
@@ -37,13 +50,16 @@
 <script>
 import ContentField from '../../components/ContentField.vue'
 import {useUserStore} from '@/store/modules/user'
-
+// import SoftPaginationItem from '../../components/SoftPaginationItem.vue'
+// import SoftPagination from '../../components/SoftPagination.vue'
 import { ref } from 'vue';
 import {getlist} from '@/api//rankList/rankList'
 
 export default {
     components: {
-        ContentField
+        ContentField,
+        // SoftPaginationItem,
+        // SoftPagination
     },
     setup() {
         // const pkStore = useStore('pk');

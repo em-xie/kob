@@ -1,6 +1,6 @@
 <template>
 
-<ContentField>
+<ContentField class="tap">
   <table class="table table-striped table-hover" style="text-align: center;">
             <thead>
                 <tr>
@@ -8,7 +8,7 @@
                     <th>访问站点</th>
                     <th>自定义域名</th>
                     <th>桶名称</th>
-                    <th>前缀</th>
+                    <!-- <th>前缀</th> -->
                     <th>域</th>
                     <th>状态</th>
                     <th>操作</th>
@@ -25,7 +25,7 @@
                     <td>{{ossConfig.domain}}</td>
                     <td>{{ ossConfig.bucketName }}</td>
                     
-                      <td>{{ ossConfig.prefix }}</td>
+                      <!-- <td>{{ ossConfig.prefix }}</td> -->
                     
                    
                       <td>{{ ossConfig.region }}</td>
@@ -67,6 +67,18 @@
   <img src="http://www.xiemingquan.top:9006/test/test.png" class="rounded" alt="...">
 </div> -->
 
+  <!--信息提示栏-->
+  <div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 11">
+    <div id="info-toast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <!--成功信息-->
+                <span id="toast-info-success" class="text-success"></span>
+            </div>
+            <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
 
 </ContentField>
 </template>
@@ -75,8 +87,9 @@
 import ContentField from '../../components/ContentField.vue'
 import { ref,reactive,toRefs } from 'vue';
 import {listOssConfig} from '@/api/oss/ossConfig'
- 
-
+import router from '@/router/index'
+import $ from 'jquery'
+import bootstrap from 'bootstrap/dist/js/bootstrap'
  import ImageUpload from "../../components/ImageUpload.vue";
 export default {
     components: {
@@ -135,10 +148,22 @@ const { queryParams} = toRefs(data);
             
             return new Promise((resolve, reject) => {
               listOssConfig( queryParams.value).then(res => {
+                    console.log(res)
+                    if(res.code === 403){
+                        $("#toast-info-success").text(res.msg);
+                        // --- 显示提示栏
+                        var toastBar = document.getElementById('info-toast');
+                        var toast = new bootstrap.Toast(toastBar);
+                        toast.show();
+                        setTimeout(()=>{
+                            router.push({ name: 'home' });
+                         },4000); //延时函数，单位是毫秒 
+                    }else{
                     ossConfigList.value = res.rows;
                     total.value = res.total;
                     udpate_pages();
-              resolve()
+                    }
+                    resolve()
             }).catch(error => {
               reject(error)
             })

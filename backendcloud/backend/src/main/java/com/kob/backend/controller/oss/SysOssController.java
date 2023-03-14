@@ -1,6 +1,7 @@
 package com.kob.backend.controller.oss;
 
 
+import cn.dev33.satoken.annotation.SaCheckRole;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.http.HttpException;
@@ -74,7 +75,7 @@ public class SysOssController extends BaseController {
      *
      * @param file 文件
      */
-
+    @SaCheckRole("admin")
     @Log(title = "OSS对象存储", businessType = BusinessType.INSERT)
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public R<Map<String, String>> upload(@RequestPart("file") MultipartFile file) {

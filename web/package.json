@@ -9,6 +9,10 @@
     "build:prod": "vue-cli-service --mode production"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@popperjs/core": "^2.11.6",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.2",
@@ -34,6 +38,8 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "image-webpack-loader": "^8.1.0",
+    "sass": "^1.58.3",
+    "sass-loader": "^13.2.0",
     "vue-cli-plugin-pinia": "^0.2.1"
   },
   "eslintConfig": {

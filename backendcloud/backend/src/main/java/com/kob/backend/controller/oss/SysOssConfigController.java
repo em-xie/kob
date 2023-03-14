@@ -1,5 +1,7 @@
 package com.kob.backend.controller.oss;
 
+import cn.dev33.satoken.annotation.SaCheckPermission;
+import cn.dev33.satoken.annotation.SaCheckRole;
 import com.kob.backend.domain.oss.bo.SysOssConfigBo;
 import com.kob.backend.domain.oss.vo.SysOssConfigVo;
 import com.kob.backend.service.oss.ISysOssConfigService;
@@ -40,7 +42,7 @@ public class SysOssConfigController extends BaseController {
     /**
      * 查询对象存储配置列表
      */
-
+    @SaCheckRole("admin")
     @GetMapping("/list")
     public TableDataInfo<SysOssConfigVo> list(@Validated(QueryGroup.class) SysOssConfigBo bo, PageQuery pageQuery) {
         return iSysOssConfigService.queryPageList(bo, pageQuery);

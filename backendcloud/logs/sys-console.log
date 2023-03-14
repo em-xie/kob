@@ -1,0 +1,458 @@
+2023-03-04 09:58:48 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 8844 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-03-04 09:58:48 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-03-04 09:58:48 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-03-04 09:59:02 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-03-04 09:59:03 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-03-04 09:59:04 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-03-04 09:59:10 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-03-04 09:59:10 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-03-04 09:59:12 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-03-04 09:59:12 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-04 09:59:12 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-04 09:59:12 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-03-04 09:59:13 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2023-03-04 09:59:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2023-03-04 09:59:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2023-03-04 09:59:13 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2023-03-04 09:59:13 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2023-03-04 09:59:13 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2023-03-04 09:59:20 [main] INFO  com.kob.job.config.XxlJobConfig - >>>>>>>>>>> xxl-job config init.
+2023-03-04 09:59:24 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:CallMeHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3b39bee2[class com.kob.job.service.CallMeService#CallMeHandler]
+2023-03-04 09:59:24 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@20ddc780[class com.kob.job.service.SampleService#commandJobHandler]
+2023-03-04 09:59:24 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@6889e714[class com.kob.job.service.SampleService#shardingJobHandler]
+2023-03-04 09:59:24 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4dc5b887[class com.kob.job.service.SampleService#demoJobHandler]
+2023-03-04 09:59:24 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3b7dd173[class com.kob.job.service.SampleService#httpJobHandler]
+2023-03-04 09:59:24 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7552f05b[class com.kob.job.service.SampleService#demoJobHandler2]
+2023-03-04 09:59:25 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-03-04 09:59:25 [Thread-75] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 3011
+2023-03-04 09:59:25 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 40.089 seconds (JVM running for 51.796)
+2023-03-04 09:59:26 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-03-04 09:59:26 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-03-04 09:59:26 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-03-04 09:59:26 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-03-04 09:59:26 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-03-04 09:59:26 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
+2023-03-04 09:59:26 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-03-04 09:59:26 [RMI TCP Connection(3)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-04 11:03:00 [http-nio-3000-exec-7] ERROR c.k.b.w.e.GlobalExceptionHandler - Validation failed for argument [0] in public com.kob.common.core.domain.R<java.util.Map<java.lang.String, java.lang.Object>> com.kob.backend.controller.user.account.LoginController.getToken(com.kob.common.core.domain.model.LoginBody): [Field error in object 'loginBody' on field 'password': rejected value [1]; codes [Length.loginBody.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginBody.password,password]; arguments []; default message [password],20,3]; default message [{user.password.length.valid}]] 
+org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public com.kob.common.core.domain.R<java.util.Map<java.lang.String, java.lang.Object>> com.kob.backend.controller.user.account.LoginController.getToken(com.kob.common.core.domain.model.LoginBody): [Field error in object 'loginBody' on field 'password': rejected value [1]; codes [Length.loginBody.password,Length.password,Length.java.lang.String,Length]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginBody.password,password]; arguments []; default message [password],20,3]; default message [{user.password.length.valid}]] 
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:141)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-03-04 11:11:16 [http-nio-3000-exec-1] INFO  c.k.b.s.I.u.account.LoginServiceImpl - 登录用户：xie111 不存在.
+2023-03-04 11:11:16 [http-nio-3000-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.kob.backend.web.exception.GlobalExceptionHandler#handleRuntimeException(RuntimeException, HttpServletRequest)
+org.springframework.context.NoSuchMessageException: No message found under code 'user.not.exists' for locale 'zh_CN'.
+	at org.springframework.context.support.DelegatingMessageSource.getMessage(DelegatingMessageSource.java:76)
+	at com.kob.common.utils.MessageUtils.message(MessageUtils.java:27)
+	at com.kob.common.exception.base.BaseException.getMessage(BaseException.java:67)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:78)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:62)
+	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:119)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:419)
+	at ch.qos.logback.classic.Logger.filterAndLog_2(Logger.java:414)
+	at ch.qos.logback.classic.Logger.error(Logger.java:530)
+	at com.kob.backend.web.exception.GlobalExceptionHandler.handleRuntimeException(GlobalExceptionHandler.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-03-04 11:11:16 [http-nio-3000-exec-1] ERROR o.a.c.c.C.[Tomcat].[localhost] - Exception Processing /kob/user/account/token/
+org.springframework.context.NoSuchMessageException: No message found under code 'user.not.exists' for locale 'zh_CN'.
+	at org.springframework.context.support.DelegatingMessageSource.getMessage(DelegatingMessageSource.java:76)
+	at com.kob.common.utils.MessageUtils.message(MessageUtils.java:27)
+	at com.kob.common.exception.base.BaseException.getMessage(BaseException.java:67)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:78)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:62)
+	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:119)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:419)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:383)
+	at ch.qos.logback.classic.Logger.log(Logger.java:765)
+	at org.slf4j.bridge.SLF4JBridgeHandler.callLocationAwareLogger(SLF4JBridgeHandler.java:221)
+	at org.slf4j.bridge.SLF4JBridgeHandler.publish(SLF4JBridgeHandler.java:303)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.logp(Logger.java:1042)
+	at org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:175)
+	at org.apache.juli.logging.DirectJDKLog.error(DirectJDKLog.java:141)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:207)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-03-04 11:11:16 [http-nio-3000-exec-1] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/error',认证失败'未能读取到有效Token',无法访问系统资源
+2023-03-04 11:11:53 [http-nio-3000-exec-2] INFO  c.k.b.s.I.u.account.LoginServiceImpl - 登录用户：xie111 不存在.
+2023-03-04 11:11:53 [http-nio-3000-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Failure in @ExceptionHandler com.kob.backend.web.exception.GlobalExceptionHandler#handleRuntimeException(RuntimeException, HttpServletRequest)
+org.springframework.context.NoSuchMessageException: No message found under code 'user.not.exists' for locale 'zh_CN'.
+	at org.springframework.context.support.DelegatingMessageSource.getMessage(DelegatingMessageSource.java:76)
+	at com.kob.common.utils.MessageUtils.message(MessageUtils.java:27)
+	at com.kob.common.exception.base.BaseException.getMessage(BaseException.java:67)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:78)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:62)
+	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:119)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:419)
+	at ch.qos.logback.classic.Logger.filterAndLog_2(Logger.java:414)
+	at ch.qos.logback.classic.Logger.error(Logger.java:530)
+	at com.kob.backend.web.exception.GlobalExceptionHandler.handleRuntimeException(GlobalExceptionHandler.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-03-04 11:11:53 [http-nio-3000-exec-2] ERROR o.a.c.c.C.[Tomcat].[localhost] - Exception Processing /kob/user/account/token/
+org.springframework.context.NoSuchMessageException: No message found under code 'user.not.exists' for locale 'zh_CN'.
+	at org.springframework.context.support.DelegatingMessageSource.getMessage(DelegatingMessageSource.java:76)
+	at com.kob.common.utils.MessageUtils.message(MessageUtils.java:27)
+	at com.kob.common.exception.base.BaseException.getMessage(BaseException.java:67)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:78)
+	at ch.qos.logback.classic.spi.ThrowableProxy.<init>(ThrowableProxy.java:62)
+	at ch.qos.logback.classic.spi.LoggingEvent.<init>(LoggingEvent.java:119)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:419)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:383)
+	at ch.qos.logback.classic.Logger.log(Logger.java:765)
+	at org.slf4j.bridge.SLF4JBridgeHandler.callLocationAwareLogger(SLF4JBridgeHandler.java:221)
+	at org.slf4j.bridge.SLF4JBridgeHandler.publish(SLF4JBridgeHandler.java:303)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.logp(Logger.java:1042)
+	at org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:175)
+	at org.apache.juli.logging.DirectJDKLog.error(DirectJDKLog.java:141)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:207)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2023-03-04 11:11:53 [http-nio-3000-exec-2] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/error',认证失败'未能读取到有效Token',无法访问系统资源
+2023-03-04 11:31:47 [master housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - master - Thread starvation or clock leap detected (housekeeper delta=14m2s904ms885µs500ns).
+2023-03-04 14:49:32 [master housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - master - Thread starvation or clock leap detected (housekeeper delta=2h24m14s4ms256µs100ns).
+2023-03-04 16:34:43 [http-nio-3000-exec-8] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:34:50 [http-nio-3000-exec-2] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:35:24 [http-nio-3000-exec-3] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:37:59 [http-nio-3000-exec-4] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:38:18 [http-nio-3000-exec-5] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:38:32 [http-nio-3000-exec-10] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:38:56 [http-nio-3000-exec-4] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:39:03 [http-nio-3000-exec-1] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:39:05 [http-nio-3000-exec-2] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:40:21 [http-nio-3000-exec-9] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:40:24 [http-nio-3000-exec-4] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:40:27 [http-nio-3000-exec-1] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:40:44 [http-nio-3000-exec-5] ERROR c.k.b.w.e.GlobalExceptionHandler - 请求地址'/kob/user/account/info/',认证失败'Token已过期：eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpblR5cGUiOiJsb2dpbiIsImxvZ2luSWQiOjIsInJuU3RyIjoiSHJsT3l0MmhxbmNmckNBN3hmb1dncmNlQkNwaDNmdE4ifQ.5D-aCKuv6PEquBbL6RZp0ZO6xfIKifGabc36efaev78',无法访问系统资源
+2023-03-04 16:43:16 [Thread-75] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2023-03-04 16:43:16 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-job-executor', registryValue='http://192.168.93.1:3011/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-03-04 16:43:16 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+2023-03-04 16:43:16 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-03-04 16:43:16 [xxl-job, executor JobLogFileCleanThread] INFO  c.x.j.c.thread.JobLogFileCleanThread - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-03-04 16:43:16 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-03-04 16:43:16 [Thread-74] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-03-04 16:43:16 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2023-03-04 16:43:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2023-03-04 16:43:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2023-03-04 16:43:17 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2023-03-04 16:43:53 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 15752 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-03-04 16:43:53 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-03-04 16:43:53 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-03-04 16:44:02 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-03-04 16:44:02 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-03-04 16:44:02 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-03-04 16:44:05 [redisson-netty-2-6] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-03-04 16:44:05 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-03-04 16:44:07 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-03-04 16:44:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-04 16:44:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-04 16:44:07 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-03-04 16:44:08 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2023-03-04 16:44:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2023-03-04 16:44:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2023-03-04 16:44:08 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2023-03-04 16:44:08 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2023-03-04 16:44:08 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2023-03-04 16:44:14 [main] INFO  com.kob.job.config.XxlJobConfig - >>>>>>>>>>> xxl-job config init.
+2023-03-04 16:44:17 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:CallMeHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@41092c8[class com.kob.job.service.CallMeService#CallMeHandler]
+2023-03-04 16:44:17 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2e590e36[class com.kob.job.service.SampleService#commandJobHandler]
+2023-03-04 16:44:17 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3fc2a1d1[class com.kob.job.service.SampleService#shardingJobHandler]
+2023-03-04 16:44:17 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@752e4223[class com.kob.job.service.SampleService#demoJobHandler]
+2023-03-04 16:44:17 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7528089c[class com.kob.job.service.SampleService#httpJobHandler]
+2023-03-04 16:44:17 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@136690b1[class com.kob.job.service.SampleService#demoJobHandler2]
+2023-03-04 16:44:17 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-03-04 16:44:18 [Thread-62] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 3011
+2023-03-04 16:44:18 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 26.468 seconds (JVM running for 31.286)
+2023-03-04 16:44:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-03-04 16:44:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-03-04 16:44:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-03-04 16:44:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-03-04 16:44:18 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-03-04 16:44:18 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
+2023-03-04 16:44:18 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-03-04 16:44:19 [RMI TCP Connection(1)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-04 16:49:27 [Thread-62] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2023-03-04 16:49:27 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-job-executor', registryValue='http://192.168.93.1:3011/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-03-04 16:49:27 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+2023-03-04 16:49:27 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-03-04 16:49:27 [xxl-job, executor JobLogFileCleanThread] INFO  c.x.j.c.thread.JobLogFileCleanThread - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-03-04 16:49:27 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-03-04 16:49:27 [Thread-61] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-03-04 16:49:27 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2023-03-04 16:49:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2023-03-04 16:49:27 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2023-03-04 16:49:27 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye
+2023-03-04 16:49:44 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-03-04 16:49:44 [main] INFO  com.kob.backend.BackendApplication - Starting BackendApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 19344 (E:\java2\kob\backendcloud\backend\target\classes started by A in E:\java2\kob\backendcloud)
+2023-03-04 16:49:44 [main] INFO  com.kob.backend.BackendApplication - The following 1 profile is active: "dev"
+2023-03-04 16:49:50 [main] INFO  com.kob.backend.config.JacksonConfig - 初始化 jackson 配置
+2023-03-04 16:49:50 [main] INFO  com.kob.backend.config.RedisConfig - 初始化 redis 配置
+2023-03-04 16:49:51 [main] INFO  org.redisson.Version - Redisson 3.17.5
+2023-03-04 16:49:53 [redisson-netty-2-1] INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for localhost/127.0.0.1:6379
+2023-03-04 16:49:53 [redisson-netty-2-4] INFO  o.r.c.pool.MasterConnectionPool - 8 connections initialized for localhost/127.0.0.1:6379
+2023-03-04 16:49:55 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3000"]
+2023-03-04 16:49:55 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-04 16:49:55 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-04 16:49:55 [main] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring embedded WebApplicationContext
+2023-03-04 16:49:55 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource detect P6SPY plugin and enabled it
+2023-03-04 16:49:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Starting...
+2023-03-04 16:49:56 [main] INFO  com.zaxxer.hikari.HikariDataSource - master - Start completed.
+2023-03-04 16:49:56 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [slave] success
+2023-03-04 16:49:56 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource - add a datasource named [master] success
+2023-03-04 16:49:56 [main] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource initial loaded [2] datasource,primary datasource named [master]
+2023-03-04 16:50:01 [main] INFO  com.kob.job.config.XxlJobConfig - >>>>>>>>>>> xxl-job config init.
+2023-03-04 16:50:04 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:CallMeHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@1fd77205[class com.kob.job.service.CallMeService#CallMeHandler]
+2023-03-04 16:50:04 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:commandJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3b9c05f[class com.kob.job.service.SampleService#commandJobHandler]
+2023-03-04 16:50:04 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:shardingJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@288915a1[class com.kob.job.service.SampleService#shardingJobHandler]
+2023-03-04 16:50:04 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@62a6a47e[class com.kob.job.service.SampleService#demoJobHandler]
+2023-03-04 16:50:04 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler2, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4645a575[class com.kob.job.service.SampleService#demoJobHandler2]
+2023-03-04 16:50:04 [main] INFO  c.x.job.core.executor.XxlJobExecutor - >>>>>>>>>>> xxl-job register jobhandler success, name:httpJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@b332eda[class com.kob.job.service.SampleService#httpJobHandler]
+2023-03-04 16:50:04 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3000"]
+2023-03-04 16:50:04 [Thread-54] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 3011
+2023-03-04 16:50:04 [main] INFO  com.kob.backend.BackendApplication - Started BackendApplication in 22.213 seconds (JVM running for 26.204)
+2023-03-04 16:50:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => minio
+2023-03-04 16:50:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qiniu
+2023-03-04 16:50:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => aliyun
+2023-03-04 16:50:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => qcloud
+2023-03-04 16:50:05 [main] INFO  c.k.b.s.I.o.SysOssConfigServiceImpl - 发布刷新OSS配置 => image
+2023-03-04 16:50:05 [main] INFO  com.kob.oss.factory.OssFactory - 初始化OSS工厂
+2023-03-04 16:50:05 [main] INFO  c.k.b.runner.SystemApplicationRunner - 初始化OSS配置成功
+2023-03-04 16:50:06 [RMI TCP Connection(2)-192.168.93.1] INFO  o.a.c.c.C.[.[localhost].[/kob] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-04 17:29:34 [Thread-54] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server stop.
+2023-03-04 17:29:36 [xxl-job, executor ExecutorRegistryThread] ERROR c.x.job.core.util.XxlJobRemotingUtil - Connection refused: connect
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:371)
+	at sun.net.www.protocol.http.HttpURLConnection.setNewClient(HttpURLConnection.java:775)
+	at sun.net.www.protocol.http.HttpURLConnection.setNewClient(HttpURLConnection.java:763)
+	at sun.net.www.protocol.http.HttpURLConnection.writeRequests(HttpURLConnection.java:705)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1585)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:119)
+	at com.xxl.job.core.biz.client.AdminBizClient.registryRemove(AdminBizClient.java:47)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:84)
+	at java.lang.Thread.run(Thread.java:748)
+2023-03-04 17:29:36 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-job-executor', registryValue='http://192.168.93.1:3011/'}, registryResult:ReturnT [code=500, msg=xxl-job remoting error(Connection refused: connect), for url : http://localhost:3010/xxl-job-admin/api/registryRemove, content=null]
+2023-03-04 17:29:36 [xxl-job, executor ExecutorRegistryThread] INFO  c.x.j.c.t.ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+2023-03-04 17:29:36 [SpringApplicationShutdownHook] INFO  com.xxl.job.core.server.EmbedServer - >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-03-04 17:29:36 [xxl-job, executor JobLogFileCleanThread] INFO  c.x.j.c.thread.JobLogFileCleanThread - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+2023-03-04 17:29:36 [xxl-job, executor TriggerCallbackThread] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+2023-03-04 17:29:36 [Thread-53] INFO  c.x.j.c.thread.TriggerCallbackThread - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+2023-03-04 17:29:36 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource start closing ....
+2023-03-04 17:29:36 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown initiated...
+2023-03-04 17:29:36 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - master - Shutdown completed.
+2023-03-04 17:29:36 [SpringApplicationShutdownHook] INFO  c.b.d.d.DynamicRoutingDataSource - dynamic-datasource all closed success,bye

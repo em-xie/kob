@@ -1,58 +1,133 @@
 <template>
-        <ContentField>
-        <div class="row justify-content-md-center">
-            <div class="col-3">
-                <!--submit.prevent阻止掉默认行为  -->
-                <form @submit.prevent="UserRegister">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">用户名</label>
-                        <input v-model="username" type="text" class="form-control" id="username" placeholder="请输入用户名">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">密码</label>
-                        <input v-model="password" type="password" class="form-control" id="password" placeholder="请输入密码">
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirmedPassword" class="form-label">确认密码</label>
-                        <input v-model="confirmedPassword" type="password" class="form-control" id="confirmedPassword" placeholder="请输入密码">
-                    </div>
-                    <div class="error-message">{{ error_message }}</div>
-                    <button type="submit" class="btn btn-primary">注册</button>
-                </form>
-            </div>
+   
+   <div class="page-header min-vh-75">
+    <div class="container">
+    <div class="row mt-lg-n1 mt-md-n11 mt-n10 justify-content-center">
+      <div class="mx-auto col-xl-4 col-lg-5 col-md-7">
+        <div class="card z-index-0">
+          <div class="pt-4 text-center card-header">
+            <h5>Register with</h5>
+    </div>
+          <div class="card-body">
+            <form @submit.prevent="UserRegister" :v-model="registers">
+              <div class="mb-3">
+                <input
+                  id="username"
+                  class="form-control"
+                  type="text"
+                  placeholder="Name"
+                  aria-label="username"
+                  v-model="registers.username"
+                  
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  class="form-control"
+                  id="password"
+                  type="password"
+                  placeholder="Password"
+                  aria-label="Password"
+                  v-model="registers.password"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  id="confirmedPassword"
+                  class="form-control"
+                  type="password"
+                  placeholder="confirmedPassword"
+                  aria-label="Password"
+                  v-model="registers.confirmedPassword"
+                />
+              </div>
+
+               <MessageCard :title="error.error_message" class="error-message" >
+      
+               </MessageCard>
+              <div class="text-center">
+                
+                <soft-button
+                  type="submit"
+                  color="dark"
+                  full-width
+                  variant="gradient"
+                  class="my-4 mb-2"
+                  >Sign up</soft-button
+                >
+              </div>
+              <p class="text-sm mt-3 mb-0">
+                Already have an account?
+                <router-link
+                  :to="{ name: 'user_account_login' }"
+                  class="text-dark font-weight-bolder"
+                >
+                  Sign in
+                </router-link>
+              </p>
+            </form>
+
+          
+            
+          </div>
+          
         </div>
-    </ContentField>
+        
+      </div>
+    </div>
+  </div>
+
+</div>
+
 </template>
 
 <script>
-import ContentField from '../../../components/ContentField'
-import { ref } from 'vue';
+//import ContentField from '../../../components/ContentField'
+import { ref,reactive } from 'vue';
 import router from '../../../router/index'
 import {register} from '@/api/login'
+
+
+import MessageCard from "@/components/MessageCard.vue";
+import SoftButton from "@/components/SoftButton.vue";
 export default {
     components: {
-        ContentField
+        //ContentField,
+        MessageCard,
+        SoftButton,
+        //SoftCheckbox,
+        
     },
     setup(){
-        let username = ref('');
-        let password = ref('');
-        let confirmedPassword = ref('');
-        let error_message = ref('');
-
+        // let username = ref('');
+        // let password = ref('');
+        // let confirmedPassword = ref('');
+        
+        const error = reactive({
+        
+        error_message: "",
+    })
+        
+        const registers = ref({
+            username: "",
+            password: "",
+            confirmedPassword: "",  
+        })
+    
         const UserRegister = () => {
-            const data = {
-                    username: username.value,
-                    password: password.value,
-                    confirmedPassword: confirmedPassword.value,
-                }
-          
+       
+
+ 
+            
             return new Promise((resolve, reject) => {
-            register(data).then(res => {
+
+            register(registers.value).then(res => {
                  // 成功直接返回登录界面
                  if (res.error_message === "success") {
                         router.push({name: "user_account_login"});
                     } else {
-                        error_message.value = res.error_message;
+                        error.error_message = res.error_message;
+                   
                     }
               resolve()
             }).catch(error => {
@@ -63,11 +138,13 @@ export default {
         
         
         return {
-            username,
-            password,
-            confirmedPassword,
-            error_message,
+            // username,
+            // password,
+            // confirmedPassword,
+            
+            registers,
             UserRegister,
+            error
         }
     }
 }
@@ -80,5 +157,11 @@ export default {
 button {
     width: 100%;
 }
+
+.error-message{
+    color: red;
+}
+
+
 
 </style>

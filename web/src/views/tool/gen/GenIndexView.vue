@@ -221,12 +221,12 @@ function handleSelectionChange(e) {
     let checked =  e.target.checked
     let j = 0;
     let checkDom = proxy.$refs.table.getElementsByClassName("form-check-input")
-    console.log(checked)
+   // console.log(checked)
     if(checked){
         for(var i = j; i < checkDom.length; i++){
             if(checkDom[i].checked ){
                 tableNameArray.push(checkDom[i].value)
-                console.log(tableNameArray)
+              // console.log(tableNameArray)
                 j = checkDom.length - i;
             }else{
                 j = 0;

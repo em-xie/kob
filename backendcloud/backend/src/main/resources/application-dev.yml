@@ -139,12 +139,12 @@ mail:
 
 --- # sms 短信
 sms:
-  enabled: false
+  enabled: true
   # 阿里云 dysmsapi.aliyuncs.com
   # 腾讯云 sms.tencentcloudapi.com
   endpoint: "dysmsapi.aliyuncs.com"
-  accessKeyId: xxxxxxx
-  accessKeySecret: xxxxxx
+  accessKeyId: LTAI5tFfQjeUjw1pQrCpk5e5
+  accessKeySecret: Wx1nmgCH6sIH34BfkKIOfYsJAo6f7c
   signName: 测试
   # 腾讯专用
   sdkAppId:

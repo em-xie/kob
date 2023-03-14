@@ -35,7 +35,8 @@ import { storeToRefs } from 'pinia'
         store.updateLoser("none");
         rstore.updateIsRecord("false");
         //字符串中有${}表达式操作的话要用``，不能用引号
-        const socketUrl = `ws://localhost:3000/kob/websocket/${userStore.token}/`;
+       // const socketUrl = `ws://localhost:3000/kob/websocket/${userStore.token}/`;
+        const socketUrl = `wss://app3943.acapp.acwing.com.cn/kob/websocket/${userStore.token}/`;
 
         let socket = null;
         onMounted(() => { 
@@ -77,7 +78,7 @@ import { storeToRefs } from 'pinia'
                     store.updateGame(data.game);
                 }else if(data.event ==="move"){
                     const game = store.gameObject;
-                    console.log(data.a_direction)
+//console.log(data.a_direction)
                     const [snake0, snake1] = game.Snakes;
                     snake0.set_direction(data.a_direction);
                     snake1.set_direction(data.b_direction);

@@ -4,7 +4,7 @@
       <table class="table table-striped table-hover" style="text-align: center;">
                 <thead>
                     <tr>
-                        <th>文件名</th>
+                        <!-- <th>文件名</th> -->
                         <th>原名</th>
                         <th>文件后缀</th>
                         <th>文件展示</th>
@@ -15,9 +15,9 @@
                 
                 <tbody>
                     <tr v-for="oss in ossList" :key="oss.index">
-                        <td class="mytt">
+                        <!-- <td class="mytt">
                             {{oss.fileName}}
-                        </td>
+                        </td> -->
                         <td class="mytt"> 
                             {{oss.originalName}}
                         </td>

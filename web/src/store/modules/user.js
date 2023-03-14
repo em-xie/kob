@@ -67,9 +67,10 @@ export const useUserStore = defineStore(
             login(username, password).then(res => {
               setToken(res.data.token)
               this.token = res.data.token
-              resolve()
+              resolve(res)
             }).catch(error => {
               reject(error)
+
             })
           })
         },

@@ -67,7 +67,7 @@
     </div>
     <div class="row mb-3 text-center">
       <div class="col-4 themed-grid-col">
-          <button type="button" class="btn btn-outline-secondary" @click="pictureUpload">图片上传</button>
+          <button type="button" class="btn btn-outline-secondary" @click="pictureUpload">oss配置</button>
       </div>
 
       <div class="col-4 themed-grid-col">
@@ -125,7 +125,7 @@ export default {
       const getBotContextExample = () => {
         return new Promise((resolve, reject) => {
                 BotContextExample().then(res => {
-                console.log(res)
+            //    console.log(res)
                 botadd.content = res.data.example;
                 resolve(res)
             }).catch(error => {
@@ -185,6 +185,9 @@ export default {
   margin-bottom: 1.5rem;
   background-color: rgba(0, 123, 255, .15);
   border: 1px solid rgba(0, 123, 255, .2);
+}
+.btn-close{
+  background-color: black;
 }
 </style>
 

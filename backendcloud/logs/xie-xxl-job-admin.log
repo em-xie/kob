@@ -1,0 +1,22 @@
+2023-03-04 09:58:54 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Starting XxlJobAdminApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 4580 (E:\java2\kob\backendcloud\xie-extend\xie-xxl-job-admin\target\classes started by A in E:\java2\kob\backendcloud)
+2023-03-04 09:58:54 [main] INFO  c.x.job.admin.XxlJobAdminApplication - The following 1 profile is active: "dev"
+2023-03-04 09:58:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 3010 (http)
+2023-03-04 09:58:59 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3010"]
+2023-03-04 09:58:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-04 09:58:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-03-04 09:59:02 [main] INFO  o.a.c.c.C.[.[.[/xxl-job-admin] - Initializing Spring embedded WebApplicationContext
+2023-03-04 09:59:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6812 ms
+2023-03-04 09:59:05 [main] INFO  c.x.j.a.c.scheduler.XxlJobScheduler - >>>>>>>>> init xxl-job admin success.
+2023-03-04 09:59:05 [xxl-job, admin JobRegistryMonitorHelper-registryMonitorThread] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2023-03-04 09:59:06 [xxl-job, admin JobRegistryMonitorHelper-registryMonitorThread] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2023-03-04 09:59:06 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-03-04 09:59:08 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-03-04 09:59:08 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3010"]
+2023-03-04 09:59:08 [main] INFO  o.a.c.c.C.[.[.[/xxl-job-admin] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-04 09:59:08 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-04 09:59:08 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2023-03-04 09:59:08 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 3010 (http) with context path '/xxl-job-admin'
+2023-03-04 09:59:09 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Started XxlJobAdminApplication in 16.351 seconds (JVM running for 22.142)
+2023-03-04 09:59:10 [xxl-job, admin JobScheduleHelper#scheduleThread] INFO  c.x.j.a.c.thread.JobScheduleHelper - >>>>>>>>> init xxl-job admin scheduler success.
+2023-03-04 11:31:40 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=14m2s899ms856µs).
+2023-03-04 14:49:54 [HikariCP housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariCP - Thread starvation or clock leap detected (housekeeper delta=2h24m14s19ms923µs100ns).

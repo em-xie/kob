@@ -150,7 +150,7 @@ export class GameMap extends AcGameObject {
             let k = 0;
             const a_steps = this.rStore.a_steps;
             const b_steps = this.rStore.b_steps;
-            console.log(a_steps)
+            //console.log(a_steps)
             const loser = this.rStore.record_loser;
             const [snake0, snake1] = this.Snakes;
             const interval_id = setInterval(() => {

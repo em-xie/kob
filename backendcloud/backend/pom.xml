@@ -137,20 +137,42 @@
 
 
 
+
+
         <dependency>
-            <groupId>com.kob.test</groupId>
-            <artifactId>test</artifactId>
+            <groupId>com.kob.sms</groupId>
+            <artifactId>xie-sms</artifactId>
         </dependency>
     </dependencies>
 
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                &lt;!&ndash;这里写上main方法所在类的路径&ndash;&gt;-->
+<!--                <configuration>-->
+<!--                    <mainClass>com.kob.backend.BackendApplication</mainClass>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
     <build>
+        <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--这里写上main方法所在类的路径-->
+                <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>com.kob.backend.BackendApplication</mainClass>
+                    <fork>true</fork> <!-- 如果没有该配置，devtools不会生效 -->
                 </configuration>
                 <executions>
                     <execution>
@@ -160,7 +182,17 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.2</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warName>${project.artifactId}</warName>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
 
 </project>

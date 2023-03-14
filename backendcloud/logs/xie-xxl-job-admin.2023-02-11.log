@@ -1,0 +1,20 @@
+2023-02-11 12:53:17 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Starting XxlJobAdminApplication using Java 1.8.0_202 on DESKTOP-U0P6EDB with PID 17332 (E:\java2\kob\backendcloud\xie-extend\xie-xxl-job-admin\target\classes started by A in E:\java2\kob\backendcloud)
+2023-02-11 12:53:17 [main] INFO  c.x.job.admin.XxlJobAdminApplication - The following 1 profile is active: "dev"
+2023-02-11 12:53:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 3010 (http)
+2023-02-11 12:53:22 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-3010"]
+2023-02-11 12:53:22 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-02-11 12:53:22 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-02-11 12:53:22 [main] INFO  o.a.c.c.C.[.[.[/xxl-job-admin] - Initializing Spring embedded WebApplicationContext
+2023-02-11 12:53:22 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4786 ms
+2023-02-11 12:53:24 [main] INFO  c.x.j.a.c.scheduler.XxlJobScheduler - >>>>>>>>> init xxl-job admin success.
+2023-02-11 12:53:24 [xxl-job, admin JobRegistryMonitorHelper-registryMonitorThread] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Starting...
+2023-02-11 12:53:24 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-02-11 12:53:24 [xxl-job, admin JobRegistryMonitorHelper-registryMonitorThread] INFO  com.zaxxer.hikari.HikariDataSource - HikariCP - Start completed.
+2023-02-11 12:53:25 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-02-11 12:53:26 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-3010"]
+2023-02-11 12:53:26 [main] INFO  o.a.c.c.C.[.[.[/xxl-job-admin] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-11 12:53:26 [main] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-02-11 12:53:26 [main] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-02-11 12:53:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 3010 (http) with context path '/xxl-job-admin'
+2023-02-11 12:53:26 [main] INFO  c.x.job.admin.XxlJobAdminApplication - Started XxlJobAdminApplication in 10.538 seconds (JVM running for 14.175)
+2023-02-11 12:53:29 [xxl-job, admin JobScheduleHelper#scheduleThread] INFO  c.x.j.a.c.thread.JobScheduleHelper - >>>>>>>>> init xxl-job admin scheduler success.

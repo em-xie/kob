@@ -44,11 +44,18 @@ private Integer userId;
 
         //Integer userId = JwtAuthentication.getUserId(token);
         //token = StpUtil.getTokenValue();
-        Integer userId = Integer.valueOf(String.valueOf(StpUtil.getLoginIdByToken(token)));
+        if(!token.isEmpty()) {
+            String loginIdByToken1 = (String)StpUtil.getLoginIdByToken(token);
 
-        this.userId = userId;
+            Integer loginIdByToken = Integer.valueOf(loginIdByToken1);
 
-        if (userId > 0) {
+            Integer userId = loginIdByToken;
+
+            this.userId = userId;
+        }
+
+
+        if (userId != null) {
             users.put(userId, this);
             //System.out.println("connected！");
             //users.get(userId).sendMessage("success");

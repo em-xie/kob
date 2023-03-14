@@ -300,7 +300,7 @@ class BsDialog {
                     elFooter.removeChild(elFooter.lastChild);
                 }
                 Array.from(elFormFooter.children).forEach(elBtn => {
-                    console.log(elBtn);
+                   // console.log(elBtn);
                     elFooter.appendChild(elBtn);
                 })
             }

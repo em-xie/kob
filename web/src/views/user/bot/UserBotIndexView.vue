@@ -151,7 +151,7 @@ export default {
     const refresh_bots = () => {
         return new Promise((resolve, reject) => {
                 getlist().then(res => {
-                console.log(res)
+               // console.log(res)
                 bots.value = res;
                 resolve(res)
             }).catch(error => {
@@ -169,7 +169,7 @@ export default {
                     title: botadd.title,
                     description: botadd.description,
                     content: botadd.content,
-                }
+            }
             return new Promise((resolve, reject) => {
             addBot(data).then(res => {
                 if (res.data.add.error_message === "success") {
@@ -258,5 +258,8 @@ export default {
 <style scoped> 
 div.error-message{
     color:red;
+}
+.btn-close{
+  background-color: black;
 }
 </style>
